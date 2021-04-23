@@ -1,0 +1,105 @@
+\documentclass{lea}
+
+%%
+%% Setup
+%%
+
+\title{ENIGMA HALFpipe: Interactive, reproducible, and efficient analysis for resting-state and task-based fMRI data}
+
+\author[1\envelope]{Lea Waller \orcid{0000-0002-3239-6957}}
+\author[1]{Susanne Erk}
+\author[2,3]{Elena Pozzi \orcid{0000-0001-8360-5571}}
+\author[2,3]{Yara J. Toenders \orcid{0000-0002-4117-1143}}
+\author[4]{Courtney~C.~Haswell}
+\author[1]{Marc Büttner \orcid{0000-0001-6940-6656}}
+\author[5]{Paul M. Thompson \orcid{0000-0002-4720-8867}}
+\author[2,3]{Lianne Schmaal \orcid{0000-0001-9822-048X}}
+\author[4]{Rajendra~A.~Morey \orcid{0000-0002-6517-6969}}
+\author[1]{Henrik Walter \orcid{0000-0002-9403-6121}}
+\author[1,6]{Ilya M. Veer \orcid{0000-0002-6733-3593}}
+
+\affil[1]{Department of Psychiatry and Psychotherapy CCM, Charité Universitätsmedizin Berlin, corporate member of Freie Universität Berlin and Humboldt-Universität zu Berlin, Berlin, Germany}
+\affil[2]{Centre for Youth Mental Health, University of Melbourne, Melbourne, Australia}
+\affil[3]{Orygen, Parkville, Australia}
+\affil[4]{Duke University School of Medicine, Durham, NC, USA}
+\affil[5]{Imaging Genetics Center, Mark and Mary Stevens Institute for Neuroimaging and Informatics, Keck School of Medicine, University of Southern California, Los Angeles, CA, USA}
+\affil[6]{Donders Institute for Brain, Cognition and Behaviour, Nijmegen, the Netherlands; Radboud University Medical Center, Nijmegen, the Netherlands}
+\affil[\envelope]{Correspondence should be addressed to \href{mailto://lea@fmri.science}{lea@fmri.science}}
+
+\fancyhead[L]{\sffamily Waller et al.}
+\fancyhead[R]{\sffamily ENIGMA HALFpipe | {\fontseries{mb}\selectfont\color{leaPurple}\thepage}}
+
+\fancyfoot[C]{}
+%\fancyfoot[R]{\sffamily%
+%\href{https://github.com/HALFpipe/HALFpipe}{\color{leaPurple}{https://github.com/HALFpipe/HALFpipe}}}
+
+%%
+%% Article
+%%
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+The reproducibility crisis in neuroimaging has led to an increased
+demand for standardized data processing workflows. Within the ENIGMA
+consortium, we developed \soft{HALFpipe} (\soft{H}armonized 
+\soft{A}na\soft{L}ysis of \soft{F}unctional MRI 
+\soft{pipe}line), an open-source, containerized, user-friendly tool that
+facilitates reproducible analysis of task-based and resting-state fMRI
+data through uniform application of preprocessing, quality assessment,
+single-subject feature extraction, and group-level statistics. It
+provides state-of-the-art preprocessing using \soft{fMRIPrep} without the
+requirement for input data in Brain Imaging Data Structure (BIDS)
+format. \soft{HALFpipe} extends the functionality of \soft{fMRIPrep} with additional
+preprocessing steps, which include spatial smoothing, grand mean
+scaling, temporal filtering, and confound regression. \soft{HALFpipe} generates
+an interactive quality assessment (QA) webpage to assess the quality of
+key preprocessing outputs and raw data in general. \soft{HALFpipe} features
+myriad post-processing functions at the individual subject level,
+including calculation of task-based activation, seed-based connectivity,
+network-template (or dual) regression, atlas-based functional
+connectivity matrices, regional homogeneity (ReHo), and fractional
+amplitude of low frequency fluctuations (fALFF), offering support to
+evaluate a combinatorial number of features or preprocessing settings in
+one run. Finally, flexible factorial models can be defined for
+mixed-effects regression analysis at the group level, including multiple
+comparison correction. Here, we introduce the theoretical framework in
+which \soft{HALFpipe} was developed, and present an overview of the main
+functions of the pipeline. \soft{HALFpipe} offers the scientific community a
+major advance toward addressing the reproducibility crisis in
+neuroimaging, providing a workflow that encompasses preprocessing,
+post-processing, and QA of fMRI data, while broadening core principles
+of data analysis for producing reproducible results. Instructions and 
+code can be found at \url{https://github.com/HALFpipe/HALFpipe}.
+
+\end{abstract}
+
+\input{./tex/introduction.tex}
+
+\input{./tex/methods.tex}
+
+\input{./tex/procedure.tex}
+
+\input{./tex/discussion.tex}
+
+\section{Acknowledgements}
+
+S.E. acknowledges funding from the German Research Foundation (DFG ER
+724/4--1).
+P.M.T. received research grant funding from Biogen, Inc., for research unrelated to this manuscript.
+L.S. acknowledges funding from the National Institutes of Health (NIH RO1
+MH117601 and NHMRC Career Development Fellowship 1140764).
+R.A.M acknowledges funding from National Institutes of Health (NIH R01
+MH111671).
+H.W. acknowledges funding from the German Research Foundation (DFG WA
+1539/11--1).
+I.V. acknowledges funding from the European Union's Horizon 2020 research
+and innovation programme under under Grant Agreement number 777084
+(DynaMORE project).
+
+\bibliography{./bib/lea,./bib/ilya}
+
+\end{document}
