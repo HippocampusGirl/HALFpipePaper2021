@@ -30,7 +30,7 @@
 %% Metadata
 %%
 
-\newcommand{\org@maketitle}{}% LATEX-Check
+\newcommand{\org@leftitle}{}% LATEX-Check
 \let\org@maketitle\maketitle
 \def\maketitle{%
 	\hypersetup{
@@ -106,7 +106,7 @@
 
 \newfontfamily{\emoji}{AppleColorEmoji}[
   Extension = .ttf,
-  Renderer=HarfBuzz
+  Renderer = HarfBuzz%
 ]
 
 \RequirePackage{microtype}
@@ -118,7 +118,7 @@
 %%
 
 \RequirePackage{graphicx}
-\RequirePackage{xcolor}
+\RequirePackage[table]{xcolor}
 
 \definecolor{leaPurple}{HTML}{6E4FFC}
 \definecolor{leaGrey}{HTML}{A6A6A6}
@@ -265,6 +265,7 @@
 }{}{}
 
 \renewcommand{\maketitle}{%
+  \vspace{12mm}%
   {\color{leaPurple}\raggedright\sffamily\fontseries{mb}\fontsize{24}{22}\selectfont \@title\par}%
   \vskip12pt
   {\@author\par}
@@ -351,7 +352,7 @@
 \newenvironment{appendixbox}{%
   \setcounter{figure}{0}
   \setcounter{table}{0}
-  \refstepcounter{appendix}%
+  \refstepcounter{appendix}%X[c,m]
   \clearpage%
   \patchcmd{\ttlf@section}{eLifeMediumGrey}{leaPurple}{}{}
   \noindent{\bfseries\Large\color{eLifeMediumGrey}Appendix \arabic{appendix}\par}
@@ -367,7 +368,7 @@
   allcolors=black,
   citecolor=eLifeMediumGrey,
   linkcolor=eLifeMediumGrey,
-  urlcolor=eLifeLightBlue
+  urlcolor=leaPurple
 ]{hyperref}
 \urlstyle{same}
 
@@ -402,6 +403,34 @@
   #1
 }
 
+\RequirePackage{tabularx,booktabs,array,multirow,makecell}
+\RequirePackage{colortbl}
+\RequirePackage{collcell}
+\RequirePackage{hhline}
+
+\newtcolorbox[
+  auto counter
+]{tablebox}[2][]{
+  arc=0pt,
+  outer arc=0pt,
+  boxsep=0pt,left=0pt,right=0pt,bottom=0pt,
+  top=2mm,
+  boxrule=0pt,
+  colframe=white,
+  opacityframe=0,
+  colback=white,
+  opacityback=0,
+  coltitle=black,
+  fonttitle=\fontseries{mb}\sffamily,
+  fontupper=\small\sffamily,
+  oversize,
+  enlarge left by=-1.6cm,
+  width=\linewidth+1.6cm,
+  float=tb,
+  title=Table \thetcbcounter: #2,
+  #1
+}
+
 %%
 %% Custom definitions
 %%
@@ -416,21 +445,21 @@
 \endgroup}}}
 
 \newcommand{\filename}[1]{%
-\smash{\ttfamily\texttransparent{0.80}{%
+\smash{\ttfamily\texttransparent{0.70}{%
 \begingroup\fboxsep=1pt%
 \colorbox{leaLightGreen}{\texttransparent{1}{#1}}%
 \endgroup}}}
 
 \newcommand{\code}[1]{%
-\smash{\ttfamily%
+\smash{\ttfamily\texttransparent{0.70}{%
 \begingroup\fboxsep=1pt%
-\colorbox{leaLightYellow}{#1}%
-\endgroup}}
+\colorbox{leaLightYellow}{\texttransparent{1}{#1}}%
+\endgroup}}}
 
 \newcommand{\pseudocode}[1]{
-\smash{\plexsans\fontseries{c}\emph{%
+\smash{\plexsans\fontseries{c}\texttransparent{0.70}{%
 \begingroup\fboxsep=1pt%
-\colorbox{leaLightYellow}{#1}%
+\colorbox{leaLightYellow}{\texttransparent{1}{#1}}%
 \endgroup}}}
 
 \newcommand{\term}[1]{\emph{#1}}

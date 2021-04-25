@@ -1,0 +1,53 @@
+\begin{tablebox}[label={table:settings}]{Default values for preprocessing settings per feature}
+
+\begingroup%
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}%
+\renewcommand\tabularxcolumn[1]{m{#1}}%
+\renewcommand{\arraystretch}{1.3}%
+\begin{tabularx}{\textwidth}{@{} | L |
+M{2cm} | C | C | C | C | c | c | @{}} 
+\hhline{~|-|-|-|-|-|-|-|}
+\multicolumn{1}{c|}{} & 
+\textbf{Preprocessed image} & 
+\textbf{Task-based activation} &
+\textbf{Seed-based connectivity} & 
+\textbf{Dual regression} &
+\textbf{Atlas-based connectivity matrix} & 
+\textbf{ReHo} & 
+\textbf{fALFF} \\
+\hhline{-|-|-|-|-|-|-|-|}
+Spatial smoothing &%
+\multicolumn{4}{c|}{\cellcolor{leaLightGreen}6 mm} &%
+\cellcolor{leaGrey} &%
+\multicolumn{2}{c|}{\cellcolor{leaLightGreen}6 mm*} \\
+\hhline{-|-|-|-|-|-|-|-|}
+Grand mean scaling &%
+\multicolumn{7}{c|}{\cellcolor{leaLightGreen}10,000} \\
+\hhline{-|-|-|-|-|-|-|-|}
+ICA-AROMA &%
+\multicolumn{7}{c|}{\cellcolor{leaLightGreen}Yes} \\
+\hhline{-|-|-|-|-|-|-|-|}
+Temporal filter &%
+\multicolumn{4}{c|}{\cellcolor{leaLightGreen}Gaussian (128 s FWHM)} &% 
+\multicolumn{3}{c|}{\cellcolor{leaLightGreen}Frequency-based (0.01--0.1 Hz)} \\
+\hhline{-|-|-|-|-|-|-|-|}
+Confound removal &%
+\cellcolor{leaLightGreen}None &%
+\multicolumn{3}{c|}{\cellcolor{leaGrey}} &%
+\multicolumn{3}{c|}{\cellcolor{leaLightGreen}None} \\
+\hhline{-|-|-|-|-|-|-|-|}
+Add confounds to model &%
+\cellcolor{leaGrey}&%
+\multicolumn{3}{c|}{\cellcolor{leaLightGreen}None} &%
+\multicolumn{3}{c|}{\cellcolor{leaGrey}} \\
+\hhline{-|-|-|-|-|-|-|-|}
+\end{tabularx}\par
+\vspace*{2mm}
+Note: Cells filled in grey indicate that this option cannot be selected in
+the user interface, all other settings can be adapted by the user; * done
+on the statistical maps after feature extraction.
+\endgroup
+
+\end{tablebox}

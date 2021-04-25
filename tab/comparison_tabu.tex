@@ -1,0 +1,33 @@
+\begin{tablebox}[label={table:comparison}]{Comparison to other neuroimaging pipelines}
+
+{\tabulinesep=1.2mm
+\begin{tabu} to \textwidth {| X[l,m] | X[l,m] |
+X[c,m] | X[c,m] | X[c,m] | X[c,m] | X[c,m] | X[c,m] |}
+\tabucline{3-}
+\rowfont\bfseries
+\multicolumn{2}{c|}{} & HALFpipe & C-PAC & fMRIPrep MRIQC FitLins & CONN toolbox & XCP Engine & DPARSF DPABI \\
+\tabucline{1-}
+\multirow{2}{*}[-1.5ex]{\parbox[c][][c]{2cm}{\raggedright{Quality assessment}}} & Quality metrics & Yes & Yes & Yes & Yes & Yes & Yes \\
+\tabucline{2-}
+& Visual quality assessment & Yes & Yes & Yes & Yes & Yes & Yes \\
+\tabucline{1-}
+\multirow{7}{*}{Features} & Task-based activation & Yes & No & Yes & No* & Yes & No \\
+\tabucline{2-}
+& Seed-based connectivity & Yes & Yes & No & Yes & Yes & Yes \\
+\tabucline{2-}
+& Dual regression & Yes & Yes & No & Yes & No & Yes \\
+\tabucline{2-}
+& Atlas-based connectivity matrix & Yes & Yes & No & Yes & Yes & Yes \\
+\tabucline{2-}
+& ReHo & Yes & Yes & No & Yes** & Yes & Yes \\
+\tabucline{2-}
+& fALFF & Yes & Yes & No & Yes & Yes & Yes \\
+\tabucline{2-}
+& Group statistics & Yes & Yes & Yes & Yes & No & Yes \\
+\tabucline{1-}
+\end{tabu}}\par
+\vspace*{2mm}
+Note: * task-based connectivity is supported; ** as implemented with LCOR (Local Correlation).
+
+\end{tablebox}
+

@@ -45,8 +45,8 @@ problems for users.
 \subsection{Databases}
 
 To automatically construct a neuroimaging processing workflow, the program
-needs to be able to fulfill queries such as \pseudocode{retrieve the
-structural image for subject x}. Many programs implement such queries using
+needs to be able to fulfill queries such as \pseudocode{``retrieve the
+structural image for subject x''}. Many programs implement such queries using
 a database system. 
 
 For example, the Python implementation of the BIDS
@@ -122,7 +122,6 @@ the user a series of questions about the data set and the analysis plan,
 and stores the inputs in a configuration file called \filename{spec.json}. The
 configuration file has a predictable syntax and can be easily scripted or
 modified, which enables collaborative studies to harmonize analysis plans.
-
 \subsection{Workflow engine}
 
 To obtain reproducible results, a core requirement for \soft{HALFpipe} was
@@ -279,7 +278,7 @@ concatenated with the subject's warp to \term{MNI152NLin2009cAsym} space,
 with which resampling is performed with \soft{fMRIPrep}'s
 \code{bold\_std\_trans\_wf} workflow. Finally, \soft{ICA-AROMA} is run on the
 resulting fMRI image in \term{MNI152NLin6Asym} space using
-\soft{fMRIPrep}'s \term{ica\_aroma\_wf} workflow, which also includes spatial
+\soft{fMRIPrep}'s \code{ica\_aroma\_wf} workflow, which also includes spatial
 smoothing fixed to a 6 mm FWHM smoothing kernel
 \citep{10.1016/j.neuroimage.2015.02.064}. \soft{ICA-AROMA} generates a set
 of component time series and a binary classification of these components as
@@ -352,7 +351,7 @@ data and the nuisance time series.
 \end{enumerate}
 
 \soft{HALFpipe} suggests default settings for each of these steps, which
-are outlined in \autoref{table:settings}. Note that some are selected based on
+are outlined in Table~\ref{table:settings}. Note that some are selected based on
 best-practices in the field (i.e., band-pass temporal filter for ALFF and
 ReHo), whereas most default settings can be adjusted by the user.
 
@@ -505,3 +504,5 @@ sample mean. Design matrices for the flexible factorial models are
 generated using the Python module \soft{Patsy}
 \citep{nathaniel_j_smith_2018_1472929}. Contrasts between groups are
 specified using the \soft{lsmeans} procedure \citep{jssv069i01}.
+
+\input{./tab/settings.tex}

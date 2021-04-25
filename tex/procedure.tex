@@ -33,12 +33,12 @@ of manually adding each input file for each subject separately, as is done
 in the SPM or FSL user interfaces, the template describes the pattern used
 for naming files. That pattern can match many file names, thereby reducing
 the amount of manual work for the user. For example, when placing the tag
-\filename{\{subject\}} in the file path \filename{\{subject\}\_t1.nii.gz}, all
-files of which the name ends in \filename{\_t1} and have the extension
-\filename{.nii.gz} will be selected. The part of the filename that comes before
-\filename{\_t1} is now interpreted by the parsing algorithm as the subject
-identifier. When multiple files from different modalities have the same
-subject identifier, or session number, etc., they will be matched
+\filename{\{subject\}} in the file path \filename{\{subject\}\_t1.nii.gz},
+all files of which the name ends in \filename{\_t1} and have the extension
+\filename{.nii.gz} will be selected. The part of the filename that comes
+before \filename{\_t1} is now interpreted by the parsing algorithm as the
+subject identifier. When multiple files from different modalities have the
+same subject identifier, or session number, etc., they will be matched
 automatically by these tags. Automated processing workflows can then be
 constructed around the resulting data structure.
 
@@ -46,9 +46,9 @@ In contrast to \soft{C-PAC}'s data configuration syntax, \soft{HALFpipe}
 path templates use BIDS tags \citep{10.1038/sdata.2016.44}. \soft{HALFpipe}
 path templates can be further specified by adding a colon and a regular
 expression after the tag name (as in standard Python regular expression
-syntax). For example, \filename{\{subject:[0-9]\*\}} will only match subject
-identifiers that contain just digits. This can be useful for more complex
-data layouts, such as when multiple datasets are placed in the same
+syntax). For example, \filename{\{subject:[0-9]\*\}} will only match
+subject identifiers that contain just digits. This can be useful for more
+complex data layouts, such as when multiple datasets are placed in the same
 directory, and only a single subset is to be used.
 
 In the \soft{HALFpipe} user interface, the user receives feedback on how
@@ -96,8 +96,8 @@ white matter signal, CSF signal, and global signal. Importantly, in
 denoising to these confound signals as well, to match the preprocessed and
 denoised data, so as to not accidentally re-introduce noise variance
 \citep{10.1016/j.neuroimage.2013.05.116,10.1002/hbm.24528}. This was
-illustrated with the example on motion parameter regression
-in \autoref{sec:denoising}.
+illustrated with the example on motion parameter regression in the
+section~\nameref{sec:denoising}.
 
 Various confound and denoising settings may be used for each fMRI feature
 (see the Feature extraction section), and for generating preprocessed
@@ -107,13 +107,13 @@ other than \soft{HALFpipe}.
 \subsection{Quality assessment}
 
 Quality assessment can be performed in an interactive, browser-based user
-interface (see \autoref{fig:qualitycheck}). \soft{HALFpipe} provides a detailed
-user manual for quality assessment that is linked on the web page. The web
-app shows report images of several preprocessing steps such as T1 skull
-stripping and normalization, BOLD tSNR, motion confounds, ICA-based
-artifact removal, and spatial normalization (see \autoref{sec:qamethods}).
-These images can be visually inspected and rated by the viewer as either
-good, uncertain, or bad.
+interface (see \autoref{fig:qualitycheck}). \soft{HALFpipe} provides a
+detailed user manual for quality assessment that is linked on the web page.
+The web app shows report images of several preprocessing steps such as T1
+skull stripping and normalization, BOLD tSNR, motion confounds, ICA-based
+artifact removal, and spatial normalization (see the methods section
+on~\nameref{sec:qamethods}). These images can be visually inspected and
+rated by the viewer as either good, uncertain, or bad.
 
 Ratings will be saved in the local browser storage. Once completed, they
 can be downloaded in JSON format to be read by \soft{HALFpipe}. If placed
@@ -125,13 +125,13 @@ assessment by multiple researchers. In the case of conflicts between
 ratings, the lower rating will be used.
 
 \soft{HALFpipe} will include as much data as possible while excluding all
-scans rated as `bad''. Ratings of `good'' and
-`uncertain'' will be included for group analysis. A `bad'' rating for any
-report image related to structural/anatomical processing will exclude the
-entire subject. A `bad'' rating for any report image related to functional 
-image processing will only exclude the specific functional scan. This
-means that if a subject has one `bad'' scan, its other scans may still be
-included for group statistics.
+scans rated as ``bad''. Ratings of ``good'' and ``uncertain'' will be
+included for group analysis. A ``bad'' rating for any report image related
+to structural/anatomical processing will exclude the entire subject. A 
+``bad'' rating for any report image related to functional image processing
+will only exclude the specific functional scan. This means that if a
+subject has one ``bad'' scan, its other scans may still be included for
+group statistics.
 
 In addition, the mean framewise displacement, percentage of frames with a
 framewise displacement above a specified threshold, percentage of the
@@ -160,7 +160,7 @@ denoising settings to explore the impact of analytical decisions in a
 \term{multiverse analysis}. Of note, for selected features some options are
 not available. For example, spatial smoothing is disabled for atlas-based
 connectivity matrices \citep{10.1111/ejn.13717}, or performed \emph{after}
-ReHo and fALFF have been calculated (see Table~\ref{tab:settings}).
+ReHo and fALFF have been calculated (see Table~\ref{table:settings}).
 
 A brief description of the features is provided in Box~\ref{box:features}.
 
@@ -220,8 +220,8 @@ coefficient of concordance \citep{10.1016/j.neuroimage.2003.12.030} using
 \paragraph{Fractional amplitude of low frequency fluctuations (fALFF)}
 
 Variance in amplitude of low frequencies in the BOLD signal is calculated,
-dividing the power in the low frequency range (0.01--0.1 Hz) by the power in
-the entire frequency range \citep{10.1016/j.jneumeth.2008.04.012} with a
+dividing the power in the low frequency range (0.01--0.1 Hz) by the power
+in the entire frequency range \citep{10.1016/j.jneumeth.2008.04.012} with a
 customized version of the \soft{C-PAC} implementation of fALFF.\@
 
 \end{featurebox}
