@@ -10,18 +10,18 @@ harmonization of task-based and resting-state fMRI data analysis and
 quality assessment across multiple labs and cohorts. \soft{HALFpipe}
 bundles all software tools, library functions, and other dependencies by
 containerizing the requisite components in a Singularity
-\citep{10.1371/journal.pone.0177459} and Docker (Docker Inc.) release.
+\parencite{10.1371/journal.pone.0177459} and Docker (Docker Inc.) release.
 Containerization ensures that all software dependencies and the runtime
 environment are provided. Therefore, containerized software such as
 \soft{HALFpipe} can run reliably regardless of the computing environment
 where it is installed, be it a laptop, computational cluster, or cloud
-computing service \citep{10.1016/j.cels.2018.03.014}.
+computing service \parencite{10.1016/j.cels.2018.03.014}.
 
 The design, implementation, and testing of the \soft{HALFpipe} workflow
 resulted in its 1.0 version release in early 2021. Several thousand
 resting-state fMRI datasets from 29 ENIGMA PTSD consortium sites have
 already been analyzed as part of the first published report to employ
-\soft{HALFpipe} \citep{weis_thesis}, while analyses of other large
+\soft{HALFpipe} \parencite{weis_thesis}, while analyses of other large
 multi-site datasets are currently underway in several ENIGMA working
 groups, including the ENIGMA task-based fMRI working group (Veer et al.
 2019). Running \soft{HALFpipe} requires approximately 8 to 20 GB of RAM per
@@ -54,14 +54,14 @@ multi-cohort studies of several hundred or several thousand samples ---
 ultimately supporting harmonized cross-disorder comparisons. While not part
 of the \soft{HALFpipe} workflow, cross-site/platform harmonization
 techniques for neuroimaging have recently experienced a dramatic increase
-\citep{pezoulas2020medical,10.1016/j.neuroimage.2017.11.024,10.1016/j.media.2020.101879}.
+\parencite{pezoulas2020medical,10.1016/j.neuroimage.2017.11.024,10.1016/j.media.2020.101879}.
 Much of this methodological innovation has arrived on the heels of earlier
 developments in cross-platform harmonization of genetic data
-\citep{10.1186/s12859-019-2641-8,10.1093/biostatistics/kxj037,10.1093/bioinformatics/btx147,10.1038/nbt.4091}.
+\parencite{10.1186/s12859-019-2641-8,10.1093/biostatistics/kxj037,10.1093/bioinformatics/btx147,10.1038/nbt.4091}.
 These advances in harmonization of neuroimaging data are expected to
 manifest synergy with standardized workflows such as \soft{HALFpipe}, as
 both elements are essential to large-scale imaging consortium efforts
-\citep{thompson_enigma_2020}.
+\parencite{thompson_enigma_2020}.
 
 The implementation of quality metrics for fMRI data has been an incremental
 process that has moved steadily towards establishing empirically-informed
@@ -69,11 +69,11 @@ best practices. Historically, quality criteria have been applied unevenly
 across research labs. Recent years have witnessed a heightened awareness
 about the essential role of applying systematic and principled quality
 metrics to minimize confounds, for example motion artifacts
-\citep{10.1016/j.neuroimage.2011.10.018,10.1016/j.neuroimage.2013.08.048,10.1016/j.neuroimage.2013.04.001},
+\parencite{10.1016/j.neuroimage.2011.10.018,10.1016/j.neuroimage.2013.08.048,10.1016/j.neuroimage.2013.04.001},
 and widespread fMRI signal deflections
-\citep{10.1016/j.neuroimage.2020.116614}. Automated quality control methods
+\parencite{10.1016/j.neuroimage.2020.116614}. Automated quality control methods
 are being developed and adopted with increasing interest, such as the MRI
-Quality Control software \soft{MRIQC} \citep{10.1371/journal.pone.0184661}.
+Quality Control software \soft{MRIQC} \parencite{10.1371/journal.pone.0184661}.
 \soft{HALFpipe} has adopted parts of the functionality of \soft{MRIQC} with
 an enhanced user experience that generates quality reports via a
 web-browser-based interface to facilitate rapid viewing, screening, and
@@ -83,14 +83,14 @@ important when mega-analyzing and even meta-analyzing multi-site/scanner
 data, as is done in ENIGMA.\@ That is, study variables that segregate by site
 are more likely to lead to confounds without the uniform implementation of
 quality assessment across sites
-\citep[e.g.][]{10.1016/j.media.2020.101879}. With its harmonized quality
+\parencite[e.g.][]{10.1016/j.media.2020.101879}. With its harmonized quality
 procedures, \soft{HALFpipe} aims to minimize such effects.
 
 \subsection{Limitations}
 
 Computing platforms that are likely to differ between sites are known to
 introduce subtle differences in output attributable to operating systems
-and hardware \citep{10.1371/journal.pone.0038234}. Collecting raw
+and hardware \parencite{10.1371/journal.pone.0038234}. Collecting raw
 multi-site data at one central site prior to \soft{HALFpipe} processing
 ensures that the same computing platform can be used to process all data.
 While optimal, this is often not practical due to restrictions on data
@@ -103,10 +103,10 @@ data, but other sources of non-uniformity are beyond its scope. Recent
 advances in cross-site/platform harmonization may additionally correct for
 differences in site, scanner hardware, or computation on different
 processors
-\citep{pezoulas2020medical,10.1016/j.neuroimage.2017.11.024,10.1016/j.media.2020.101879}.
+\parencite{pezoulas2020medical,10.1016/j.neuroimage.2017.11.024,10.1016/j.media.2020.101879}.
 Such methods could be applied to extracted \soft{HALFpipe} features, either
 centralized or through distributed computation using tools such as
-\soft{COINSTAC} \citep{plis_coinstac_2016}, to yield results that are
+\soft{COINSTAC} \parencite{plis_coinstac_2016}, to yield results that are
 potentially more generalizable.
 
 \subsection{Conclusion}

@@ -3,12 +3,12 @@
 The \soft{HALFpipe} software is containerized, similar to \soft{fMRIPrep}
 or \soft{C-PAC}. This means that it comes bundled with all other software
 that is needed for it to run, such as \soft{fMRIPrep}
-\citep{10.1038/s41592-018-0235-4}, MRIQC
-\citep{10.1371/journal.pone.0184661}, FSL
-\citep{10.1016/j.neuroimage.2011.09.015}, ANTs
-\citep{10.1016/j.neuroimage.2010.09.025}, FreeSurfer
-\citep{10.1073/pnas.200033797}, and AFNI
-\citep{10.1006/cbmr.1996.0014,10.1002/(sici)1099-1492(199706/08)10:4/5<171::aid-nbm453>3.0.co;2-l}.
+\parencite{10.1038/s41592-018-0235-4}, MRIQC
+\parencite{10.1371/journal.pone.0184661}, FSL
+\parencite{10.1016/j.neuroimage.2011.09.015}, ANTs
+\parencite{10.1016/j.neuroimage.2010.09.025}, FreeSurfer
+\parencite{10.1073/pnas.200033797}, and AFNI
+\parencite{10.1006/cbmr.1996.0014,cox_afni_1997}.
 As such, all users of one version of \soft{HALFpipe} will be using the
 exact same versions of these tools, because they come with the container.
 Thus, the containerization of \soft{HALFpipe} software aids reproducibility
@@ -26,11 +26,11 @@ administrator privileges.
 Besides containers, our \soft{HALFpipe} development team adopted other
 software engineering best practices, which promoted faster development and
 reduced code errors. These industry best-practices, which have found their
-way into research applications \citep{das_programming_2018}, involve
+way into research applications \parencite{das_programming_2018}, involve
 writing code that is easy to read (albeit generally harder to write), the
 breakdown of complex systems into several simpler subsystems, dedicated
 effort toward thoughtful code design before implementation, and performing
-continuous integration via unit tests \citep{beckkent2000epe:}. The
+continuous integration via unit tests \parencite{beckkent2000epe:}. The
 \soft{HALFpipe} development team applied these practices whenever possible.
 
 \soft{HALFpipe} is being developed as an open-source project and is
@@ -38,7 +38,7 @@ accepting contributions that offer new features, enhance functionality, or
 improve efficiency. All changes will be reviewed manually. Additionally,
 before inclusion in the source tree, changes will undergo automated (unit)
 testing, which includes running an entire analysis for one subject of the
-OpenNeuro dataset ds000108 \citep{10.1016/j.neuron.2008.09.006}. This way,
+OpenNeuro dataset ds000108 \parencite{10.1016/j.neuron.2008.09.006}. This way,
 unexpected side effects and bugs can be caught and corrected before causing
 problems for users.
 
@@ -88,8 +88,8 @@ the following three methods.
 First, metadata can be stored in BIDS format. This means that a JavaScript
 Object Notation (JSON) file accompanies each image file, which contains the
 necessary metadata. BIDS calls this file the \term{sidecar}, and common
-tools such as \soft{heudiconv} \citep{yaroslav_halchenko_2018_1306159} or
-\soft{dcm2niix} \citep{10.1016/j.jneumeth.2016.03.001} generate these files
+tools such as \soft{heudiconv} \parencite{yaroslav_halchenko_2018_1306159} or
+\soft{dcm2niix} \parencite{10.1016/j.jneumeth.2016.03.001} generate these files
 automatically. If these files are present, \soft{HALFpipe} will detect and
 use them. Second, instead of sidecar files, some software tools store image
 metadata in the NIfTI header. The NIfTI format defines fields that can fit
@@ -130,7 +130,7 @@ requires fMRI analysis of large datasets with several thousand samples,
 \soft{HALFpipe} was designed to parallelize processing on multiple
 computers or processor cores. Both of these specifications were achieved by
 implementation in \soft{Nipype}, \term{NeuroImaging in Python: Pipelines
-and Interfaces} \citep{10.3389/fninf.2011.00013}. \soft{Nipype} is a
+and Interfaces} \parencite{10.3389/fninf.2011.00013}. \soft{Nipype} is a
 workflow engine for neuroimaging that constructs an acyclic directed graph,
 in which nodes represent processing commands that need to be executed (the
 steps of the pipeline), while the edges represent inputs and outputs being
@@ -142,12 +142,12 @@ The workflow graphs are modular and scalable, which means they can be
 nested and extended. \soft{HALFpipe} uses the workflows defined by
 \soft{fMRIPrep} and then connects their outputs to additional workflows.
 \soft{fMRIPrep} itself is modular and divided into multiple workflows:
-\soft{sMRIPrep} \citep{esteban_oscar_2021_4593442}, \soft{SDCFlows}, and
+\soft{sMRIPrep} \parencite{esteban_oscar_2021_4593442}, \soft{SDCFlows}, and
 \soft{NiWorkflows}. The workflow graph facilitates saving and verifying
 intermediate results, and supports the user's ability to stop and later
 restart processing. \soft{HALFpipe} also uses the graphs to determine which
 intermediate results files are not needed by subsequent commands by using a
-tracing garbage collection algorithm \citep{10.1145/359642.359655}. As
+tracing garbage collection algorithm \parencite{10.1145/359642.359655}. As
 such, intermediate files do not accumulate on the storage device. This
 feature is implemented as a plugin to \soft{Nipype}.
 
@@ -158,7 +158,7 @@ limitations that are relevant in the context of \soft{HALFpipe}.
 different variations of preprocessing settings. To do this efficiently,
 intermediate results need to be re-used whenever possible. An improved
 second version of \soft{Nipype} is currently being developed, called
-\soft{Pydra} \citep{pydra-proc-scipy-2020}, which will be able to
+\soft{Pydra} \parencite{pydra-proc-scipy-2020}, which will be able to
 automatically detect repetitive processing commands, and automatically
 re-use outputs. Presently, until \soft{Pydra} becomes available,
 \soft{HALFpipe} calculates a four-letter hash code that uniquely identifies
@@ -192,7 +192,7 @@ unique job, we recommend requesting 24 GB of RAM for each job. The most
 memory-intensive steps of processing are spatial registration and
 resampling, and running \soft{FSL MELODIC} for independent component
 analysis (ICA) as part of \soft{ICA-AROMA}
-\citep{10.1016/j.neuroimage.2015.02.064}. For large datasets, parallel
+\parencite{10.1016/j.neuroimage.2015.02.064}. For large datasets, parallel
 processing of subjects is highly desirable to reduce the total computation
 time.
 
@@ -227,15 +227,15 @@ in our selection of tools.
 resampling the fMRI data to standard space using \soft{fMRIPrep}.
 \soft{HALFpipe} defines standard space as the \term{MNI152NLin2009cAsym}
 template, which is the most current and detailed template available
-\citep{horn_blog}.
+\parencite{horn_blog}.
 
 \soft{fMRIPrep} not only outputs a preprocessed image in standard space,
 but also a spreadsheet with nuisance (or confound) time series. These
 include (derivatives of) motion parameters (squared), aCompCor components
-\citep{10.1016/j.neuroimage.2007.04.042}, white matter signal, CSF signal,
+\parencite{10.1016/j.neuroimage.2007.04.042}, white matter signal, CSF signal,
 and global signal. A key consideration is that including these time series
 as nuisance regressors may re-introduce variance that was already removed
-in previous processing steps \citep{10.1016/j.neuroimage.2013.05.116}. An
+in previous processing steps \parencite{10.1016/j.neuroimage.2013.05.116}. An
 example of this phenomenon may be regressing out motion parameters after
 removing low-frequency drift via temporal filtering. In practice, this
 means setting up a regression model for each voxel, where the temporally
@@ -263,44 +263,44 @@ denoising is implemented as follows:
 \item
 
 \soft{ICA-AROMA} noise component classification
-\citep{10.1016/j.neuroimage.2015.02.064} relies on reference masks defined
+\parencite{10.1016/j.neuroimage.2015.02.064} relies on reference masks defined
 in \term{MNI152NLin6Asym} space, which is different from the standard space
 template used by \soft{fMRIPrep}. To solve this issue, \soft{fMRIPrep} will
 estimate a second normalization to this template, apply it to the fMRI
 image in native space, and run \soft{ICA-AROMA} on the resulting image
-\citep{10.1101/2021.02.10.430678}. This approach effectively doubles the
+\parencite{10.1101/2021.02.10.430678}. This approach effectively doubles the
 processor time spent on spatial normalization, and may require manually
 checking both spatial registrations. To avoid this considerable effort,
 \soft{HALFpipe} resamples the image to \term{MNI152NLin6Asym} space using
 an existing transformation/warp field between the two spaces
-\citep{horn_transform}. Specifically, this predefined warp field is
+\parencite{horn_transform}. Specifically, this predefined warp field is
 concatenated with the subject's warp to \term{MNI152NLin2009cAsym} space,
 with which resampling is performed with \soft{fMRIPrep}'s
 \code{bold\_std\_trans\_wf} workflow. Finally, \soft{ICA-AROMA} is run on the
 resulting fMRI image in \term{MNI152NLin6Asym} space using
 \soft{fMRIPrep}'s \code{ica\_aroma\_wf} workflow, which also includes spatial
 smoothing fixed to a 6 mm FWHM smoothing kernel
-\citep{10.1016/j.neuroimage.2015.02.064}. \soft{ICA-AROMA} generates a set
+\parencite{10.1016/j.neuroimage.2015.02.064}. \soft{ICA-AROMA} generates a set
 of component time series and a binary classification of these components as
 either signal or noise.
 
 \item
 
 \soft{HALFpipe} implements spatial smoothing using \soft{AFNI}'s
-\soft{3dBlurInMask} \citep{10.1006/cbmr.1996.0014}. Each voxel's signal is
+\soft{3dBlurInMask} \parencite{10.1006/cbmr.1996.0014}. Each voxel's signal is
 averaged with the signal of its neighboring voxels, weighted by an
 isotropic gaussian kernel. At the edges of the brain, this kernel may
 include non-brain voxels, so smoothing is constrained to only happen within
 the brain mask. This is equivalent to the procedure in the \term{Minimal
 Preprocessing Pipelines for the Human Connectome Project}
-\citep{10.1016/j.neuroimage.2013.04.127}.
+\parencite{10.1016/j.neuroimage.2013.04.127}.
 
 \item\label{itm:grandmean}
 
 Grand mean scaling sets the image mean, defined as the within-scan mean
 across all voxels and time points, to a predefined value. The grand mean is
 closely related to scanner parameters such as amplifier gain but not to
-neural mechanisms \citep{10.1006/nimg.2002.1226}. Adjusting the grand mean
+neural mechanisms \parencite{10.1006/nimg.2002.1226}. Adjusting the grand mean
 via scaling makes analysis results more interpretable and comparable across
 subjects, sessions, and sites. The scaling factor is calculated based on
 the masked functional image, and applied to both the fMRI data and the
@@ -321,7 +321,7 @@ regressors are multiplied by their regression weights and added together to
 yield one time series of all the noise. Subtracting the noise from the
 voxel time series yields a denoised time series (the regression residuals);
 this step is done using a re-implementation of \soft{fsl\_regfilt} in
-\soft{Numpy} \citep{10.1038/s41586-020-2649-2}. The same procedure is
+\soft{Numpy} \parencite{10.1038/s41586-020-2649-2}. The same procedure is
 applied to the nuisance time series from step~\ref{itm:grandmean}.
 
 \item\label{itm:tempfilt}
@@ -330,12 +330,12 @@ Temporal filtering can be used to remove low-frequency drift via a
 high-pass filter, high-frequency noise via a low-pass filter, or both at
 the same time using a band-pass filter. \soft{HALFpipe} implements two
 approaches to temporal filtering, a frequency-based approach
-\citep{10.1155/2013/935154} and a Gaussian-weighted approach
-\citep{10.1006/nimg.2000.0628}. The frequency-based temporal filter is very
+\parencite{10.1155/2013/935154} and a Gaussian-weighted approach
+\parencite{10.1006/nimg.2000.0628}. The frequency-based temporal filter is very
 exact in selecting frequencies to be kept or removed, and is commonly used
 to calculate fractional Amplitude of Low Frequency Fluctuations (fALFF) and
 Regional Homogeneity (ReHo). The Gaussian-weighted temporal filter is the
-default used by \soft{FSL Feat} \citep{10.1016/j.neuroimage.2011.09.015}
+default used by \soft{FSL Feat} \parencite{10.1016/j.neuroimage.2011.09.015}
 and may have fewer edge effects at the start and end of the time series.
 However, its spectrum also has a more gradual roll-off, meaning that it
 will be less aggressive in removing frequencies close to the chosen cutoff
@@ -355,13 +355,23 @@ are outlined in Table~\ref{table:settings}. Note that some are selected based on
 best-practices in the field (i.e., band-pass temporal filter for ALFF and
 ReHo), whereas most default settings can be adjusted by the user.
 
+\begin{figure}
+\begin{adjustwidth}{-1cm}{}
+\includegraphics[width=\linewidth]{fig/workflow-crop}\label{fig:workflow}
+\caption{\textbf{HALFpipe workflow.} After minimal preprocessing with
+fMRIPrep \parencite{10.1038/s41592-018-0235-4}, additional filtering of the
+data can be selected. Based on the resulting preprocessed image, 
+statistical maps can be calculated. }
+\end{adjustwidth}
+\end{figure}
+
 \subsection{Quality assessment}\label{sec:qamethods}
 
 Assessing the quality of data and preprocessing is a laborious undertaking
 and often done manually. Efforts to automate this process, either through
 predefined thresholds of image quality features
-\citep{10.1016/j.neuroimage.2017.10.034} or machine learning
-\citep{10.1371/journal.pone.0184661} are not yet ready to replace the eyes
+\parencite{10.1016/j.neuroimage.2017.10.034} or machine learning
+\parencite{10.1371/journal.pone.0184661} are not yet ready to replace the eyes
 of a trained researcher checking the data. However, various approaches make
 this process easier. First, rather than viewing three-dimensional
 neuroimaging files directly, generating and viewing reports containing
@@ -369,7 +379,7 @@ two-dimensional images offers a significant time savings. Second, tools
 such as \soft{slicesdir} (in \soft{FSL}), \soft{fMRIPrep}, and \soft{MRIQC}
 generate HTML files that contain multiple report images and can be explored
 in a web browser. \soft{MRIQC} also provides an interactive widget to rate
-the quality of each image \citep{10.1038/s41597-019-0035-4}.
+the quality of each image \parencite{10.1038/s41597-019-0035-4}.
 
 In \soft{HALFpipe}, we use a fixed set of processing steps for quality
 assessment. While \soft{slicesdir} allows the researcher to easily compare
@@ -437,7 +447,7 @@ drop-out, or striping artifacts.
 \item
 
 EPI Confounds shows the carpet plot
-\citep{10.1016/j.neuroimage.2016.08.009,10.1016/j.neuroimage.2020.116614}
+\parencite{10.1016/j.neuroimage.2016.08.009,10.1016/j.neuroimage.2020.116614}
 generated by \soft{fMRIPrep}. A carpet plot is a two-dimensional plot of
 time series within a scan, with time on the \emph{x}-axis and voxels on the
 \emph{y}-axis. Voxels are grouped into cortical gray matter (blue),
@@ -474,11 +484,11 @@ the resampled image.
 \subsection{Statistics}\label{sec:statistics}
 
 \soft{HALFpipe} uses \soft{FSL} FMRIB Local Analysis of Mixed Effects
-(FLAME) \citep{10.1016/j.neuroimage.2003.12.023} for group statistics,
+(FLAME) \parencite{10.1016/j.neuroimage.2003.12.023} for group statistics,
 because it considers the within-subject variance of lower level estimates
 in its mixed effects models. In addition, its estimates are conservative,
 which means they offer robust control of the false positive rate
-\citep{10.1073/pnas.1602413113}.
+\parencite{10.1073/pnas.1602413113}.
 
 A common issue in fMRI studies is that the spatial extent of brain coverage
 may differ between subjects. A common choice is to restrict higher-level
@@ -487,7 +497,7 @@ However, with a large variation in brain coverage, which is to be expected
 when pooling multi-cohort data, sizable portions of the brain may
 ultimately be excluded from analysis. To circumvent this issue,
 \soft{HALFpipe} uses a re-implementation of \soft{FSL}'s \soft{flameo} in
-\soft{Numpy} \citep{10.1038/s41586-020-2649-2}. In this implementation, a
+\soft{Numpy} \parencite{10.1038/s41586-020-2649-2}. In this implementation, a
 unique design matrix is re-generated for every voxel so that only subjects
 who have a measurable value for a given voxel are included. Then the model
 is estimated using the FLAME algorithm. This list-wise deletion approach
@@ -502,7 +512,7 @@ alternatively choose to replace missing values by zero in the demeaned
 design matrix. The latter approach is equivalent to imputation by the
 sample mean. Design matrices for the flexible factorial models are
 generated using the Python module \soft{Patsy}
-\citep{nathaniel_j_smith_2018_1472929}. Contrasts between groups are
-specified using the \soft{lsmeans} procedure \citep{jssv069i01}.
+\parencite{nathaniel_j_smith_2018_1472929}. Contrasts between groups are
+specified using the \soft{lsmeans} procedure \parencite{jssv069i01}.
 
 \input{./tab/settings.tex}

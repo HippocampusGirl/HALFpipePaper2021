@@ -12,7 +12,7 @@ indirectly captures the neural processes of interest, a series of
 computational operations on fMRI data, referred to as the \term{analysis
 pipeline}, are necessary to arrive at interpretable results. In practice,
 each step is flexible and subject to a number of choices by the researcher,
-termed \term{analytic flexibility} \citep{10.1038/nrn.2016.167}. The steps
+termed \term{analytic flexibility} \parencite{10.1038/nrn.2016.167}. The steps
 in the analysis pipeline may be reordered, run with different parameters,
 or may be completely omitted in some cases. Understandably, users expect
 different tools performing the same function to generate (near) identical
@@ -20,25 +20,25 @@ results when supplied with given input data. However, the multiplicity of
 tools has had the unintended consequence of generating inconsistent results
 from studies designed to answer the same research question, sometimes even
 when the same data is used as the starting point
-\citep{10.1038/s41586-020-2314-9}. Thus, \term{analytic flexibility}
+\parencite{10.1038/s41586-020-2314-9}. Thus, \term{analytic flexibility}
 combined with the number of analysis steps, as well as the possible
 parameters for running each analysis step, has led to a vast multiplicity
 of methodologic variants and an equal number of possible results. This
 situation has contributed in part to what is widely hailed as a
 \term{crisis of reproducibility,} which now plagues the neuroimaging field
-\citep{10.1038/sdata.2016.44,10.1038/nrn.2016.167}.
+\parencite{10.1038/sdata.2016.44,10.1038/nrn.2016.167}.
 
 One solution to improving reproducibility is to constrain the parameter
 space by limiting choices to default parameters established from
-empirically-derived best-practices \citep{10.1016/j.cels.2018.03.014}. For
+empirically-derived best-practices \parencite{10.1016/j.cels.2018.03.014}. For
 instance, established pipelines such as \soft{fMRIPrep}
-\citep{10.1038/s41592-018-0235-4} and \soft{C-PAC}
-\citep{craddock_towards_2013} have automated many of these choices. An
+\parencite{10.1038/s41592-018-0235-4} and \soft{C-PAC}
+\parencite{craddock_towards_2013} have automated many of these choices. An
 alternative approach is to run multiple analyses separately on the same
 input data with the same or different pipelines, but with different
 parameter selections for each analysis, and then compare the results. This
 second approach, termed \term{multiverse analysis}
-\citep{10.1177/1745691616658637}, has the advantage that results from
+\parencite{10.1177/1745691616658637}, has the advantage that results from
 multiple analyses may be compared and alternate solutions may be presented
 in published reports to promote increased transparency. However,
 \term{multiverse analysis} has the disadvantage that it may ultimately not
@@ -50,15 +50,15 @@ workflows to conduct both the preprocessing and postprocessing stages of
 fMRI analysis. The recent introduction and widespread adoption of
 standardized pipelines for fMRI data preprocessing has provided the
 research community with much-needed high-quality tools that have improved
-reproducibility \citep{thompson_big_2020}. The four ingredients that are
+reproducibility \parencite{thompson_big_2020}. The four ingredients that are
 essential to data analysis and reproducible results are: (1) data and
 metadata availability, (2) code usage and transparency, (3) software
 installability, and (4) re-creation of the runtime environment. Relative to
 other processing pipelines, \soft{fMRIPrep}
-\citep{10.1038/s41592-018-0235-4} has grown in popularity due to its
+\parencite{10.1038/s41592-018-0235-4} has grown in popularity due to its
 adoption of best practices, open-source availability, favorable user
 experience, and \term{glass-box} principles of transparency
-\citep{10.1146/annurev-biodatasci-072018-021237}. However, \soft{fMRIPrep}
+\parencite{10.1146/annurev-biodatasci-072018-021237}. However, \soft{fMRIPrep}
 is limited to the so-called preprocessing steps of fMRI data analysis,
 whilst variability in parameter selection for subsequent post-processing
 analysis steps (e.g., data cleaning, feature extraction, model
@@ -68,15 +68,15 @@ The ENIGMA consortium has addressed the reproducibility crisis by pooling
 observational study data from structural and diffusion imaging (and more
 recently EEG and MEG), and by developing standardized pipelines, data
 harmonization methodology, and quality control protocols
-\citep{thompson_enigma_2020}. These workflows have successfully analyzed
+\parencite{thompson_enigma_2020}. These workflows have successfully analyzed
 structural and diffusion MRI data aggregated from large numbers of small-
 and medium-sized cohorts to accumulate sufficient power to yield robust
 results on a wide range of neuropsychiatric conditions
-\citep[e.g.][]{10.1038/s41398-020-0842-6,van_den_heuvel_overview_2020,10.1002/hbm.25029}.
+\parencite[e.g.][]{10.1038/s41398-020-0842-6,van_den_heuvel_overview_2020,10.1002/hbm.25029}.
 However, until now the ENIGMA consortium has lacked the ability to reliably
 conduct consortium-wide analyses on fMRI data. More recently, however, the
-ENIGMA task-based \citep{veer_enigma_2019} and resting-state fMRI
-\citep{10.1007/s11682-018-9941-x} working groups have spurred initiatives
+ENIGMA task-based \parencite{veer_enigma_2019} and resting-state fMRI
+\parencite{10.1007/s11682-018-9941-x} working groups have spurred initiatives
 to bring the ENIGMA framework to the functional domain.
 
 To support these initiatives within ENIGMA, we developed a standardized

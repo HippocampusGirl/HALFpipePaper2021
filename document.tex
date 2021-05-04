@@ -6,19 +6,19 @@
 
 \title{ENIGMA HALFpipe: Interactive, reproducible, and efficient analysis for resting-state and task-based fMRI data}
 
-\author[1\envelope]{Lea Waller \orcid{0000-0002-3239-6957}}
-\author[1]{Susanne Erk}
-\author[2,3]{Elena Pozzi \orcid{0000-0001-8360-5571}}
-\author[2,3]{Yara J. Toenders \orcid{0000-0002-4117-1143}}
-\author[4]{Courtney~C.~Haswell}
-\author[1]{Marc Büttner \orcid{0000-0001-6940-6656}}
-\author[5]{Paul M. Thompson \orcid{0000-0002-4720-8867}}
-\author[2,3]{Lianne Schmaal \orcid{0000-0001-9822-048X}}
-\author[4]{Rajendra~A.~Morey \orcid{0000-0002-6517-6969}}
-\author[1]{Henrik Walter \orcid{0000-0002-9403-6121}}
-\author[1,6]{Ilya M. Veer \orcid{0000-0002-6733-3593}}
+\author[1\envelope]{\mbox{Lea Waller \orcid{0000-0002-3239-6957}}}
+\author[1]{\mbox{Susanne Erk \orcid{0000-0003-0961-3543}}}
+\author[2,3]{\mbox{Elena Pozzi \orcid{0000-0001-8360-5571}}}
+\author[2,3]{\mbox{Yara J. Toenders \orcid{0000-0002-4117-1143}}}
+\author[4]{\mbox{Courtney C. Haswell}}
+\author[1]{\mbox{Marc Büttner \orcid{0000-0001-6940-6656}}}
+\author[5]{\mbox{Paul M. Thompson \orcid{0000-0002-4720-8867}}}
+\author[2,3]{\mbox{Lianne Schmaal \orcid{0000-0001-9822-048X}}}
+\author[4]{\mbox{Rajendra A. Morey \orcid{0000-0002-6517-6969}}}
+\author[1]{\mbox{Henrik Walter \orcid{0000-0002-9403-6121}}}
+\author[1,6]{\mbox{Ilya M. Veer \orcid{0000-0002-6733-3593}}}
 
-\affil[1]{Department of Psychiatry and Psychotherapy CCM, Charité Universitätsmedizin Berlin, corporate member of Freie Universität Berlin and Humboldt-Universität zu Berlin, Berlin, Germany}
+\affil[1]{Charité Universitätsmedizin Berlin, corporate member of Freie Universität Berlin and Humboldt-Universität zu Berlin, Department of Psychiatry and Psychotherapy CCM, Berlin, Germany}
 \affil[2]{Centre for Youth Mental Health, University of Melbourne, Melbourne, Australia}
 \affil[3]{Orygen, Parkville, Australia}
 \affil[4]{Duke University School of Medicine, Durham, NC, USA}
@@ -36,6 +36,10 @@
 % hyphenation exceptions
 \hyphenation{fMRIPrep}
 
+\addbibresource{./bib/ilya.bib}
+\addbibresource{./bib/lea.bib}
+
+
 %%
 %% Article
 %%
@@ -48,18 +52,18 @@
 
 The reproducibility crisis in neuroimaging has led to an increased
 demand for standardized data processing workflows. Within the ENIGMA
-consortium, we developed \soft{HALFpipe} (\soft{H}armonized 
-\soft{A}na\soft{L}ysis of \soft{F}unctional MRI 
-\soft{pipe}line), an open-source, containerized, user-friendly tool that
+consortium, we developed \soft{HALFpipe} (\myuline{H}armonized 
+\myuline{A}na\myuline{L}\contour{white}{ysis} of \myuline{F}unctional MRI 
+\myuline{pipe}line), an open-source, containerized, user-friendly tool that
 facilitates reproducible analysis of task-based and resting-state fMRI
 data through uniform application of preprocessing, quality assessment,
 single-subject feature extraction, and group-level statistics. It
 provides state-of-the-art preprocessing using \soft{fMRIPrep} without the
 requirement for input data in Brain Imaging Data Structure (BIDS)
-format. \soft{HALFpipe} extends the functionality of \soft{fMRIPrep} with additional
-preprocessing steps, which include spatial smoothing, grand mean
-scaling, temporal filtering, and confound regression. \soft{HALFpipe} generates
-an interactive quality assessment (QA) webpage to assess the quality of
+format. \soft{HALFpipe} extends the functionality of \soft{fMRIPrep} with 
+additional preprocessing steps, which include spatial smoothing, grand 
+mean scaling, temporal filtering, and confound regression. \soft{HALFpipe}
+generates an interactive quality assessment (QA) webpage to assess the quality of
 key preprocessing outputs and raw data in general. \soft{HALFpipe} features
 myriad post-processing functions at the individual subject level,
 including calculation of task-based activation, seed-based connectivity,
@@ -90,19 +94,18 @@ code can be found at \url{https://github.com/HALFpipe/HALFpipe}.
 
 \section{Acknowledgements}
 
-S.E. acknowledges funding from the German Research Foundation (DFG ER
-724/4--1).
-P.M.T. received research grant funding from Biogen, Inc., for research unrelated to this manuscript.
-L.S. acknowledges funding from the National Institutes of Health (NIH RO1
+This work has been supported by a Grant from the German Research
+Foundation to S.E. and H.W. (DFG ER 724/4--1, WA 1539/11--1).
+P.M.T. received research grant funding from Biogen, Inc., for research
+unrelated to this manuscript.
+L.S. received funding from the National Institutes of Health (NIH RO1
 MH117601 and NHMRC Career Development Fellowship 1140764).
-R.A.M acknowledges funding from National Institutes of Health (NIH R01
+R.A.M received funding from National Institutes of Health (NIH R01
 MH111671).
-H.W. acknowledges funding from the German Research Foundation (DFG WA
-1539/11--1).
-I.V. acknowledges funding from the European Union's Horizon 2020 research
+I.V. received funding from the European Union's Horizon 2020 research
 and innovation programme under under Grant Agreement number 777084
 (DynaMORE project).
 
-\bibliography{./bib/lea,./bib/ilya}
+\printbibliography
 
 \end{document}

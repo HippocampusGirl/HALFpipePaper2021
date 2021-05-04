@@ -118,7 +118,7 @@
 %%
 
 \RequirePackage{graphicx}
-\RequirePackage[table]{xcolor}
+\RequirePackage[table,svgnames]{xcolor}
 
 \definecolor{leaPurple}{HTML}{6E4FFC}
 \definecolor{leaGrey}{HTML}{A6A6A6}
@@ -137,11 +137,15 @@
 \RequirePackage{booktabs}
 \RequirePackage{authblk}[noblocks]
 
+\reversemarginpar
 \RequirePackage[
-  left=4.3cm,  
-  right=2.7cm,
-  top=2.7cm,
-  bottom=2cm,
+  left=1.5cm,  
+  right=1.3cm,
+  top=2.5cm,
+  bottom=2.5cm,
+  marginparwidth=4cm,
+  marginparsep=0.5cm,
+  includemp,reversemp,
   a4paper
 ]{geometry}
 
@@ -149,14 +153,14 @@
 
 \RequirePackage{silence}
 
-\RequirePackage{caption}[
-  labelfont={bf},
+\RequirePackage[
+  labelfont={sf,bf},
+  font={sf},
   labelsep=period,
   justification=raggedright,
   singlelinecheck=false,
-  tableposition=top,
-  font=small
-]
+  tableposition=top
+]{caption}
                 
 % \captionsetup*[table]{skip=\medskipamount}
 
@@ -164,9 +168,13 @@
 %% Bibliography
 %%
 
-\RequirePackage{natbib}
-\renewcommand{\bibfont}{\small}
-\bibliographystyle{apalike}
+\RequirePackage[
+  style=apa,
+  block=ragged
+]{biblatex}
+
+\setlength{\bibhang}{11pt}
+\renewcommand{\bibfont}{\footnotesize}
 
 %%
 %% Headers and footers
@@ -178,10 +186,10 @@
 \pagestyle{fancy}          % Enables the custom headers/footers
 
 \addtolength{\headwidth}{\marginparsep}
-\addtolength{\headwidth}{\marginparwidth}
+\addtolength{\headwidth}{\marginparwidth} 
+% \addtolength{\headwidth}{1cm}
 
-%\rfoot{\small\color{eLifeMediumGrey}\thepage\space of\space\pageref{LastPage}}%
-%\preto{\footrule}{\color{eLifeMediumGrey}}
+% \rfoot{\small\color{eLifeMediumGrey}\thepage\space of\space\pageref{LastPage}}%
 
 \renewcommand{\headrulewidth}{0.2pt}
 \xpretocmd\headrule{\color{leaPurple}}{}{\PatchFailed}
@@ -228,7 +236,6 @@
   \fnsymbolmult{\numexpr\value{authorfn}+#1}%
 }
 
-\reversemarginpar
 
 %%
 %% Custom title page 
@@ -245,8 +252,13 @@
   opacityframe=0,
   colback=white,
   opacityback=0,
+  fontupper=\small\sffamily\raggedright\mdseries,
   float=#1
 }
+
+%\newcommand{\org@author}{}% LATEX-Check
+%\let\org@author\author
+%\renewcommand{\author}[1]{\org@author{\mbox{#1}}}
 
 \renewcommand{\Authfont}{\sffamily\fontseries{mb}\large\raggedright}
 \renewcommand{\Affilfont}{\mdseries\small\raggedright}
@@ -260,27 +272,44 @@
 \patchcmd{\@author}{%
   \AB@authlist\\[\affilsep]\AB@affillist
 }{%
-  \AB@authlist\\[\affilsep]\marginpar{\raggedright\footnotesize\par}
-  \begin{affilfloat}\AB@affillist\end{affilfloat}
+  \AB@authlist\\[\affilsep] 
 }{}{}
 
+\newmdenv[
+  topline=false,
+  bottomline=false,
+  rightline=false,
+  leftmargin=-10pt,
+  rightmargin=0pt,
+  innertopmargin=0pt,
+  innerbottommargin=0pt,
+  linecolor=leaPurple,
+  linewidth=2pt,
+]{lealineleft}
+
 \renewcommand{\maketitle}{%
-  \vspace{12mm}%
-  {\color{leaPurple}\raggedright\sffamily\fontseries{mb}\fontsize{24}{22}\selectfont \@title\par}%
-  \vskip12pt
-  {\@author\par}
-}
+  \thispagestyle{empty}%
+  {%
+    \begin{lealineleft}%
+    {\color{leaPurple}\raggedright\sffamily\fontseries{mb}\fontsize{24}{22}\selectfont \@title\par}%
+    \vskip12pt%
+    {\@author\par}%
+    \end{lealineleft}%
+    \vskip4pt%
+  }%
+  \begin{affilfloat}\Affilfont\selectfont\AB@affillist\end{affilfloat}
+}%
 
 \renewenvironment{abstract}{%
    \setlength{\parindent}{0pt}\raggedright
    \fontseries{mb}\selectfont
 }{%   
-   \vskip4pt
+  \vskip4pt
 }
 
 %% Insert a grey line to separate floats from main text
-\newcommand{\topfigrule}{\vskip8pt\noindent{\rule{\linewidth}{1pt}}}
-\newcommand{\botfigrule}{\noindent{\rule{\linewidth}{1pt}}\vskip8pt}
+\newcommand{\topfigrule}{\vskip8pt\noindent{\rule{\linewidth}{0.5pt}}}
+\newcommand{\botfigrule}{\noindent{\rule{\linewidth}{0.5pt}}\vskip8pt}
 
 \RequirePackage{newfloat}
 \RequirePackage{wrapfig}
@@ -289,63 +318,21 @@
 % \AtEndEnvironment{floatingfigure}{\vskip8pt\noindent\textcolor{eLifeMediumGrey}{\rule{\hsize}{2pt}}}
 
 \newenvironment{fullwidth}{%
+  \begin{adjustwidth}{-4.5cm}{}
+}{%
+  \end{adjustwidth}
+}
+
+\newenvironment{morewidth}{%
   \begin{adjustwidth}{-1.6cm}{}
 }{%
   \end{adjustwidth}
 }
 
-\appto{\appendix}{%
-  \captionsetup*[figure]{name={Appendix \arabic{appendix} Figure },font={color=leaPurple,small},skip=\smallskipamount}%
-  \captionsetup*[table]{name={Appendix \arabic{appendix} Table },font={color=leaPurple,small}}%
-}
-
-\newcounter{figsupp}
-\setcounter{figsupp}{0}
-\newcounter{data}
-\setcounter{data}{0}
-\def\supplist{}
-
-\RequirePackage{newfile}
-\newoutputstream{suppinfo}
-\openoutputfile{\jobname.suppinfo}{suppinfo}
-
-
-\AtBeginEnvironment{figure}{%
-  \setcounter{figsupp}{0}
-  \setcounter{data}{0}
-  \newcommand{\figsupp}[2]{%
-    \refstepcounter{figsupp}%
-    {\small\textbf{Figure~\thefigure--Figure supplement \arabic{figsupp}.} #1}\par
-    \addtostream{suppinfo}{%
-      \noindent\protect\begin{minipage}{\linewidth}
-      \protect #2\noexpand\par
-      \textbf{Figure \thefigure--Figure supplement \arabic{figsupp}.} #1\noexpand\par
-      \vskip8pt
-      \protect\end{minipage}
-      \vskip16pt
-    }
-  }
-  \newcommand{\figdata}[1]{%
-    \refstepcounter{data}
-    {\small\textbf{Figure~\thefigure--source data \arabic{data}.} #1}\par
-  }
-}
-
-\AtBeginEnvironment{table}{%
-  \setcounter{data}{0}
-  \newcommand{\tabledata}[1]{%
-    \refstepcounter{data}
-    {\small\textbf{Table~\thetable--source data \arabic{data}.} #1}\par
-  }
-}
-
-\AtEndDocument{%
-  \closeoutputstream{suppinfo}
-%   \pagestyle{empty}
-  \renewcommand{\footrule}{}
-  \rfoot{}
-  \input{\jobname.suppinfo}
-}
+% \appto{\appendix}{%
+%   \captionsetup*[figure]{name={Appendix \arabic{appendix} Figure },font={color=leaPurple,small},skip=\smallskipamount}%
+%   \captionsetup*[table]{name={Appendix \arabic{appendix} Table },font={color=leaPurple,small}}%
+% }
 
 \newcounter{appendix}
 \setcounter{appendix}{0}
@@ -457,7 +444,7 @@
 \endgroup}}}
 
 \newcommand{\pseudocode}[1]{
-\smash{\plexsans\fontseries{c}\texttransparent{0.70}{%
+\smash{\plexsans\fontseries{c}\selectfont\texttransparent{0.70}{%
 \begingroup\fboxsep=1pt%
 \colorbox{leaLightYellow}{\texttransparent{1}{#1}}%
 \endgroup}}}
@@ -473,3 +460,16 @@
 % autoref
 \let\oldautoref\autoref
 \renewcommand{\autoref}[1]{\emph{\textbf{\oldautoref{#1}}}}
+
+% underline
+% https://alexwlchan.net/2017/10/latex-underlines/
+\RequirePackage{contour}
+\RequirePackage[normalem]{ulem}
+
+\renewcommand{\ULdepth}{1.2pt}
+\contourlength{0.6pt}
+
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
