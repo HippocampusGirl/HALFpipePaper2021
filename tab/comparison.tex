@@ -3,19 +3,10 @@
 \begingroup%
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}%
 \newcolumntype{C}{>{\centering\arraybackslash}X}%
-% \newcommand{\conditionalformat}[1]{% 
-%     \IfStrEqCase{#1}{Yes}{% 
-%         \cellcolor{leaLightGreen}#1
-%     }{No}{%
-%         \cellcolor{leaLightYellow}#1
-%     }[%
-%         #1
-%     ]%
-% }
-% \newcolumntype{K}{>{\collectcell\usermacro}X{\endcollectcell}}%
+\newcolumntype{K}[1]{>{\raggedright\arraybackslash}m{#1}}%
 \renewcommand\tabularxcolumn[1]{m{#1}}%
-\renewcommand{\arraystretch}{1.3}%
-\begin{tabularx}{\textwidth}{@{} | L | L | 
+\renewcommand{\arraystretch}{1.35}%
+  \begin{tabularx}{\textwidth}{@{} | K{1.5cm} | K{2cm} | 
 C | C | C | C | C | C | @{}} 
 \hhline{~|~|-|-|-|-|-|-|}
 \multicolumn{2}{c|}{} &%
@@ -26,7 +17,7 @@ C | C | C | C | C | C | @{}}
 \textbf{XCP Engine} &%
 \textbf{DPARSF DPABI} \\
 \hhline{-|-|-|-|-|-|-|-|}
-\multirow{2}{*}[-1.3em]{\parbox[c][][c]{2cm}{\raggedright{Quality assessment}}} &%
+\multirow{2}{*}[-0.7em]{\parbox[c][][c]{2cm}{\raggedright{Quality assessment}}} &%
 Quality metrics &%
 \cellcolor{leaLightGreen}Yes &% 
 \cellcolor{leaLightGreen}Yes &% 
@@ -44,7 +35,7 @@ Visual quality assessment &%
 \cellcolor{leaLightGreen}Yes &%
 \cellcolor{leaLightGreen}Yes \\
 \hhline{-|-|-|-|-|-|-|-|}
-\multirow{7}{*}[-3.3em]{Features} &% 
+\multirow{7}{*}[-2.2em]{Features} &% 
 Task-based activation &%
 \cellcolor{leaLightGreen}Yes &%
 \cellcolor{leaLightYellow}No &%
