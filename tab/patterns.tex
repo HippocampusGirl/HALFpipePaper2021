@@ -1,0 +1,45 @@
+\begin{tablebox}[label={table:patterns}]{Examples of path template syntax}
+
+\begingroup%
+\fboxsep=1pt%
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{K}[1]{>{\raggedright\arraybackslash}m{#1}}%
+\renewcommand{\arraystretch}{1.35}%
+\begin{tabularx}{\textwidth}{@{} | K{2cm} |
+L | L | @{}} 
+\hhline{~|-|-|}
+\multicolumn{1}{c|}{} & 
+\textbf{Example 1} & 
+\textbf{Example 2} \\
+\hhline{-|-|-|}
+Path template &%
+\texttt{data/\colorbox{leaLightPurple}{\{subject\}}/bold\_rest.nii.gz} &%
+\texttt{data/\colorbox{leaLightPurple}{\{subject\}}/bold\_\colorbox{leaLightBlue}{\{task\}}.nii.gz} \\
+\hhline{-|-|-|}
+Matches these files &%
+\makecell[l]{%
+\texttt{data/\colorbox{leaLightPurple}{subject01}/bold\_rest.nii.gz}\\%
+\texttt{data/\colorbox{leaLightPurple}{subject02}/bold\_rest.nii.gz}\\%
+\texttt{data/\colorbox{leaLightPurple}{subject03}/bold\_rest.nii.gz}\\%
+\texttt{data/\colorbox{leaLightPurple}{phantom}/bold\_rest.nii.gz}} &%
+\makecell[l]{%
+\texttt{data/subject\colorbox{leaLightPurple}{01}/bold\_\colorbox{leaLightBlue}{rest}.nii.gz}\\%
+\texttt{data/subject\colorbox{leaLightPurple}{02}/bold\_\colorbox{leaLightBlue}{rest}.nii.gz}\\%
+\texttt{data/subject\colorbox{leaLightPurple}{03}/bold\_\colorbox{leaLightBlue}{rest}.nii.gz}\\%
+\texttt{data/subject\colorbox{leaLightPurple}{01}/bold\_\colorbox{leaLightBlue}{task}.nii.gz}} \\
+\hhline{-|-|-|}
+Does not match &%
+\makecell[l]{%
+\texttt{data/subject01/bold\_\colorbox{leaLightGrey}{task}/.nii.gz}\\%
+\texttt{data/\colorbox{leaLightGrey}{subfolder}/subject01/bold\_rest.nii.gz}} &%
+\makecell[l]{%
+\texttt{data/\colorbox{leaLightGrey}{phantom}/bold\_rest.nii.gz}\\%
+\texttt{data/\colorbox{leaLightGrey}{subfolder}/subject01/bold\_rest.nii.gz}} \\
+\hhline{-|-|-|}
+\end{tabularx}\par
+\vspace*{2mm}
+Note: The grey highlight shows the part of the file name that is
+responsible for not matching.
+\endgroup
+
+\end{tablebox}

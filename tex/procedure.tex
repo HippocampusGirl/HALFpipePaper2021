@@ -30,7 +30,7 @@ Through the use of path templates, \soft{HALFpipe} can handle a wide range
 of folder structures and data layouts. The syntax for path templates is
 adapted from \soft{C-PAC}'s data configuration \parencite{cpac_config}. Instead
 of manually adding each input file for each subject separately, as is done
-in the SPM or FSL user interfaces, the template describes the pattern used
+in the \soft{SPM} or \soft{FSL} user interfaces, the template describes the pattern used
 for naming files. That pattern can match many file names, thereby reducing
 the amount of manual work for the user. For example, when placing the tag
 \filename{\{subject\}} in the file path \filename{\{subject\}\_t1.nii.gz},
@@ -40,7 +40,9 @@ before \filename{\_t1} is now interpreted by the parsing algorithm as the
 subject identifier. When multiple files from different modalities have the
 same subject identifier, or session number, etc., they will be matched
 automatically by these tags. Automated processing workflows can then be
-constructed around the resulting data structure.
+constructed around the resulting data structure. 
+
+\input{./tab/patterns.tex}
 
 In contrast to \soft{C-PAC}'s data configuration syntax, \soft{HALFpipe}
 path templates use BIDS tags \parencite{10.1038/sdata.2016.44}. \soft{HALFpipe}
@@ -49,7 +51,8 @@ expression after the tag name (as in standard Python regular expression
 syntax). For example, \filename{\{subject:[0-9]\*\}} will only match
 subject identifiers that contain just digits. This can be useful for more
 complex data layouts, such as when multiple datasets are placed in the same
-directory, and only a single subset is to be used.
+directory, and only a single subset is to be used. For more examples, see
+Table~\ref{table:patterns}.
 
 In the \soft{HALFpipe} user interface, the user receives feedback on how
 many and which files are matched, so that the path templates can be entered
@@ -107,7 +110,7 @@ software other than \soft{HALFpipe}.
 \subsection{Quality assessment}
 
 Quality assessment can be performed in an interactive, browser-based user
-interface (see \autoref{fig:qualitycheck}). \soft{HALFpipe} provides a
+interface (see \autoref{fig:qa}). \soft{HALFpipe} provides a
 detailed user manual for quality assessment that is linked on the web page.
 The web app shows report images of several preprocessing steps such as T1
 skull stripping and normalization, BOLD tSNR, motion confounds, ICA-based
@@ -141,6 +144,22 @@ images, links to the source images are shown so that these can be inspected
 in more detail by opening them in a preferred image viewer (e.g.,
 \soft{fsleyes}).
 
+\begin{figure}[!tb]
+\begin{adjustwidth}{-1cm}{}
+\hsize=\linewidth%
+\includegraphics[width=\linewidth]{fig/quality_assessment-crop}
+\caption{\textbf{Quality assessment user interface.} The top panel shows
+the charts view, containing one chart for processing status, one for
+quality ratings and one for image quality metrics. In the top left
+corner, the navigation menu is open, which shows the option to export
+ratings for use in group statistics. The bottom panel contains a 
+screenshot of the explorer view that allows the user to navigate across
+subjects and image types. The explorer view shows the currently selected
+report image on the right, along with its rating, related images, and the
+source files that were used to construct it.}\label{fig:qa}
+\end{adjustwidth}
+\end{figure}
+
 \subsection{Feature extraction}\label{sec:featureextraction}
 
 Following preprocessing, \soft{HALFpipe} can extract several
@@ -163,6 +182,26 @@ connectivity matrices \parencite{10.1111/ejn.13717}, or performed \emph{after}
 ReHo and fALFF have been calculated (see Table~\ref{table:settings}).
 
 A brief description of the features is provided in Box~\ref{box:features}.
+
+\subsection{Group-level statistics}
+
+Group-level statistics on individual features can be performed with
+\soft{FSL}'s FLAME algorithm. Subjects who had poor quality data in the
+interactive quality assessment are excluded. In addition, subjects can be
+excluded based on movement by selecting the maximum allowed mean framewise
+displacement (FD) and percentage of outlier frames (i.e., frames with
+motion higher than the specified FD threshold).
+
+For group-level statistics, users can choose to calculate the intercept
+only (i.e., mean across all subjects) or run flexible factorial models. For
+the latter, \soft{HALFpipe} prompts the user to specify the path to a
+covariates file (multiple file formats are supported) containing subject
+identifiers, group membership, and other variables, and to specify whether
+these are continuous or categorical. Missing values in the covariates file
+can be handled with either listwise deletion or mean substitution. The user
+can specify main effects and interactions between variables, while
+within-group regressions against a continuous variable (e.g., symptom
+severity) is also possible.
 
 \begin{featurebox}[label={box:features}]{Overview of HALFpipe features}
 
@@ -225,23 +264,3 @@ in the entire frequency range \parencite{10.1016/j.jneumeth.2008.04.012} with a
 customized version of the \soft{C-PAC} implementation of fALFF.\@
 
 \end{featurebox}
-
-\subsection{Group-level statistics}
-
-Group-level statistics on individual features can be performed with
-\soft{FSL}'s FLAME algorithm. Subjects who had poor quality data in the
-interactive quality assessment are excluded. In addition, subjects can be
-excluded based on movement by selecting the maximum allowed mean framewise
-displacement (FD) and percentage of outlier frames (i.e., frames with
-motion higher than the specified FD threshold).
-
-For group-level statistics, users can choose to calculate the intercept
-only (i.e., mean across all subjects) or run flexible factorial models. For
-the latter, \soft{HALFpipe} prompts the user to specify the path to a
-covariates file (multiple file formats are supported) containing subject
-identifiers, group membership, and other variables, and to specify whether
-these are continuous or categorical. Missing values in the covariates file
-can be handled with either listwise deletion or mean substitution. The user
-can specify main effects and interactions between variables, while
-within-group regressions against a continuous variable (e.g., symptom
-severity) is also possible.

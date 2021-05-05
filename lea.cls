@@ -110,6 +110,7 @@
 ]
 
 \RequirePackage{microtype}
+\RequirePackage{setspace}
 
 \linespread{1.2}
 
@@ -123,8 +124,10 @@
 \definecolor{leaPurple}{HTML}{6E4FFC}
 \definecolor{leaGrey}{HTML}{A6A6A6}
 \colorlet{leaLightGrey}{leaGrey!15}
+\colorlet{leaLightPurple}{leaPurple!15}
 \definecolor{leaLightGreen}{HTML}{D8EBCD}
 \definecolor{leaLightYellow}{HTML}{FFF2CC}
+\definecolor{leaLightBlue}{HTML}{D4E4FF}
 
 \definecolor{eLifeLightBlue}{HTML}{0A9DD9}
 \definecolor{eLifeMediumGrey}{HTML}{6D6E70}
@@ -154,10 +157,10 @@
 \RequirePackage{silence}
 
 \RequirePackage[
-  labelfont={sf,bf},
-  font={sf},
+  labelfont={sf,bf,stretch=1},
+  font={sf,stretch=1},
   labelsep=period,
-  justification=raggedright,
+  justification=justified,
   singlelinecheck=false,
   tableposition=top
 ]{caption}
@@ -230,6 +233,15 @@
 \RequirePackage{alphalph}
 \newalphalph{\fnsymbolmult}[mult]{\@fnsymbol}{5}
 
+\def\@contribution{}
+
+\newcommand{\contrib}[2][]{
+  \appto{\@contribution}{%
+  \ifx\empty#1\else\textsuperscript{#1}\fi
+  #2\\
+  }{}{}
+}
+
 \newcounter{authorfn}
 \setcounter{authorfn}{1}
 \newcommand{\authfn}[1]{%
@@ -254,6 +266,11 @@
   opacityback=0,
   fontupper=\small\sffamily\raggedright\mdseries,
   float=#1
+}
+
+\newcommand{\themetadata}{%
+    \ifx\empty\@contribution\else
+    \par\@contribution\par\fi
 }
 
 %\newcommand{\org@author}{}% LATEX-Check
@@ -297,7 +314,7 @@
     \end{lealineleft}%
     \vskip4pt%
   }%
-  \begin{affilfloat}\Affilfont\selectfont\AB@affillist\end{affilfloat}
+  \begin{affilfloat}\Affilfont\selectfont\AB@affillist\themetadata\end{affilfloat}
 }%
 
 \renewenvironment{abstract}{%
@@ -394,6 +411,7 @@
 \RequirePackage{colortbl}
 \RequirePackage{collcell}
 \RequirePackage{hhline}
+\RequirePackage{makecell}
 
 \newtcolorbox[
   auto counter

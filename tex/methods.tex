@@ -3,11 +3,11 @@
 The \soft{HALFpipe} software is containerized, similar to \soft{fMRIPrep}
 or \soft{C-PAC}. This means that it comes bundled with all other software
 that is needed for it to run, such as \soft{fMRIPrep}
-\parencite{10.1038/s41592-018-0235-4}, MRIQC
-\parencite{10.1371/journal.pone.0184661}, FSL
-\parencite{10.1016/j.neuroimage.2011.09.015}, ANTs
+\parencite{10.1038/s41592-018-0235-4}, \soft{MRIQC}
+\parencite{10.1371/journal.pone.0184661}, \soft{FSL}
+\parencite{10.1016/j.neuroimage.2011.09.015}, \soft{ANTs}
 \parencite{10.1016/j.neuroimage.2010.09.025}, FreeSurfer
-\parencite{10.1073/pnas.200033797}, and AFNI
+\parencite{10.1073/pnas.200033797}, and \soft{AFNI}
 \parencite{10.1006/cbmr.1996.0014,cox_afni_1997}.
 As such, all users of one version of \soft{HALFpipe} will be using the
 exact same versions of these tools, because they come with the container.
@@ -311,7 +311,7 @@ nuisance time series extracted by \soft{fMRIPrep}.
 The previously estimated \soft{ICA-AROMA} noise components are removed from
 the smoothed and grand-mean-scaled fMRI data. This is done in a
 non-aggressive way to minimize removing variance that is shared between
-signal and noise components. ICA-AROMA implements this step using the FSL
+signal and noise components. ICA-AROMA implements this step using the \soft{FSL}
 command \soft{fsl\_regfilt}, which calculates an ordinary least squares
 regression for each voxel, where the design matrix includes both the signal
 and the noise components as regressors. This means that the resulting
@@ -355,13 +355,17 @@ are outlined in Table~\ref{table:settings}. Note that some are selected based on
 best-practices in the field (i.e., band-pass temporal filter for ALFF and
 ReHo), whereas most default settings can be adjusted by the user.
 
-\begin{figure}
-\begin{adjustwidth}{-1cm}{}
-\includegraphics[width=\linewidth]{fig/workflow-crop}\label{fig:workflow}
+\begin{figure}[!tb]
+\begin{adjustwidth}{-2.4cm}{}
+\hsize=\linewidth%
+\includegraphics[width=\linewidth]{fig/workflow-crop}
 \caption{\textbf{HALFpipe workflow.} After minimal preprocessing with
-fMRIPrep \parencite{10.1038/s41592-018-0235-4}, additional filtering of the
-data can be selected. Based on the resulting preprocessed image, 
-statistical maps can be calculated. }
+fMRIPrep \parencite{10.1038/s41592-018-0235-4}, additional preprocessing
+steps can be selected (purple). Based on the resulting image, statistical
+maps can be calculated during feature extraction (turquoise). Some of the
+combinations between preprocessing steps and feature extraction steps can
+not be selected, as outlined in Table~\ref{table:settings}. The diagram
+omits this detail to increase visual clarity.}\label{fig:workflow}
 \end{adjustwidth}
 \end{figure}
 
