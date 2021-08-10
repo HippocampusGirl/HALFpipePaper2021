@@ -27,22 +27,6 @@
 \RequirePackage{xstring}
 
 %%
-%% Metadata
-%%
-
-\newcommand{\org@leftitle}{}% LATEX-Check
-\let\org@maketitle\maketitle
-\def\maketitle{%
-	\hypersetup{
-		pdftitle={\@Title},
-		pdfsubject={\@abstract},
-		pdfkeywords={\@keyword},
-		pdfauthor={\@AuthorNames}
-		}%
-	\org@maketitle
-}
-
-%%
 %% Fonts
 %%
 
@@ -122,6 +106,7 @@
 \RequirePackage[table,svgnames]{xcolor}
 
 \definecolor{leaPurple}{HTML}{6E4FFC}
+\definecolor{leaDarkGrey}{HTML}{343434}
 \definecolor{leaGrey}{HTML}{A6A6A6}
 \colorlet{leaLightGrey}{leaGrey!15}
 \colorlet{leaLightPurple}{leaPurple!15}
@@ -210,7 +195,7 @@
 \RequirePackage[explicit]{titlesec}
 
 \titleformat{\section}
-  {\sffamily\fontseries{mb}\Large}
+  {\color{leaDarkGrey}\sffamily\fontseries{mb}\Large}
   {\thesection}{}{#1}[]
 
 \titleformat{\subsection}
@@ -319,7 +304,10 @@
 
 \renewenvironment{abstract}{%
    \setlength{\parindent}{0pt}\raggedright
-   \fontseries{mb}\selectfont
+   \phantomsection
+   \addcontentsline{toc}{section}{Abstract}%
+   {\color{leaDarkGrey}\sffamily\fontseries{mb}\large\selectfont\abstractname\space}
+   \fontseries{mb}\selectfont   
 }{%   
   \vskip4pt
 }
