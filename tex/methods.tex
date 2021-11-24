@@ -279,21 +279,25 @@ with which resampling is performed with \soft{fMRIPrep}'s
 \code{bold\_std\_trans\_wf} workflow. Finally, \soft{ICA-AROMA} is run on the
 resulting fMRI image in \term{MNI152NLin6Asym} space using
 \soft{fMRIPrep}'s \code{ica\_aroma\_wf} workflow, which also includes spatial
-smoothing fixed to a 6 mm FWHM smoothing kernel
-\parencite{10.1016/j.neuroimage.2015.02.064}. \soft{ICA-AROMA} generates a set
+smoothing fixed to a 6 mm FWHM smoothing kernel. \soft{ICA-AROMA} generates a set
 of component time series and a binary classification of these components as
 either signal or noise.
 
 \item
 
 \soft{HALFpipe} implements spatial smoothing using \soft{AFNI}'s
-\soft{3dBlurInMask} \parencite{10.1006/cbmr.1996.0014}. Each voxel's signal is
-averaged with the signal of its neighboring voxels, weighted by an
-isotropic gaussian kernel. At the edges of the brain, this kernel may
-include non-brain voxels, so smoothing is constrained to only happen within
-the brain mask. This is equivalent to the procedure in the \term{Minimal
-Preprocessing Pipelines for the Human Connectome Project}
-\parencite{10.1016/j.neuroimage.2013.04.127}.
+\soft{3dBlurToFWHM} \parencite{friedman_reducing_2006}.
+Each voxel's signal is averaged with the signal of its neighboring voxels, 
+weighted by an isotropic gaussian kernel. At the edges of the brain, this
+kernel may include non-brain voxels, so smoothing is constrained to only
+happen within the brain mask. This is equivalent to the procedure in the
+\term{Minimal Preprocessing Pipelines for the Human Connectome Project}
+\parencite{10.1016/j.neuroimage.2013.04.127}. In addition,
+\soft{3dBlurToFWHM} estimates the smoothness of the resulting image, and
+iteratively decreases the amount of smoothing so that the resulting 
+smoothness matches the user setting. This way differences in the intrinsic
+smoothness between datasets, for example due to different voxel sizes, can
+be harmonized.
 
 \item\label{itm:grandmean}
 

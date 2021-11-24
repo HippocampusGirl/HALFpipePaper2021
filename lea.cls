@@ -34,7 +34,7 @@
 
 \setmainfont{IBMPlexSerif}[
   Ligatures = TeX,
-  Extension = .ttf,
+  Extension = .otf,
   UprightFont = *-Text,
   BoldFont = *-Bold,
   ItalicFont = *-TextItalic,
@@ -79,7 +79,7 @@
 
 \newfontfamily{\plexsans}{IBMPlexSans}[
   Ligatures = TeX,
-  Extension = .ttf,
+  Extension = .otf,
   UprightFont = *-Text,
   BoldFont = *-Bold,
   ItalicFont = *-TextItalic,
