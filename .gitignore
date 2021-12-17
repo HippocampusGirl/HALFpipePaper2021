@@ -284,3 +284,9 @@ TSWLatexianTemp*
 #*Notes.bib
 
 *.suppinfo  # not sure what this is
+
+# Jupyter
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+profile_default/
+ipython_config.py
