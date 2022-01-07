@@ -290,6 +290,3 @@ TSWLatexianTemp*
 */.ipynb_checkpoints/*
 profile_default/
 ipython_config.py
-
-# Cropped figures
-fig/*-crop.pdf
