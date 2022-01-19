@@ -1,124 +1,21 @@
 \section{Discussion}
 
-Large samples are essential for recent neuroimaging applications, such as
-imaging-genetics association studies, training of complex machine learning
-models, and even unsupervised learning. This demand has stimulated efforts
-to pool data from multiple observational studies, which typically incur
-greater bias than studies designed \emph{a priori} to address a specific
-scientific question. Within ENIGMA, we developed \soft{HALFpipe} to support
-harmonization of task-based and resting-state fMRI data analysis and
-quality assessment across multiple labs and cohorts. \soft{HALFpipe}
-bundles all software tools, library functions, and other dependencies by
-containerizing the requisite components in a Singularity
-\parencite{kurtzer2017} and Docker (Docker Inc.) release.
-Containerization ensures that all software dependencies and the runtime
-environment are provided. Therefore, containerized software such as
-\soft{HALFpipe} can run reliably regardless of the computing environment
-where it is installed, be it a laptop, computational cluster, or cloud
-computing service \parencite{gruning2018}.
+Large samples are essential for recent neuroimaging applications, such as imaging-genetics association studies, training of complex machine learning models, and even unsupervised learning. This demand has stimulated efforts to pool data from multiple observational studies, which typically incur greater bias than studies designed \emph{a priori} to address a specific scientific question. Within ENIGMA, we developed \soft{HALFpipe} to support harmonization of task-based and resting-state fMRI data analysis and quality assessment across multiple labs and cohorts. \soft{HALFpipe} bundles all software tools, library functions, and other dependencies by containerizing the requisite components in a Singularity \parencite{kurtzer2017} and Docker (Docker Inc.) release. Containerization ensures that all software dependencies and the runtime environment are provided. Therefore, containerized software such as \soft{HALFpipe} can run reliably regardless of the computing environment where it is installed, be it a laptop, computational cluster, or cloud computing service \parencite{gruning2018}.
 
-The design, implementation, and testing of the \soft{HALFpipe} workflow
-resulted in its 1.0 version release in early 2021. Several thousand
-resting-state fMRI datasets from 29 ENIGMA PTSD consortium sites have
-already been analyzed as part of the first published report to employ
-\soft{HALFpipe} \parencite{weis2020b}, while analyses of other large
-multi-site datasets are currently underway in several ENIGMA working
-groups, including the ENIGMA task-based fMRI working group \parencite{veer2019b}. 
-Running \soft{HALFpipe} requires approximately 8 to 20 GB of RAM per
-computer or cluster node and 6 to 10 hours to complete on a single
-processor core. The exact resource usage depends on voxel resolution and
-the number of volumes in the fMRI data. The number of features the user
-chooses has a negligible impact on processing time.
+The design, implementation, and testing of the \soft{HALFpipe} workflow resulted in its 1.0 version release in early 2021. Several thousand resting-state fMRI datasets from 29 ENIGMA PTSD consortium sites have already been analyzed as part of the first published report to employ \soft{HALFpipe} \parencite{weis2020b}, while analyses of other large multi-site datasets are currently underway in several ENIGMA working groups, including the ENIGMA task-based fMRI working group \parencite{veer2019b}. Running \soft{HALFpipe} requires approximately 8 to 20 GB of RAM per computer or cluster node and 6 to 10 hours to complete on a single processor core. The exact resource usage depends on voxel resolution and the number of volumes in the fMRI data. The number of features the user chooses has a negligible impact on processing time.
 
-The \soft{HALFpipe} user experience includes an interactive user interface
-to facilitate rapid analysis prototyping while preserving the ability to
-script automated analyses of large datasets via configuration files in JSON
-format with detailed prescriptions of the dataset, analyses steps, and
-input parameters. Importantly, \soft{HALFpipe} accommodates concurrent
-harmonized processing of task-based and resting-state fMRI data, which
-facilitates cross-modal comparisons between the two fMRI modalities.
+The \soft{HALFpipe} user experience includes an interactive user interface to facilitate rapid analysis prototyping while preserving the ability to script automated analyses of large datasets via configuration files in JSON format with detailed prescriptions of the dataset, analyses steps, and input parameters. Importantly, \soft{HALFpipe} accommodates concurrent harmonized processing of task-based and resting-state fMRI data, which facilitates cross-modal comparisons between the two fMRI modalities \parencite[e.g.,][]{kerestes2017}.
 
-Our implementation of \soft{HALFpipe} enables users to tackle consortium
-analyses of multi-cohort fMRI data with highly uniform application of
-methods. Specifically, we have established a standardized process and
-analysis methodology that involves a pre-specified: (1) ensemble of
-software tools, (2) software version for each tool, (3) set of user-defined
-parameters, (4) analytic steps, (5) sequence of analytic steps, (6) quality
-assessment process, and (7) criteria for excluding substandard data. Thus,
-\soft{HALFpipe} promotes the seamless implementation of a standardized
-process (preprocessing and feature extraction) at each site and/or cohort
-prior to initiating group level statistics. Such capabilities hold the
-promise of significantly advancing basic neuroscience, and particularly
-clinical neuroscience, by supporting the execution of multi-site
-multi-cohort studies of several hundred or several thousand samples ---
-ultimately supporting harmonized cross-disorder comparisons. While not part
-of the \soft{HALFpipe} workflow, cross-site/platform harmonization
-techniques for neuroimaging have recently experienced a dramatic increase
-\parencite{pezoulas2020b,fortin2018,wachinger2021}.
-Much of this methodological innovation has arrived on the heels of earlier
-developments in cross-platform harmonization of genetic data
-\parencite{borisov2019,johnson2007,pontikos2017,haghverdi2018}.
-These advances in harmonization of neuroimaging data are expected to
-manifest synergy with standardized workflows such as \soft{HALFpipe}, as
-both elements are essential to large-scale imaging consortium efforts
-\parencite{thompson2020a}.
+Our implementation of \soft{HALFpipe} enables users to tackle consortium analyses of multi-cohort fMRI data with highly uniform application of methods. Specifically, we have established a standardized process and analysis methodology that involves a pre-specified: (1) ensemble of software tools, (2) software version for each tool, (3) set of user-defined parameters, (4) sequence of analytic steps, (5) quality assessment process, and (6) criteria for excluding substandard data. Thus, \soft{HALFpipe} promotes the seamless implementation of a standardized process (preprocessing and feature extraction) at each site and/or cohort prior to initiating group level statistics. Such capabilities hold the promise of significantly advancing basic neuroscience, and particularly clinical neuroscience, by supporting the execution of multi-site multi-cohort studies of several hundred or several thousand samples --- ultimately supporting harmonized cross-disorder comparisons. While not part of the \soft{HALFpipe} workflow, cross-site/platform harmonization techniques for neuroimaging have recently experienced a dramatic increase \parencite{pezoulas2020b,fortin2018,wachinger2021}. Much of this methodological innovation has arrived on the heels of earlier developments in cross-platform harmonization of genetic data \parencite{borisov2019,johnson2007,pontikos2017,haghverdi2018}. These advances in harmonization of neuroimaging data are expected to manifest synergy with standardized workflows such as \soft{HALFpipe}, as both elements are essential to large-scale imaging consortium efforts \parencite{thompson2020a}.
 
-The implementation of quality metrics for fMRI data has been an incremental
-process that has moved steadily towards establishing empirically-informed
-best practices. Historically, quality criteria have been applied unevenly
-across research labs. Recent years have witnessed a heightened awareness
-about the essential role of applying systematic and principled quality
-metrics to minimize confounds, for example motion artifacts
-\parencite{power2012,power2014,murphy2013},
-and widespread fMRI signal deflections
-\parencite{aquino2020}. Automated quality control methods
-are being developed and adopted with increasing interest, such as the MRI
-Quality Control software \soft{MRIQC} \parencite{esteban2017}.
-\soft{HALFpipe} has adopted parts of the functionality of \soft{MRIQC} with
-an enhanced user experience that generates quality reports via a
-web-browser-based interface to facilitate rapid viewing, screening, and
-selection of individual subject data for inclusion or exclusion. The
-application of uniform quality assessment procedures is particularly
-important when mega-analyzing and even meta-analyzing multi-site/scanner
-data, as is done in ENIGMA.\@ That is, study variables that segregate by site
-are more likely to lead to confounds without the uniform implementation of
-quality assessment across sites
-\parencite[e.g.][]{wachinger2021}. With its harmonized quality
-procedures, \soft{HALFpipe} aims to minimize such effects.
+The implementation of quality metrics for fMRI data has been an incremental process that has moved steadily towards establishing empirically-informed best practices. Historically, quality criteria have been applied unevenly across research labs. Recent years have witnessed a heightened awareness about the essential role of applying systematic and principled quality metrics to minimize confounds, for example motion artifacts \parencite{power2012,power2014,murphy2013}, and widespread fMRI signal deflections \parencite{aquino2020}. Automated quality control methods are being developed and adopted with increasing interest, such as the MRI Quality Control software \soft{MRIQC} \parencite{esteban2017}. \soft{HALFpipe} has adopted parts of the functionality of \soft{MRIQC} with an enhanced user experience that generates quality reports via a web-browser-based interface to facilitate rapid viewing, screening, and selection of individual subject data for inclusion or exclusion. The application of uniform quality assessment procedures is particularly important when mega-analyzing and even meta-analyzing multi-site/scanner data, as is done in ENIGMA.\@ That is, study variables that segregate by site are more likely to lead to confounds without the uniform implementation of quality assessment across sites \parencite[e.g.,][]{wachinger2021}. With its harmonized quality procedures, \soft{HALFpipe} aims to minimize such effects.
 
 \subsection{Limitations}
 
-Computing platforms that are likely to differ between sites are known to
-introduce subtle differences in output attributable to operating systems
-and hardware \parencite{gronenschild2012}. Collecting raw
-multi-site data at one central site prior to \soft{HALFpipe} processing
-ensures that the same computing platform can be used to process all data.
-While optimal, this is often not practical due to restrictions on data
-sharing, even when the data is completely de-identified (i.e., when linking
-data to protected health or other sensitive information is no longer
-possible).
+Computing platforms that are likely to differ between sites are known to introduce subtle differences in output attributable to operating systems and hardware \parencite{gronenschild2012}. Collecting raw multi-site data at one central site prior to \soft{HALFpipe} processing ensures that the same computing platform can be used to process all data. While optimal, this is often not practical due to restrictions on data sharing, even when the data is completely de-identified (i.e., when linking data to protected health or other sensitive information is no longer possible).
 
-\soft{HALFpipe} offers harmonization through uniform processing of fMRI
-data, but other sources of non-uniformity are beyond its scope. Recent
-advances in cross-site/platform harmonization may additionally correct for
-differences in site, scanner hardware, or computation on different
-processors
-\parencite{pezoulas2020b,fortin2018,wachinger2021}.
-Such methods could be applied to extracted \soft{HALFpipe} features, either
-centralized or through distributed computation using tools such as
-\soft{COINSTAC} \parencite{plis2016}, to yield results that are
-potentially more generalizable.
+\soft{HALFpipe} offers harmonization through uniform processing of fMRI data, but other sources of non-uniformity are beyond its scope. Recent advances in cross-site/platform harmonization may additionally correct for differences in site, scanner hardware, or computation on different processors \parencite{pezoulas2020b,fortin2018,wachinger2021}. Such methods could be applied to extracted \soft{HALFpipe} features, either centralized or through distributed computation using tools such as \soft{COINSTAC} \parencite{plis2016}, to yield results that are potentially more generalizable.
 
 \subsection{Conclusion}
 
-\soft{HALFpipe} provides a standardized workflow that encompases the
-essential elements of task-based and resting-state fMRI analyses, builds on
-the progress and contributions of \soft{fMRIPrep} developers, and extends
-capabilities beyond preprocessing steps with a diverse set of
-post-processing functions. \soft{HALFpipe} represents a major step toward
-addressing the reproducibility crisis in functional neuroimaging by
-offering a workflow that maintains details of user options, steps performed
-in analyses, metadata associated with analyses, code transparency,
-containerized installation, and the ability to recreate the runtime
-environment, while implementing empirically-supported best-practices
-adopted by the functional neuroimaging community.
+\soft{HALFpipe} provides a standardized workflow that encompases the essential elements of task-based and resting-state fMRI analyses, builds on the progress and contributions of \soft{fMRIPrep} developers, and extends capabilities beyond preprocessing steps with a diverse set of post-processing functions. \soft{HALFpipe} represents a major step toward addressing the reproducibility crisis in functional neuroimaging by offering a workflow that maintains details of user options, steps performed in analyses, metadata associated with analyses, code transparency, containerized installation, and the ability to recreate the runtime environment, while implementing empirically-supported best-practices adopted by the functional neuroimaging community.
