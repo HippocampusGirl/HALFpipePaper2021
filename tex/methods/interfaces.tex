@@ -1,0 +1,5 @@
+\subsection{Interfaces}
+
+\soft{HALFpipe} consists of different modules that need to pass data between each other, such as file pathnames and the results of quality assessment procedures. Developing an application as large and complex as \soft{HALFpipe} requires establishing predictable interfaces, which prescribe data formats for communication within the application. An advantage of this approach is that knowledgeable users can write their own code to interface with \soft{HALFpipe}.
+
+\soft{HALFpipe} uses the Python module \soft{marshmallow} to implement interfaces, called schemas in the module's nomenclature. All schemas are defined in the \code{halfpipe.schema} module. When the user first starts the application, the user interface is displayed by \soft{HALFpipe}. It asks the user a series of questions about the data set and the analysis plan, and stores the inputs in a configuration file called \filename{spec.json}. The configuration file has predictable syntax and can be easily scripted or modified, which enables collaborative studies to harmonize analysis plans.
