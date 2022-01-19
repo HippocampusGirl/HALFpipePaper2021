@@ -1,0 +1,1504 @@
+@article{abraham2014,
+ abstract = {{Statistical machine learning methods are increasingly used for neuroimaging data analysis. Their main virtue is their ability to model high-dimensional datasets, e.g., multivariate analysis of activation images or resting-state time series. Supervised learning is typically used in decoding or encoding settings to relate brain images to behavioral or clinical observations, while unsupervised learning can uncover hidden structures in sets of images (e.g., resting state functional MRI) or find sub-populations in large cohorts. By considering different functional neuroimaging applications, we illustrate how scikit-learn, a Python machine learning library, can be used to perform some key analysis steps. Scikit-learn contains a very large set of statistical learning algorithms, both supervised and unsupervised, and its application to neuroimaging data provides a versatile tool to study the brain.}},
+ author = {Abraham, Alexandre and Pedregosa, Fabian and Eickenberg, Michael and Gervais, Philippe and Mueller, Andreas and Kossaifi, Jean and Gramfort, Alexandre and Thirion, Bertrand and Varoquaux, Gaël},
+ doi = {10.3389/fninf.2014.00014},
+ journal = {Frontiers in Neuroinformatics},
+ keywords = {},
+ pages = {14},
+ pmcid = {PMC3930868},
+ pmid = {24600388},
+ title = {{Machine learning for neuroimaging with scikit-learn}},
+ volume = {8},
+ year = {2014}
+}
+
+@article{adhikari2019,
+ abstract = {{Large-scale consortium efforts such as Enhancing NeuroImaging Genetics through Meta-Analysis (ENIGMA) and other collaborative efforts show that combining statistical data from multiple independent studies can boost statistical power and achieve more accurate estimates of effect sizes, contributing to more reliable and reproducible research. A meta- analysis would pool effects from studies conducted in a similar manner, yet to date, no such harmonized protocol exists for resting state fMRI (rsfMRI) data. Here, we propose an initial pipeline for multi-site rsfMRI analysis to allow research groups around the world to analyze scans in a harmonized way, and to perform coordinated statistical tests. The challenge lies in the fact that resting state fMRI measurements collected by researchers over the last decade vary widely, with variable quality and differing spatial or temporal signal-to-noise ratio (tSNR). An effective harmonization must provide optimal measures for all quality data. Here we used rsfMRI data from twenty-two independent studies with approximately fifty corresponding T1-weighted and rsfMRI datasets each, to (A) review and aggregate the state of existing rsfMRI data, (B) demonstrate utility of principal component analysis (PCA)-based denoising and (C) develop a deformable ENIGMA EPI template based on the representative anatomy that incorporates spatial distortion patterns from various protocols and populations.}},
+ author = {Adhikari, Bhim M. and Jahanshad, Neda and Shukla, Dinesh and Turner, Jessica and Grotegerd, Dominik and Dannlowski, Udo and Kugel, Harald and Engelen, Jennifer and Dietsche, Bruno and Krug, Axel and Kircher, Tilo and Fieremans, Els and Veraart, Jelle and Novikov, Dmitry S. and Boedhoe, Premika S. W. and van der Werf, Ysbrand D. and van den Heuvel, Odile A. and Ipser, Jonathan and Uhlmann, Anne and Stein, Dan J. and Dickie, Erin and Voineskos, Aristotle N. and Malhotra, Anil K. and Pizzagalli, Fabrizio and Calhoun, Vince D. and Waller, Lea and Veer, Ilja M. and Walter, Hernik and Buchanan, Robert W. and Glahn, David C. and Hong, L. Elliot and Thompson, Paul M. and Kochunov, Peter},
+ doi = {10.1007/s11682-018-9941-x},
+ issn = {1931-7557},
+ journal = {Brain Imaging and Behavior},
+ keywords = {},
+ number = {5},
+ pages = {1453--1467},
+ pmid = {30191514},
+ title = {{A resting state fMRI analysis pipeline for pooling inference across diverse cohorts: an ENIGMA rs-fMRI protocol}},
+ volume = {13},
+ year = {2019}
+}
+
+@article{alakorkko2017,
+ abstract = {{Graph-theoretical methods have rapidly become a standard tool in studies of the structure and function of the human brain. Whereas the structural connectome can be fairly straightforwardly mapped onto a complex network, there are more degrees of freedom in constructing networks that represent functional connections between brain areas. For functional magnetic resonance imaging (fMRI) data, such networks are typically built by aggregating the blood-oxygen-level dependent signal time series of voxels into larger entities (such as Regions of Interest in some brain atlas) and determining their connection strengths from some measure of time-series correlations. Although it is evident that the outcome must be affected by how the voxel-level time series are treated at the preprocessing stage, there is a lack of systematic studies of the effects of preprocessing on network structure. Here, we focus on the effects of spatial smoothing, a standard preprocessing method for fMRI. We apply various levels of spatial smoothing to resting-state fMRI data and measure the changes induced in functional networks. We show that the level of spatial smoothing clearly affects the degrees and other centrality measures of functional network nodes; these changes are non-uniform, systematic, and depend on the geometry of the brain. The composition of the largest connected network component is also affected in a way that artificially increases the similarity of the networks of different subjects. Our conclusion is that wherever possible, spatial smoothing should be avoided when preprocessing fMRI data for network analysis.}},
+ author = {Alakörkkö, Tuomas and Saarimäki, Heini and Glerean, Enrico and Saramäki, Jari and Korhonen, Onerva},
+ doi = {10.1111/ejn.13717},
+ eprint = {1705.02141},
+ issn = {1460-9568},
+ journal = {European Journal of Neuroscience},
+ keywords = {},
+ number = {9},
+ pages = {2471--2480},
+ pmid = {28922510},
+ title = {{Effects of spatial smoothing on functional brain networks}},
+ volume = {46},
+ year = {2017}
+}
+
+@article{alfaroalmagro2018,
+ abstract = {{ UK Biobank is a large-scale prospective epidemiological study with all data accessible to researchers worldwide. It is currently in the process of bringing back 100,000 of the original participants for brain, heart and body MRI, carotid ultrasound and low-dose bone/fat x-ray. The brain imaging component covers 6 modalities (T1, T2 FLAIR, susceptibility weighted MRI, Resting fMRI, Task fMRI and Diffusion MRI). Raw and processed data from the first 10,000 imaged subjects has recently been released for general research access. To help convert this data into useful summary information we have developed an automated processing and QC (Quality Control) pipeline that is available for use by other researchers. In this paper we describe the pipeline in detail, following a brief overview of UK Biobank brain imaging and the acquisition protocol. We also describe several quantitative investigations carried out as part of the development of both the imaging protocol and the processing pipeline.}},
+ author = {Alfaro-Almagro, Fidel and Jenkinson, Mark and Bangerter, Neal K. and Andersson, Jesper L.R. and Griffanti, Ludovica and Douaud, Gwenaëlle and Sotiropoulos, Stamatios N. and Jbabdi, Saad and Hernandez-Fernandez, Moises and Vallee, Emmanuel and Vidaurre, Diego and Webster, Matthew and McCarthy, Paul and Rorden, Christopher and Daducci, Alessandro and Alexander, Daniel C. and Zhang, Hui and Dragonu, Iulius and Matthews, Paul M. and Miller, Karla L. and Smith, Stephen M.},
+ doi = {10.1016/j.neuroimage.2017.10.034},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ pages = {400--424},
+ pmid = {29079522},
+ title = {{Image processing and Quality Control for the first 10,000 brain imaging datasets from UK Biobank}},
+ volume = {166},
+ year = {2018}
+}
+
+@article{aquino2020,
+ abstract = {{One of the most controversial procedures in the analysis of resting-state functional magnetic resonance imaging (rsfMRI) data is global signal regression (GSR): the removal, via linear regression, of the mean signal averaged over the entire brain. On one hand, the global mean signal contains variance associated with respiratory, scanner-, and motion-related artifacts, and its removal via GSR improves various quality-control metrics, enhances the anatomical specificity of functional-connectivity patterns, and can increase the behavioral variance explained by such patterns. On the other hand, GSR alters the distribution of regional signal correlations in the brain, can induce artifactual anticorrelations, may remove real neural signal, and can distort case-control comparisons of functional-connectivity measures. Global signal fluctuations can be identified visually from a matrix of colour-coded signal intensities, called a carpet plot, in which rows represent voxels and columns represent time. Prior to GSR, large, periodic bands of coherent signal changes that affect most of the brain are often apparent; after GSR, these apparently global changes are greatly diminished. Here, using three independent datasets, we show that reordering carpet plots to emphasize cluster structure in the data reveals a greater diversity of spatially widespread signal deflections (WSDs) than previously thought. Their precise form varies across time and participants, and GSR is only effective in removing specific kinds of WSDs. We present an alternative, iterative correction method called Diffuse Cluster Estimation and Regression (DiCER), that identifies representative signals associated with large clusters of coherent voxels. DiCER is more effective than GSR at removing diverse WSDs as visualized in carpet plots, reduces correlations between functional connectivity and head-motion estimates, reduces inter-individual variability in global correlation structure, and results in comparable or improved identification of canonical functional-connectivity networks. Using task fMRI data across 47 contrasts from 7 tasks in the Human Connectome Project, we also present evidence that DiCER is more successful than GSR in preserving the spatial structure of expected task-related activation patterns. Our findings indicate that care must be exercised when examining WSDs (and their possible removal) in rsfMRI data, and that DiCER is a viable alternative to GSR for removing anatomically widespread and temporally coherent signals. All code for implementing DiCER and replicating our results is available at https://github.com/BMHLab/DiCER.}},
+ author = {Aquino, Kevin M. and Fulcher, Ben D. and Parkes, Linden and Sabaroedin, Kristina and Fornito, Alex},
+ doi = {10.1016/j.neuroimage.2020.116614},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ pages = {116614},
+ pmid = {32084564},
+ title = {{Identifying and removing widespread signal deflections from fMRI data: Rethinking the global signal regression problem}},
+ volume = {212},
+ year = {2020}
+}
+
+@article{avants2011,
+ abstract = {{The United States National Institutes of Health (NIH) commit significant support to open-source data and software resources in order to foment reproducibility in the biomedical imaging sciences. Here, we report and evaluate a recent product of this commitment: Advanced Neuroimaging Tools (ANTs), which is approaching its 2.0 release. The ANTs open source software library consists of a suite of state-of-the-art image registration, segmentation and template building tools for quantitative morphometric analysis. In this work, we use ANTs to quantify, for the first time, the impact of similarity metrics on the affine and deformable components of a template-based normalization study. We detail the ANTs implementation of three similarity metrics: squared intensity difference, a new and faster cross-correlation, and voxel-wise mutual information. We then use two-fold cross-validation to compare their performance on openly available, manually labeled, T1-weighted MRI brain image data of 40 subjects (UCLA's LPBA40 dataset). We report evaluation results on cortical and whole brain labels for both the affine and deformable components of the registration. Results indicate that the best ANTs methods are competitive with existing brain extraction results (Jaccard=0.958) and cortical labeling approaches. Mutual information affine mapping combined with cross-correlation diffeomorphic mapping gave the best cortical labeling results (Jaccard=0.669±0.022). Furthermore, our two-fold cross-validation allows us to quantify the similarity of templates derived from different subgroups. Our open code, data and evaluation scripts set performance benchmark parameters for this state-of-the-art toolkit. This is the first study to use a consistent transformation framework to provide a reproducible evaluation of the isolated effect of the similarity metric on optimal template construction and brain labeling.}},
+ author = {Avants, Brian B. and Tustison, Nicholas J. and Song, Gang and Cook, Philip A. and Klein, Arno and Gee, James C.},
+ doi = {10.1016/j.neuroimage.2010.09.025},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ number = {3},
+ pages = {2033--2044},
+ pmcid = {PMC3065962},
+ pmid = {20851191},
+ title = {{A reproducible evaluation of ANTs similarity metric performance in brain image registration}},
+ volume = {54},
+ year = {2011}
+}
+
+@book{beck2000,
+ address = {USA},
+ author = {Beck, Kent},
+ isbn = {0201616416},
+ keywords = {Extreme programming},
+ language = {eng},
+ publisher = {Addison-Wesley},
+ title = {{Extreme programming explained: Embrace change}},
+ year = {2000}
+}
+
+@article{beckmann2009,
+ author = {Beckmann, CF and Mackay, CE and Filippini, N and Smith, SM},
+ doi = {10.1016/s1053-8119(09)71511-3},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ pages = {S148},
+ title = {{Group comparison of resting-state FMRI data using multi-subject ICA and dual regression}},
+ volume = {47},
+ year = {2009}
+}
+
+@article{behzadi2007,
+ abstract = {{A component based method (CompCor) for the reduction of noise in both blood oxygenation level-dependent (BOLD) and perfusion-based functional magnetic resonance imaging (fMRI) data is presented. In the proposed method, significant principal components are derived from noise regions-of-interest (ROI) in which the time series data are unlikely to be modulated by neural activity. These components are then included as nuisance parameters within general linear models for BOLD and perfusion-based fMRI time series data. Two approaches for the determination of the noise ROI are considered. The first method uses high-resolution anatomical data to define a region of interest composed primarily of white matter and cerebrospinal fluid, while the second method defines a region based upon the temporal standard deviation of the time series data. With the application of CompCor, the temporal standard deviation of resting-state perfusion and BOLD data in gray matter regions was significantly reduced as compared to either no correction or the application of a previously described retrospective image based correction scheme (RETROICOR). For both functional perfusion and BOLD data, the application of CompCor significantly increased the number of activated voxels as compared to no correction. In addition, for functional BOLD data, there were significantly more activated voxels detected with CompCor as compared to RETROICOR. In comparison to RETROICOR, CompCor has the advantage of not requiring external monitoring of physiological fluctuations.}},
+ author = {Behzadi, Yashar and Restom, Khaled and Liau, Joy and Liu, Thomas T.},
+ doi = {10.1016/j.neuroimage.2007.04.042},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ number = {1},
+ pages = {90--101},
+ pmid = {17560126},
+ title = {{A component based noise correction method (CompCor) for BOLD and perfusion based fMRI}},
+ volume = {37},
+ year = {2007}
+}
+
+@online{bidscontributors2021,
+  title = {The Brain Imaging Data Structure ({BIDS}) Specification},
+  doi = {https://doi.org/10.5281/zenodo.4710751},
+  abstract = {This resource defines the Brain Imaging Data Structure ({BIDS}) specification, including the core specification as well as many modality-specific extensions. To get started, check out the introduction. For an overview of the {BIDS} ecosystem, visit the {BIDS} homepage. The entire specification can also be browsed in an {HTML} version. See Appendix I for a list of the {BIDS} contributors who jointly created this specification.},
+  author = {{BIDS} contributors},
+  urldate = {2021-11-25},
+  date = {2021-04-22},
+  doi = {10.5281/zenodo.4710751},
+  note = {Publisher: Zenodo},
+  keywords = {data standard, neuroimaging, neuroinformatics},
+}
+
+@article{borisov2019,
+ abstract = {{Harmonization techniques make different gene expression profiles and their sets compatible and ready for comparisons. Here we present a new bioinformatic tool termed Shambhala for harmonization of multiple human gene expression datasets obtained using different experimental methods and platforms of microarray hybridization and RNA sequencing. Unlike previously published methods enabling good quality data harmonization for only two datasets, Shambhala allows conversion of multiple datasets into the universal form suitable for further comparisons. Shambhala harmonization is based on the calibration of gene expression profiles using the auxiliary standardization dataset. Each profile is transformed to make it similar to the output of microarray hybridization platform Affymetrix Human Gene. This platform was chosen because it has the biggest number of human gene expression profiles deposited in public databases. We evaluated Shambhala ability to retain biologically important features after harmonization. The same four biological samples taken in multiple replicates were profiled independently using three and four different experimental platforms, respectively, then Shambhala-harmonized and investigated by hierarchical clustering. Our results showed that unlike other frequently used methods: quantile normalization and DESeq/DESeq2 normalization, Shambhala harmonization was the only method supporting sample-specific and platform-independent biologically meaningful clustering for the data obtained from multiple experimental platforms.}},
+ author = {Borisov, Nicolas and Shabalina, Irina and Tkachev, Victor and Sorokin, Maxim and Garazha, Andrew and Pulin, Andrey and Eremin, Ilya I. and Buzdin, Anton},
+ doi = {10.1186/s12859-019-2641-8},
+ journal = {BMC Bioinformatics},
+ keywords = {},
+ number = {1},
+ pages = {66},
+ pmid = {30727942},
+ title = {{Shambhala: a platform-agnostic data harmonizer for gene expression data}},
+ volume = {20},
+ year = {2019}
+}
+
+@article{botviniknezer2020,
+ abstract = {{Data analysis workflows in many scientific domains have become increasingly complex and flexible. Here we assess the effect of this flexibility on the results of functional magnetic resonance imaging by asking 70 independent teams to analyse the same dataset, testing the same 9 ex-ante hypotheses1. The flexibility of analytical approaches is exemplified by the fact that no two teams chose identical workflows to analyse the data. This flexibility resulted in sizeable variation in the results of hypothesis tests, even for teams whose statistical maps were highly correlated at intermediate stages of the analysis pipeline. Variation in reported results was related to several aspects of analysis methodology. Notably, a meta-analytical approach that aggregated information across teams yielded a significant consensus in activated regions. Furthermore, prediction markets of researchers in the field revealed an overestimation of the likelihood of significant findings, even by researchers with direct knowledge of the dataset2–5. Our findings show that analytical flexibility can have substantial effects on scientific conclusions, and identify factors that may be related to variability in the analysis of functional magnetic resonance imaging. The results emphasize the importance of validating and sharing complex analysis workflows, and demonstrate the need for performing and reporting multiple analyses of the same data. Potential approaches that could be used to mitigate issues related to analytical variability are discussed. The results obtained by seventy different teams analysing the same functional magnetic resonance imaging dataset show substantial variation, highlighting the influence of analytical choices and the importance of sharing workflows publicly and performing multiple analyses.}},
+ author = {Botvinik-Nezer, Rotem and Holzmeister, Felix and Camerer, Colin F. and Dreber, Anna and Huber, Juergen and Johannesson, Magnus and Kirchler, Michael and Iwanir, Roni and Mumford, Jeanette A. and Adcock, R. Alison and Avesani, Paolo and Baczkowski, Blazej M. and Bajracharya, Aahana and Bakst, Leah and Ball, Sheryl and Barilari, Marco and Bault, Nadège and Beaton, Derek and Beitner, Julia and Benoit, Roland G. and Berkers, Ruud M. W. J. and Bhanji, Jamil P. and Biswal, Bharat B. and Bobadilla-Suarez, Sebastian and Bortolini, Tiago and Bottenhorn, Katherine L. and Bowring, Alexander and Braem, Senne and Brooks, Hayley R. and Brudner, Emily G. and Calderon, Cristian B. and Camilleri, Julia A. and Castrellon, Jaime J. and Cecchetti, Luca and Cieslik, Edna C. and Cole, Zachary J. and Collignon, Olivier and Cox, Robert W. and Cunningham, William A. and Czoschke, Stefan and Dadi, Kamalaker and Davis, Charles P. and De Luca, Alberto and Delgado, Mauricio R. and Demetriou, Lysia and Dennison, Jeffrey B. and Di, Xin and Dickie, Erin W. and Dobryakova, Ekaterina and Donnat, Claire L. and Dukart, Juergen and Duncan, Niall W. and Durnez, Joke and Eed, Amr and Eickhoff, Simon B. and Erhart, Andrew and Fontanesi, Laura and Fricke, G. Matthew and Fu, Shiguang and Galván, Adriana and Gau, Remi and Genon, Sarah and Glatard, Tristan and Glerean, Enrico and Goeman, Jelle J. and Golowin, Sergej A. E. and González-García, Carlos and Gorgolewski, Krzysztof J. and Grady, Cheryl L. and Green, Mikella A. and Moreira, João F. Guassi and Guest, Olivia and Hakimi, Shabnam and Hamilton, J. Paul and Hancock, Roeland and Handjaras, Giacomo and Harry, Bronson B. and Hawco, Colin and Herholz, Peer and Herman, Gabrielle and Heunis, Stephan and Hoffstaedter, Felix and Hogeveen, Jeremy and Holmes, Susan and Hu, Chuan-Peng and Huettel, Scott A. and Hughes, Matthew E. and Iacovella, Vittorio and Iordan, Alexandru D. and Isager, Peder M. and Isik, Ayse I. and Jahn, Andrew and Johnson, Matthew R. and Johnstone, Tom and Joseph, Michael J. E. and Juliano, Anthony C. and Kable, Joseph W. and Kassinopoulos, Michalis and Koba, Cemal and Kong, Xiang-Zhen and Koscik, Timothy R. and Kucukboyaci, Nuri Erkut and Kuhl, Brice A. and Kupek, Sebastian and Laird, Angela R. and Lamm, Claus and Langner, Robert and Lauharatanahirun, Nina and Lee, Hongmi and Lee, Sangil and Leemans, Alexander and Leo, Andrea and Lesage, Elise and Li, Flora and Li, Monica Y. C. and Lim, Phui Cheng and Lintz, Evan N. and Liphardt, Schuyler W. and Vermeer, Annabel B. Losecaat and Love, Bradley C. and Mack, Michael L. and Malpica, Norberto and Marins, Theo and Maumet, Camille and McDonald, Kelsey and McGuire, Joseph T. and Melero, Helena and Leal, Adriana S. Méndez and Meyer, Benjamin and Meyer, Kristin N. and Mihai, Glad and Mitsis, Georgios D. and Moll, Jorge and Nielson, Dylan M. and Nilsonne, Gustav and Notter, Michael P. and Olivetti, Emanuele and Onicas, Adrian I. and Papale, Paolo and Patil, Kaustubh R. and Peelle, Jonathan E. and Pérez, Alexandre and Pischedda, Doris and Poline, Jean-Baptiste and Prystauka, Yanina and Ray, Shruti and Reuter-Lorenz, Patricia A. and Reynolds, Richard C. and Ricciardi, Emiliano and Rieck, Jenny R. and Rodriguez-Thompson, Anais M. and Romyn, Anthony and Salo, Taylor and Samanez-Larkin, Gregory R. and Sanz-Morales, Emilio and Schlichting, Margaret L. and Schultz, Douglas H. and Shen, Qiang and Sheridan, Margaret A. and Silvers, Jennifer A. and Skagerlund, Kenny and Smith, Alec and Smith, David V. and Sokol-Hessner, Peter and Steinkamp, Simon R. and Tashjian, Sarah M. and Thirion, Bertrand and Thorp, John N. and Tinghög, Gustav and Tisdall, Loreen and Tompson, Steven H. and Toro-Serey, Claudio and Tresols, Juan Jesus Torre and Tozzi, Leonardo and Truong, Vuong and Turella, Luca and van't Veer, Anna E. and Verguts, Tom and Vettel, Jean M. and Vijayarajah, Sagana and Vo, Khoi and Wall, Matthew B. and Weeda, Wouter D. and Weis, Susanne and White, David J. and Wisniewski, David and Xifra-Porxas, Alba and Yearling, Emily A. and Yoon, Sangsuk and Yuan, Rui and Yuen, Kenneth S. L. and Zhang, Lei and Zhang, Xu and Zosky, Joshua E. and Nichols, Thomas E. and Poldrack, Russell A. and Schonberg, Tom},
+ doi = {10.1038/s41586-020-2314-9},
+ issn = {0028-0836},
+ journal = {Nature},
+ keywords = {},
+ number = {7810},
+ pages = {84--88},
+ pmid = {32483374},
+ title = {{Variability in the analysis of a single neuroimaging dataset by many teams}},
+ volume = {582},
+ year = {2020}
+}
+
+@article{ciric2018,
+ abstract = {Participant motion during functional magnetic resonance image ({fMRI}) acquisition produces spurious signal fluctuations that can confound measures of functional connectivity. Without mitigation, motion artifact can bias statistical inferences about relationships between connectivity and individual differences. To counteract motion artifact, this protocol describes the implementation of a validated, high-performance denoising strategy that combines a set of model features, including physiological signals, motion estimates, and mathematical expansions, to target both widespread and focal effects of subject movement. This protocol can be used to reduce motion-related variance to near zero in studies of functional connectivity, providing up to a 100-fold improvement over minimal-processing approaches in large datasets. Image denoising requires 40 min to 4 h of computing per image, depending on model specifications and data dimensionality. The protocol additionally includes instructions for assessing the performance of a denoising strategy. Associated software implements all denoising and diagnostic procedures, using a combination of established image-processing libraries and the {eXtensible} Connectivity Pipeline ({XCP}) software.},
+ author = {Ciric, Rastko and Rosen, Adon F. G. and Erus, Guray and Cieslak, Matthew and Adebimpe, Azeez and Cook, Philip A. and Bassett, Danielle S. and Davatzikos, Christos and Wolf, Daniel H. and Satterthwaite, Theodore D.},
+ date = {2018-12},
+ doi = {10.1038/s41596-018-0065-y},
+ file = {Accepted Version:C\:\\Users\\Lea\\Zotero\\storage\\3KTVV6R2\\Ciric et al. - 2018 - Mitigating head motion artifact in functional conn.pdf:application/pdf},
+ issn = {1750-2799},
+ journaltitle = {Nature Protocols},
+ keywords = {Image processing, Magnetic resonance imaging, Quality control, Data processing, Communication and replication},
+ langid = {english},
+ note = {Bandiera\_abtest: a
+Cg\_type: Nature Research Journals
+Number: 12
+Primary\_atype: Protocols
+Publisher: Nature Publishing Group
+Subject\_term: Communication and replication;Data processing;Image processing;Magnetic resonance imaging;Quality control
+Subject\_term\_id: communication-and-replication;data-processing;image-processing;magnetic-resonance-imaging;quality-control},
+ number = {12},
+ pages = {2801--2826},
+ rights = {2018 Springer Nature Limited},
+ shortjournal = {Nat Protoc},
+ title = {Mitigating head motion artifact in functional connectivity {MRI}},
+ url = {https://www.nature.com/articles/s41596-018-0065-y},
+ urldate = {2021-11-09},
+ volume = {13}
+}
+
+@article{ciric2021,
+ abstract = {{Neuroimaging templates and corresponding atlases play a central role in experimental workflows and are the foundation for reporting standardised results. The proliferation of templates and atlases is one relevant source of methodological variability across studies, which has been recently brought to attention as an important challenge to reproducibility in neuroscience. Unclear nomenclature, an overabundance of template variants and options, inadequate provenance tracking and maintenance, and poor concordance between atlases introduce further unreliability into reported results. We introduce TemplateFlow, a cloud-based repository of human and nonhuman imaging templates paired with a client application for programmatically accessing resources. TemplateFlow is designed to be extensible, providing a transparent pathway for researchers to contribute and vet templates and their associated atlases. Following software engineering best practices, TemplateFlow leverages technologies for unambiguous resource identification, data management, versioning and synchronisation, programmatic extensibility, and continuous integration. By equipping researchers with a robust resource for using and evaluating templates, TemplateFlow will contribute to increasing the reliability of neuroimaging results.}},
+ author = {Ciric, Rastko and Lorenz, R and Thompson, William H. and Goncalves, Mathias and MacNicol, E and Markiewicz, Christopher J. and Halchenko, Yaroslav O. and Ghosh, Satrajit S. and Gorgolewski, Krzysztof J. and Poldrack, Russel A. and Esteban, Oscar},
+ doi = {10.1101/2021.02.10.430678},
+ journal = {bioRxiv},
+ keywords = {},
+ pages = {2021.02.10.430678},
+ title = {{TemplateFlow: a community archive of imaging templates and atlases for improved consistency in neuroimaging}},
+ year = {2021}
+}
+
+@article{cox1996,
+ abstract = {{A package of computer programs for analysis and visualization of three-dimensional human brain functional magnetic resonance imaging (FMRI) results is described. The software can color overlay neural activation maps onto higher resolution anatomical scans. Slices in each cardinal plane can be viewed simultaneously. Manual placement of markers on anatomical landmarks allows transformation of anatomical and functional scans into stereotaxic (Talairach–Tournoux) coordinates. The techniques for automatically generating transformed functional data sets from manually labeled anatomical data sets are described. Facilities are provided for several types of statistical analyses of multiple 3D functional data sets. The programs are written in ANSI C and Motif 1.2 to run on Unix workstations.}},
+ author = {Cox, Robert W.},
+ doi = {10.1006/cbmr.1996.0014},
+ issn = {0010-4809},
+ journal = {Computers and Biomedical Research},
+ keywords = {},
+ number = {3},
+ pages = {162--173},
+ pmid = {8812068},
+ title = {{AFNI: Software for Analysis and Visualization of Functional Magnetic Resonance Neuroimages}},
+ volume = {29},
+ year = {1996}
+}
+
+@online{coghlan2013,
+  title = {{PEP} 440 - Version Identification and Dependency Specification},
+  url = {https://www.python.org/dev/peps/pep-0440/},
+  abstract = {This {PEP} describes a scheme for identifying versions of Python software distributions, and declaring dependencies on particular versions. This document addresses several limitations of the previous attempt at a standardized approach to versioning, as described in {PEP} 345 and {PEP} 386.},
+  titleaddon = {Python.org},
+  author = {Coghlan, Nick and Stufft, Donald},
+  urldate = {2021-11-25},
+  date = {2013-03-18},
+  langid = {english},
+}
+
+@article{cox1997,
+ abstract = {{The tools needed for analysis and visualization of three-dimensional human brain functional magnetic resonance image results are outlined, covering the processing categories of data storage, interactive vs batch mode operations, visualization, spatial normalization (Talairach coordinates, etc.), analysis of functional activation, integration of multiple datasets, and interface standards. One freely available software package is described in some detail. The features and scope that a generally useful and extensible fMRI toolset should have are contrasted with what is available today. The article ends with a discussion of how the fMRI research community can cooperate to create standards and develop software that meets the community's needs. © 1997 John Wiley \& Sons, Ltd.}},
+ author = {Cox, Robert W. and Hyde, James S.},
+ doi = {10.1002/(sici)1099-1492(199706/08)10:4/5<171::aid-nbm453>3.0.co;2-l},
+ issn = {1099-1492},
+ journal = {NMR in Biomedicine},
+ keywords = {},
+ number = {4-5},
+ pages = {171--178},
+ pmid = {9430344},
+ title = {{Software tools for analysis and visualization of fMRI data}},
+ volume = {10},
+ year = {1997}
+}
+
+@unpublished{cox2016,
+ author = {Cox, Robert W.},
+ date = {2016},
+ file = {AFNI Pre-Processing – Outline, Recommendations, New Stuff | OHBM:C\:\\Users\\Lea\\Zotero\\storage\\PW34JMF4\\33759.html:text/html;Cox - 2016 - AFNI Pre-Processing – Outline, Recommendations, Ne.pdf:C\:\\Users\\Lea\\Zotero\\storage\\E98U7XLI\\Cox - 2016 - AFNI Pre-Processing – Outline, Recommendations, Ne.pdf:application/pdf},
+ note = {22nd Annual Meeting of the Organization for Human Brain Mapping},
+ title = {{AFNI} Pre-Processing – Outline, Recommendations, New Stuff},
+ url = {https://www.pathlms.com/ohbm/courses/2658/sections/4569/slide_presentations/33759},
+ urldate = {2021-03-23}
+}
+
+@inproceedings{craddock2013,
+ address = {Stockholm, Sweden},
+ author = {Craddock, Cameron and Sikka, Sharad and Cheung, Cheung and Khanuja, Ranjeet and Ghosh, Satrajit S. and Yan, Chaogan and Li, Qingyang and Lurie, Daniel and Vogelstein, Joshua and Burns, Randal and Colcombe, Stanley and Mennes, Maarten and Kelly, Clare and Di Martino, Adriana and Castellanos, Francisco X. and Milham, Michael},
+ booktitle = {Frontiers in {Neuroinformatics}},
+ doi = {10.3389/conf.fninf.2013.09.00042},
+ shorttitle = {Towards {Automated} {Analysis} of {Connectomes}},
+ title = {Towards {Automated} {Analysis} of {Connectomes}: {The} {Configurable} {Pipeline} for the {Analysis} of {Connectomes} ({C}-{PAC})},
+ url = {http://www.frontiersin.org/10.3389/conf.fninf.2013.09.00042/event_abstract},
+ urldate = {2021-03-23},
+ year = {2013}
+}
+
+@misc{das2018,
+ abstract = {I’ve programmed both in the academic setting and in industry. In college, I’ve been in research projects, directed readings with…},
+ author = {Das, Riddhiman},
+ file = {Snapshot:/work/.zotero/storage/644RH4H6/programming-in-academia-vs-industry-5fb52852ea39.html:text/html},
+ journal = {Medium},
+ language = {en},
+ month = {10},
+ title = {Programming {In} {Academia} {Vs} {Industry}},
+ url = {https://medium.com/@rdasxy/programming-in-academia-vs-industry-5fb52852ea39},
+ urldate = {2021-04-22},
+ year = {2018}
+}
+
+@article{dijkstra1978,
+ abstract = {{As an example of cooperation between sequential processes with very little mutual interference despite frequent manipulations of a large shared data space, a technique is developed which allows nearly all of the activity needed for garbage detection and collection to be performed by an additional processor operating concurrently with the processor devoted to the computation proper. Exclusion and synchronization constraints have been kept as weak as could be achieved; the severe complexities engendered by doing so are illustrated.}},
+ author = {Dijkstra, Edsger W. and Lamport, Leslie and Martin, A. J. and Scholten, C. S. and Steffens, E. F. M.},
+ doi = {10.1145/359642.359655},
+ issn = {0001-0782},
+ journal = {Communications of the ACM},
+ keywords = {},
+ number = {11},
+ pages = {966--975},
+ title = {{On-the-fly garbage collection: an exercise in cooperation}},
+ volume = {21},
+ year = {1978}
+}
+
+@article{eklund2016,
+ abstract = {{The most widely used task functional magnetic resonance imaging (fMRI) analyses use parametric statistical methods that depend on a variety of assumptions. In this work, we use real resting-state data and a total of 3 million random task group analyses to compute empirical familywise error rates for the fMRI software packages SPM, FSL, and AFNI, as well as a nonparametric permutation method. For a nominal familywise error rate of 5\%, the parametric statistical methods are shown to be conservative for voxelwise inference and invalid for clusterwise inference. Our results suggest that the principal cause of the invalid cluster inferences is spatial autocorrelation functions that do not follow the assumed Gaussian shape. By comparison, the nonparametric permutation test is found to produce nominal results for voxelwise as well as clusterwise inference. These findings speak to the need of validating the statistical methods being used in the field of neuroimaging.}},
+ author = {Eklund, Anders and Nichols, Thomas E. and Knutsson, Hans},
+ doi = {10.1073/pnas.1602413113},
+ eprint = {1511.01863},
+ issn = {0027-8424},
+ journal = {Proceedings of the National Academy of Sciences},
+ keywords = {},
+ number = {28},
+ pages = {7900--7905},
+ pmcid = {PMC4948312},
+ pmid = {27357684},
+ title = {{Cluster failure: Why fMRI inferences for spatial extent have inflated false-positive rates}},
+ volume = {113},
+ year = {2016}
+}
+
+@article{esteban2017,
+ abstract = {{Quality control of MRI is essential for excluding problematic acquisitions and avoiding bias in subsequent image processing and analysis. Visual inspection is subjective and impractical for large scale datasets. Although automated quality assessments have been demonstrated on single-site datasets, it is unclear that solutions can generalize to unseen data acquired at new sites. Here, we introduce the MRI Quality Control tool (MRIQC), a tool for extracting quality measures and fitting a binary (accept/exclude) classifier. Our tool can be run both locally and as a free online service via the OpenNeuro.org portal. The classifier is trained on a publicly available, multi-site dataset (17 sites, N = 1102). We perform model selection evaluating different normalization and feature exclusion approaches aimed at maximizing across-site generalization and estimate an accuracy of 76\%±13\% on new sites, using leave-one-site-out cross-validation. We confirm that result on a held-out dataset (2 sites, N = 265) also obtaining a 76\% accuracy. Even though the performance of the trained classifier is statistically above chance, we show that it is susceptible to site effects and unable to account for artifacts specific to new sites. MRIQC performs with high accuracy in intra-site prediction, but performance on unseen sites leaves space for improvement which might require more labeled data and new approaches to the between-site variability. Overcoming these limitations is crucial for a more objective quality assessment of neuroimaging data, and to enable the analysis of extremely large and multi-site samples.}},
+ author = {Esteban, Oscar and Birman, Daniel and Schaer, Marie and Koyejo, Oluwasanmi O. and Poldrack, Russell A. and Gorgolewski, Krzysztof J.},
+ doi = {10.1371/journal.pone.0184661},
+ journal = {PLOS ONE},
+ keywords = {},
+ number = {9},
+ pages = {e0184661},
+ pmid = {28945803},
+ title = {{MRIQC: Advancing the automatic prediction of image quality in MRI from unseen sites}},
+ volume = {12},
+ year = {2017}
+}
+
+@article{esteban2019a,
+ abstract = {{Preprocessing of functional magnetic resonance imaging (fMRI) involves numerous steps to clean and standardize the data before statistical analysis. Generally, researchers create ad hoc preprocessing workflows for each dataset, building upon a large inventory of available tools. The complexity of these workflows has snowballed with rapid advances in acquisition and processing. We introduce fMRIPrep, an analysis-agnostic tool that addresses the challenge of robust and reproducible preprocessing for fMRI data. fMRIPrep automatically adapts a best-in-breed workflow to the idiosyncrasies of virtually any dataset, ensuring high-quality preprocessing without manual intervention. By introducing visual assessment checkpoints into an iterative integration framework for software testing, we show that fMRIPrep robustly produces high-quality results on a diverse fMRI data collection. Additionally, fMRIPrep introduces less uncontrolled spatial smoothness than observed with commonly used preprocessing tools. fMRIPrep equips neuroscientists with an easy-to-use and transparent preprocessing workflow, which can help ensure the validity of inference and the interpretability of results. fMRIPrep is a robust and easy-to-use pipeline for preprocessing of diverse fMRI data. The transparent workflow dispenses of manual intervention, thereby ensuring the reproducibility of the results.}},
+ author = {Esteban, Oscar and Markiewicz, Christopher J. and Blair, Ross W. and Moodie, Craig A. and Isik, A. Ilkay and Erramuzpe, Asier and Kent, James D. and Goncalves, Mathias and DuPre, Elizabeth and Snyder, Madeleine and Oya, Hiroyuki and Ghosh, Satrajit S. and Wright, Jessey and Durnez, Joke and Poldrack, Russell A. and Gorgolewski, Krzysztof J.},
+ doi = {10.1038/s41592-018-0235-4},
+ issn = {1548-7091},
+ journal = {Nature Methods},
+ keywords = {},
+ number = {1},
+ pages = {111--116},
+ pmid = {30532080},
+ title = {{fMRIPrep: a robust preprocessing pipeline for functional MRI}},
+ volume = {16},
+ year = {2019}
+}
+
+@article{esteban2019b,
+ abstract = {{The neuroimaging community is steering towards increasingly large sample sizes, which are highly heterogeneous because they can only be acquired by multi-site consortia. The visual assessment of every imaging scan is a necessary quality control step, yet arduous and time-consuming. A sizeable body of evidence shows that images of low quality are a source of variability that may be comparable to the effect size under study. We present the MRIQC Web-API, an open crowdsourced database that collects image quality metrics extracted from MR images and corresponding manual assessments by experts. The database is rapidly growing, and currently contains over 100,000 records of image quality metrics of functional and anatomical MRIs of the human brain, and over 200 expert ratings. The resource is designed for researchers to share image quality metrics and annotations that can readily be reused in training human experts and machine learning algorithms. The ultimate goal of the database is to allow the development of fully automated quality control tools that outperform expert ratings in identifying subpar images.}},
+ author = {Esteban, Oscar and Blair, Ross W. and Nielson, Dylan M. and Varada, Jan C. and Marrett, Sean and Thomas, Adam G. and Poldrack, Russell A. and Gorgolewski, Krzysztof J.},
+ doi = {10.1038/s41597-019-0035-4},
+ journal = {Scientific Data},
+ keywords = {},
+ number = {1},
+ pages = {30},
+ pmid = {30975998},
+ title = {{Crowdsourced MRI quality metrics and expert quality annotations for training of humans and machines}},
+ volume = {6},
+ year = {2019}
+}
+
+@software{esteban2020a,
+ abstract = {Nipype-based neuroimaging workflows for susceptibility distortion correction ({SDC}) of echo-planar {MRI} images.},
+ author = {Esteban, Oscar and Markiewicz, Christopher J. and Blair, Ross W. and Poldrack, Russell A. and Gorgolewski, Krzysztof J.},
+ date = {2020-09-12},
+ doi = {10.5281/zenodo.4025963},
+ file = {Zenodo Snapshot:C\:\\Users\\Lea\\Zotero\\storage\\HHJXDMZQ\\4025963.html:text/html},
+ keywords = {pipeline, workflow, {BIDS}, {MRI}, neuroimaging, preprocessing},
+ publisher = {Zenodo},
+ shorttitle = {{SDCflows}},
+ title = {{SDCflows}: Susceptibility Distortion Correction {workFLOWS}.},
+ url = {https://zenodo.org/record/4025963},
+ urldate = {2021-10-28}
+}
+
+@software{esteban2020b,
+ abstract = {A {BIDS}-App to preprocess anatomical (T1w, T2w and {FLAIR}) data, providing workflows for reuse in {NIPreps} ({NeuroImaging} {PREProcesssing} tools) such as {fMRIPrep}.},
+ author = {Esteban, Oscar and Markiewicz, Christopher J. and Blair, Ross and Poldrack, Russell A. and Gorgolewski, Krzysztof J.},
+ date = {2020-12-09},
+ doi = {10.5281/zenodo.4313270},
+ file = {Zenodo Snapshot:C\:\\Users\\Lea\\Zotero\\storage\\I7KQY9XW\\4313270.html:text/html},
+ keywords = {pipeline, workflow, {BIDS}, {MRI}, neuroimaging, preprocessing},
+ publisher = {Zenodo},
+ shorttitle = {{sMRIPrep}},
+ title = {{sMRIPrep}: Structural {MRI} {PREProcessing} workflows},
+ url = {https://zenodo.org/record/4313270},
+ urldate = {2021-10-28}
+}
+
+@article{esteban2020c,
+ abstract = {Functional magnetic resonance imaging ({fMRI}) is a standard tool to investigate the neural correlates of cognition. {fMRI} noninvasively measures brain activity, allowing identification of patterns evoked by tasks performed during scanning. Despite the long history of this technique, the idiosyncrasies of each dataset have led to the use of ad-hoc preprocessing protocols customized for nearly every different study. This approach is time consuming, error prone and unsuitable for combining datasets from many sources. Here we showcase {fMRIPrep} (http://fmriprep.org), a robust tool to prepare human {fMRI} data for statistical analysis. This software instrument addresses the reproducibility concerns of the established protocols for {fMRI} preprocessing. By leveraging the Brain Imaging Data Structure to standardize both the input datasets ({MRI} data as stored by the scanner) and the outputs (data ready for modeling and analysis), {fMRIPrep} is capable of preprocessing a diversity of datasets without manual intervention. In support of the growing popularity of {fMRIPrep}, this protocol describes how to integrate the tool in a task-based {fMRI} investigation workflow.},
+ author = {Esteban, Oscar and Ciric, Rastko and Finc, Karolina and Blair, Ross W. and Markiewicz, Christopher J. and Moodie, Craig A. and Kent, James D. and Goncalves, Mathias and {DuPre}, Elizabeth and Gomez, Daniel E. P. and Ye, Zhifang and Salo, Taylor and Valabregue, Romain and Amlien, Inge K. and Liem, Franziskus and Jacoby, Nir and Stojić, Hrvoje and Cieslak, Matthew and Urchs, Sebastian and Halchenko, Yaroslav O. and Ghosh, Satrajit S. and De La Vega, Alejandro and Yarkoni, Tal and Wright, Jessey and Thompson, William H. and Poldrack, Russell A. and Gorgolewski, Krzysztof J.},
+ date = {2020-07},
+ doi = {10.1038/s41596-020-0327-3},
+ file = {Full Text PDF:C\:\\Users\\Lea\\Zotero\\storage\\TC2MA5L5\\Esteban et al. - 2020 - Analysis of task-based functional MRI data preproc.pdf:application/pdf;Snapshot:C\:\\Users\\Lea\\Zotero\\storage\\Z6SQSNVE\\s41596-020-0327-3.html:text/html},
+ issn = {1750-2799},
+ journaltitle = {Nature Protocols},
+ keywords = {Software, Magnetic resonance imaging, Computational neuroscience, Neurological models},
+ langid = {english},
+ note = {Bandiera\_abtest: a
+Cg\_type: Nature Research Journals
+Number: 7
+Primary\_atype: Protocols
+Publisher: Nature Publishing Group
+Subject\_term: Computational neuroscience;Magnetic resonance imaging;Neurological models;Software
+Subject\_term\_id: computational-neuroscience;magnetic-resonance-imaging;neurological-models;software},
+ number = {7},
+ pages = {2186--2202},
+ rights = {2020 The Author(s), under exclusive licence to Springer Nature Limited},
+ shortjournal = {Nat Protoc},
+ title = {Analysis of task-based functional {MRI} data preprocessed with {fMRIPrep}},
+ url = {https://www.nature.com/articles/s41596-020-0327-3/},
+ urldate = {2021-11-09},
+ volume = {15}
+}
+
+@software{esteban2021a,
+ abstract = {A collection of Nipype interfaces, patches and workflows for reuse in {NIPreps} ({NeuroImaging} {PREProcesssing} tools) such as {fMRIPrep}.},
+ author = {Esteban, Oscar and Markiewicz, Christopher J. and Goncalves, Mathias and Blair, Ross and Berleant, Shoshana L. and Poldrack, Russell A. and Gorgolewski, Krzysztof J.},
+ date = {2021-10-01},
+ doi = {10.5281/zenodo.5544246},
+ keywords = {pipeline, workflow, {BIDS}, {MRI}, neuroimaging, preprocessing},
+ publisher = {Zenodo},
+ shorttitle = {{NIWorkflows}},
+ title = {{NIWorkflows}: {NeuroImaging} Workflows},
+ url = {https://zenodo.org/record/5544246},
+ urldate = {2021-10-28}
+}
+
+@article{esteban2021b,
+ author = {Esteban, Oscar and Markiewicz, Christopher J. and Blair, Ross and Poldrack, Russell A. and Gorgolewski, Krzysztof J.},
+ doi = {10.5281/zenodo.4593442},
+ keywords = {},
+ title = {{sMRIPrep: Structural MRI PREProcessing workflows}},
+ url = {https://doi.org/10.5281/zenodo.4593442},
+ year = {2021}
+}
+
+@article{fischl2000,
+ abstract = {{Accurate and automated methods for measuring the thickness of human cerebral cortex could provide powerful tools for diagnosing and studying a variety of neurodegenerative and psychiatric disorders. Manual methods for estimating cortical thickness from neuroimaging data are labor intensive, requiring several days of effort by a trained anatomist. Furthermore, the highly folded nature of the cortex is problematic for manual techniques, frequently resulting in measurement errors in regions in which the cortical surface is not perpendicular to any of the cardinal axes. As a consequence, it has been impractical to obtain accurate thickness estimates for the entire cortex in individual subjects, or group statistics for patient or control populations. Here, we present an automated method for accurately measuring the thickness of the cerebral cortex across the entire brain and for generating cross-subject statistics in a coordinate system based on cortical anatomy. The intersubject standard deviation of the thickness measures is shown to be less than 0.5 mm, implying the ability to detect focal atrophy in small populations or even individual subjects. The reliability and accuracy of this new method are assessed by within-subject test–retest studies, as well as by comparison of cross-subject regional thickness measures with published values.}},
+ author = {Fischl, Bruce and Dale, Anders M.},
+ doi = {10.1073/pnas.200033797},
+ issn = {0027-8424},
+ journal = {Proceedings of the National Academy of Sciences},
+ keywords = {},
+ number = {20},
+ pages = {11050--11055},
+ pmid = {10984517},
+ title = {{Measuring the thickness of the human cerebral cortex from magnetic resonance images}},
+ volume = {97},
+ year = {2000}
+}
+
+@article{fonov2009,
+ author = {Fonov, Vladimir and Evans, Alan C. and {McKinstry}, Robert C. and Almli, C. and Collins, D.},
+ date = {2009-07-01},
+ doi = {10.1016/S1053-8119(09)70884-5},
+ file = {ScienceDirect Full Text PDF:C\:\\Users\\Lea\\Zotero\\storage\\YTPR6T7G\\Fonov et al. - 2009 - Unbiased nonlinear average age-appropriate brain t.pdf:application/pdf;ScienceDirect Snapshot:C\:\\Users\\Lea\\Zotero\\storage\\XCNZYCFE\\S1053811909708845.html:text/html},
+ issn = {1053-8119},
+ journaltitle = {{NeuroImage}},
+ langid = {english},
+ pages = {S102},
+ series = {Organization for Human Brain Mapping 2009 Annual Meeting},
+ shortjournal = {{NeuroImage}},
+ title = {Unbiased nonlinear average age-appropriate brain templates from birth to adulthood},
+ url = {https://www.sciencedirect.com/science/article/pii/S1053811909708845},
+ urldate = {2021-03-23},
+ volume = {47}
+}
+
+@article{fonov2011,
+ abstract = {Spatial normalization, registration, and segmentation techniques for Magnetic Resonance Imaging ({MRI}) often use a target or template volume to facilitate processing, take advantage of prior information, and define a common coordinate system for analysis. In the neuroimaging literature, the {MNI}305 Talairach-like coordinate system is often used as a standard template. However, when studying pediatric populations, variation from the adult brain makes the {MNI}305 suboptimal for processing brain images of children. Morphological changes occurring during development render the use of age-appropriate templates desirable to reduce potential errors and minimize bias during processing of pediatric data. This paper presents the methods used to create unbiased, age-appropriate {MRI} atlas templates for pediatric studies that represent the average anatomy for the age range of 4.5–18.5years, while maintaining a high level of anatomical detail and contrast. The creation of anatomical T1-weighted, T2-weighted, and proton density-weighted templates for specific developmentally important age-ranges, used data derived from the largest epidemiological, representative (healthy and normal) sample of the U.S. population, where each subject was carefully screened for medical and psychiatric factors and characterized using established neuropsychological and behavioral assessments. Use of these age-specific templates was evaluated by computing average tissue maps for gray matter, white matter, and cerebrospinal fluid for each specific age range, and by conducting an exemplar voxel-wise deformation-based morphometry study using 66 young (4.5–6.9years) participants to demonstrate the benefits of using the age-appropriate templates. The public availability of these atlases/templates will facilitate analysis of pediatric {MRI} data and enable comparison of results between studies in a common standardized space specific to pediatric research.},
+ author = {Fonov, Vladimir and Evans, Alan C. and Botteron, Kelly and Almli, C. and {McKinstry}, Robert C. and Collins, D.},
+ date = {2011-01-01},
+ doi = {10.1016/j.neuroimage.2010.07.033},
+ file = {ScienceDirect Full Text PDF:C\:\\Users\\Lea\\Zotero\\storage\\Y84FANXY\\Fonov et al. - 2011 - Unbiased average age-appropriate atlases for pedia.pdf:application/pdf;ScienceDirect Snapshot:C\:\\Users\\Lea\\Zotero\\storage\\7CJ2WMLF\\S1053811910010062.html:text/html},
+ issn = {1053-8119},
+ journaltitle = {{NeuroImage}},
+ keywords = {Atlas template, Pediatric image analysis, Registration},
+ langid = {english},
+ number = {1},
+ pages = {313--327},
+ shortjournal = {{NeuroImage}},
+ title = {Unbiased average age-appropriate atlases for pediatric studies},
+ url = {https://www.sciencedirect.com/science/article/pii/S1053811910010062},
+ urldate = {2021-03-23},
+ volume = {54}
+}
+
+@article{fortin2018,
+ abstract = {{ With the proliferation of multi-site neuroimaging studies, there is a greater need for handling non-biological variance introduced by differences in MRI scanners and acquisition protocols. Such unwanted sources of variation, which we refer to as “scanner effects”, can hinder the detection of imaging features associated with clinical covariates of interest and cause spurious findings. In this paper, we investigate scanner effects in two large multi-site studies on cortical thickness measurements across a total of 11 scanners. We propose a set of tools for visualizing and identifying scanner effects that are generalizable to other modalities. We then propose to use ComBat, a technique adopted from the genomics literature and recently applied to diffusion tensor imaging data, to combine and harmonize cortical thickness values across scanners. We show that ComBat removes unwanted sources of scan variability while simultaneously increasing the power and reproducibility of subsequent statistical analyses. We also show that ComBat is useful for combining imaging data with the goal of studying life-span trajectories in the brain.}},
+ author = {Fortin, Jean-Philippe and Cullen, Nicholas and Sheline, Yvette I. and Taylor, Warren D. and Aselcioglu, Irem and Cook, Philip A. and Adams, Phil and Cooper, Crystal and Fava, Maurizio and McGrath, Patrick J. and McInnis, Melvin and Phillips, Mary L. and Trivedi, Madhukar H. and Weissman, Myrna M. and Shinohara, Russell T.},
+ doi = {10.1016/j.neuroimage.2017.11.024},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ pages = {104--120},
+ pmid = {29155184},
+ title = {{Harmonization of cortical thickness measurements across scanners and sites}},
+ volume = {167},
+ year = {2018}
+}
+
+@article{friedman2006,
+ abstract = {Scanner-to-scanner variability of activation in multicenter fMRI studies is often considered undesirable. The purpose of this investigation was to evaluate the effect of a new procedure, “smoothness equalization”, on reducing scanner differences in activation effect size as part of a multicenter fMRI project (FIRST BIRN). Five subjects were sent to 9 centers (10 scanners) and scanned on 2 consecutive days using a sensorimotor fMRI protocol. High-field (4 T and 3 T) and low-field (1.5 T) scanners from three vendors (GE, Siemens, and Picker) were included. The activation effect size of the scanners for the detection of neural activation during a sensorimotor task was evaluated as the percent of temporal variance accounted for by our model (percent of variance accounted for or PVAF). Marked scanner effects were noted for both PVAF as well as the degree of smoothness of the raw and processed images. After smoothness equalization, there was a dramatic (low field) or consistent (high-field) reduction in scanner-to-scanner variation of activation. It was shown that the likely basis of the scanner differences in smoothness was differences in k-space filtering algorithms. This work highlights the need to account for differences in smoothness when comparing scanners on activation effect size in multicenter fMRI studies.},
+ author = {Friedman, Lee and Glover, Gary H. and Krenz, Diana and Magnotta, Vince},
+ doi = {10.1016/j.neuroimage.2006.03.062},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ language = {en},
+ month = {10},
+ number = {4},
+ pages = {1656--1668},
+ shorttitle = {Reducing inter-scanner variability of activation in a multicenter {fMRI} study},
+ title = {Reducing inter-scanner variability of activation in a multicenter {fMRI} study: {Role} of smoothness equalization},
+ url = {https://www.sciencedirect.com/science/article/pii/S1053811906004435},
+ urldate = {2021-08-29},
+ volume = {32},
+ year = {2006}
+}
+
+@article{gavrilescu2002,
+ abstract = {{We report on differences in sensitivity and false-positive rate across five methods of global normalization using resting-state fMRI data embedded with simulated activation. These methods were grand mean session scaling, proportional scaling, ANCOVA, a masking method, and an orthogonalization method. We found that global normalization by proportional scaling and ANCOVA decreased the sensitivity of the statistical analysis and induced artifactual deactivation even when the correlation between the global signal and the experimental paradigm was relatively low. The masking method and the orthogonalization method performed better from this perspective but are both restricted to certain experimental conditions. Based on the results of these simulations, we offer practical guidelines for the choice of global normalization method least likely to bias the experimental results.}},
+ author = {Gavrilescu, Maria and Shaw, Marnie E. and Stuart, Geoffrey W. and Eckersley, Peter and Svalbe, Imants D. and Egan, Gary F.},
+ doi = {10.1006/nimg.2002.1226},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ number = {2},
+ pages = {532--542},
+ title = {{Simulation of the Effects of Global Normalization Procedures in Functional MRI}},
+ volume = {17},
+ year = {2002}
+}
+
+@online{giavasis2020a,
+ author = {Giavasis, Steve and Pellman, John and Clucas, Jon and Lurie, Daniel},
+ date = {2020-07-24},
+ file = {Setting Up A Data Configuration File (Participant/Subject List) — C-PAC 1.8.0 Beta documentation:C\:\\Users\\Lea\\Zotero\\storage\\LUVV2KVN\\subject_list_config.html:text/html},
+ title = {Setting Up A Data Configuration File (Participant/Subject List)},
+ titleaddon = {C-{PAC} 1.8.0 Beta documentation},
+ url = {https://fcp-indi.github.io/docs/latest/user/subject_list_config},
+ urldate = {2021-03-23}
+}
+
+@misc{giavasis2020b,
+ author = {Giavasis, Steve and Pellman, John and Clucas, Jon and Lurie, Daniel},
+ journal = {C-PAC 1.8.0 Beta Documentation},
+ keywords = {},
+ month = {7},
+ title = {{Setting Up A Data Configuration File (Participant/Subject List)}},
+ url = {https://fcp-indi.github.io/docs/latest/user/subject\_list\_config},
+ year = {2020}
+}
+
+@article{glasser2013,
+ abstract = {{The Human Connectome Project (HCP) faces the challenging task of bringing multiple magnetic resonance imaging (MRI) modalities together in a common automated preprocessing framework across a large cohort of subjects. The MRI data acquired by the HCP differ in many ways from data acquired on conventional 3Tesla scanners and often require newly developed preprocessing methods. We describe the minimal preprocessing pipelines for structural, functional, and diffusion MRI that were developed by the HCP to accomplish many low level tasks, including spatial artifact/distortion removal, surface generation, cross-modal registration, and alignment to standard space. These pipelines are specially designed to capitalize on the high quality data offered by the HCP. The final standard space makes use of a recently introduced CIFTI file format and the associated grayordinate spatial coordinate system. This allows for combined cortical surface and subcortical volume analyses while reducing the storage and processing requirements for high spatial and temporal resolution data. Here, we provide the minimum image acquisition requirements for the HCP minimal preprocessing pipelines and additional advice for investigators interested in replicating the HCP's acquisition protocols or using these pipelines. Finally, we discuss some potential future improvements to the pipelines.}},
+ author = {Glasser, Matthew F. and Sotiropoulos, Stamatios N. and Wilson, J. Anthony and Coalson, Timothy S. and Fischl, Bruce and Andersson, Jesper L. and Xu, Junqian and Jbabdi, Saad and Webster, Matthew and Polimeni, Jonathan R. and Van Essen, David C. and Jenkinson, Mark},
+ doi = {10.1016/j.neuroimage.2013.04.127},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ pages = {105--124},
+ pmcid = {PMC3720813},
+ pmid = {23668970},
+ title = {{The minimal preprocessing pipelines for the Human Connectome Project}},
+ volume = {80},
+ year = {2013}
+}
+
+@article{goncalves2021,
+ abstract = {Goncalves et al., (2021). {NiTransforms}: A Python tool to read, represent, manipulate, and apply \$n\$-dimensional spatial transforms. Journal of Open Source Software, 6(65), 3459, https://doi.org/10.21105/joss.03459},
+ author = {Goncalves, Mathias and Markiewicz, Christopher J. and Moia, Stefano and Ghosh, Satrajit S. and Poldrack, Russell A. and Esteban, Oscar},
+ date = {2021-09-10},
+ doi = {10.21105/joss.03459},
+ file = {Full Text PDF:C\:\\Users\\Lea\\Zotero\\storage\\KSS4LBYB\\Goncalves et al. - 2021 - NiTransforms A Python tool to read, represent, ma.pdf:application/pdf;Snapshot:C\:\\Users\\Lea\\Zotero\\storage\\B36UQC4E\\joss.html:text/html},
+ issn = {2475-9066},
+ journaltitle = {Journal of Open Source Software},
+ langid = {english},
+ number = {65},
+ pages = {3459},
+ shorttitle = {{NiTransforms}},
+ title = {{NiTransforms}: A Python tool to read, represent, manipulate, and apply n-dimensional spatial transforms},
+ url = {https://joss.theoj.org/papers/10.21105/joss.03459},
+ urldate = {2021-10-28},
+ volume = {6}
+}
+
+@article{gorgolewski2011,
+ abstract = {{Current neuroimaging software offer users an incredible opportunity to analyze their data in different ways, with different underlying assumptions. Several sophisticated software packages (e.g., AFNI, BrainVoyager, FSL, FreeSurfer, Nipy, R, SPM) are used to process and analyze large and often diverse (highly multi-dimensional) data. However, this heterogeneous collection of specialized applications creates several issues that hinder replicable, efficient, and optimal use of neuroimaging analysis approaches: (1) No uniform access to neuroimaging analysis software and usage information; (2) No framework for comparative algorithm development and dissemination; (3) Personnel turnover in laboratories often limits methodological continuity and training new personnel takes time; (4) Neuroimaging software packages do not address computational efficiency; and (5) Methods sections in journal articles are inadequate for reproducing results. To address these issues, we present Nipype (Neuroimaging in Python: Pipelines and Interfaces; http://nipy.org/nipype), an open-source, community-developed, software package, and scriptable library. Nipype solves the issues by providing Interfaces to existing neuroimaging software with uniform usage semantics and by facilitating interaction between these packages using Workflows. Nipype provides an environment that encourages interactive exploration of algorithms, eases the design of Workflows within and between packages, allows rapid comparative development of algorithms and reduces the learning curve necessary to use different packages. Nipype supports both local and remote execution on multi-core machines and clusters, without additional scripting. Nipype is Berkeley Software Distribution licensed, allowing anyone unrestricted usage. An open, community-driven development philosophy allows the software to quickly adapt and address the varied needs of the evolving neuroimaging community, especially in the context of increasing demand for reproducible research.}},
+ author = {Gorgolewski, Krzysztof J. and Burns, Christopher D. and Madison, Cindee and Clark, Dav and Halchenko, Yaroslav O. and Waskom, Michael L. and Ghosh, Satrajit S.},
+ doi = {10.3389/fninf.2011.00013},
+ journal = {Frontiers in Neuroinformatics},
+ keywords = {},
+ pages = {13},
+ pmcid = {PMC3159964},
+ pmid = {21897815},
+ title = {{Nipype: A Flexible, Lightweight and Extensible Neuroimaging Data Processing Framework in Python}},
+ volume = {5},
+ year = {2011}
+}
+
+@article{gorgolewski2016a,
+ abstract = {{Recent years have seen an increase in alarming signals regarding the lack of replicability in neuroscience, psychology, and other related fields. To avoid a widespread crisis in neuroimaging research and consequent loss of credibility in the public eye, we need to improve how we do science. This article aims to be a practical guide for researchers at any stage of their careers that will help them make their research more reproducible and transparent while minimizing the additional effort that this might require. The guide covers three major topics in open science (data, code, and publications) and offers practical advice as well as highlighting advantages of adopting more open research practices that go beyond improved transparency and reproducibility.}},
+ author = {Gorgolewski, Krzysztof J. and Poldrack, Russell A.},
+ doi = {10.1371/journal.pbio.1002506},
+ issn = {1544-9173},
+ journal = {PLOS Biology},
+ keywords = {},
+ number = {7},
+ pages = {e1002506},
+ pmcid = {PMC4936733},
+ pmid = {27389358},
+ title = {{A Practical Guide for Improving Transparency and Reproducibility in Neuroimaging Research}},
+ volume = {14},
+ year = {2016}
+}
+
+@article{gorgolewski2016b,
+ abstract = {{The development of magnetic resonance imaging (MRI) techniques has defined modern neuroimaging. Since its inception, tens of thousands of studies using techniques such as functional MRI and diffusion weighted imaging have allowed for the non-invasive study of the brain. Despite the fact that MRI is routinely used to obtain data for neuroscience research, there has been no widely adopted standard for organizing and describing the data collected in an imaging experiment. This renders sharing and reusing data (within or between labs) difficult if not impossible and unnecessarily complicates the application of automatic pipelines and quality assurance protocols. To solve this problem, we have developed the Brain Imaging Data Structure (BIDS), a standard for organizing and describing MRI datasets. The BIDS standard uses file formats compatible with existing software, unifies the majority of practices already common in the field, and captures the metadata necessary for most common data processing operations.}},
+ author = {Gorgolewski, Krzysztof J. and Auer, Tibor and Calhoun, Vince D. and Craddock, R. Cameron and Das, Samir and Duff, Eugene P. and Flandin, Guillaume and Ghosh, Satrajit S. and Glatard, Tristan and Halchenko, Yaroslav O. and Handwerker, Daniel A. and Hanke, Michael and Keator, David and Li, Xiangrui and Michael, Zachary and Maumet, Camille and Nichols, B. Nolan and Nichols, Thomas E. and Pellman, John and Poline, Jean-Baptiste and Rokem, Ariel and Schaefer, Gunnar and Sochat, Vanessa and Triplett, William and Turner, Jessica A. and Varoquaux, Gaël and Poldrack, Russell A.},
+ doi = {10.1038/sdata.2016.44},
+ journal = {Scientific Data},
+ keywords = {},
+ number = {1},
+ pages = {160044},
+ pmcid = {PMC4978148},
+ pmid = {27326542},
+ title = {{The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments}},
+ volume = {3},
+ year = {2016}
+}
+
+@article{gronenschild2012,
+ abstract = {{FreeSurfer is a popular software package to measure cortical thickness and volume of neuroanatomical structures. However, little if any is known about measurement reliability across various data processing conditions. Using a set of 30 anatomical T1-weighted 3T MRI scans, we investigated the effects of data processing variables such as FreeSurfer version (v4.3.1, v4.5.0, and v5.0.0), workstation (Macintosh and Hewlett-Packard), and Macintosh operating system version (OSX 10.5 and OSX 10.6). Significant differences were revealed between FreeSurfer version v5.0.0 and the two earlier versions. These differences were on average 8.8±6.6\% (range 1.3–64.0\%) (volume) and 2.8±1.3\% (1.1–7.7\%) (cortical thickness). About a factor two smaller differences were detected between Macintosh and Hewlett-Packard workstations and between OSX 10.5 and OSX 10.6. The observed differences are similar in magnitude as effect sizes reported in accuracy evaluations and neurodegenerative studies. The main conclusion is that in the context of an ongoing study, users are discouraged to update to a new major release of either FreeSurfer or operating system or to switch to a different type of workstation without repeating the analysis; results thus give a quantitative support to successive recommendations stated by FreeSurfer developers over the years. Moreover, in view of the large and significant cross-version differences, it is concluded that formal assessment of the accuracy of FreeSurfer is desirable.}},
+ author = {Gronenschild, Ed H. B. M. and Habets, Petra and Jacobs, Heidi I. L. and Mengelers, Ron and Rozendaal, Nico and van Os, Jim and Marcelis, Machteld},
+ doi = {10.1371/journal.pone.0038234},
+ journal = {PLoS ONE},
+ keywords = {},
+ number = {6},
+ pages = {e38234},
+ pmcid = {PMC3365894},
+ pmid = {22675527},
+ title = {{The Effects of FreeSurfer Version, Workstation Type, and Macintosh Operating System Version on Anatomical Volume and Cortical Thickness Measurements}},
+ volume = {7},
+ year = {2012}
+}
+
+@article{gruning2018,
+ abstract = {{Many areas of research suffer from poor reproducibility, particularly in computationally intensive domains where results rely on a series of complex methodological decisions that are not well captured by traditional publication approaches. Various guidelines have emerged for achieving reproducibility, but implementation of these practices remains difficult due to the challenge of assembling software tools plus associated libraries, connecting tools together into pipelines, and specifying parameters. Here, we discuss a suite of cutting-edge technologies that make computational reproducibility not just possible, but practical in both time and effort. This suite combines three well-tested components—a system for building highly portable packages of bioinformatics software, containerization and virtualization technologies for isolating reusable execution environments for these packages, and workflow systems that automatically orchestrate the composition of these packages for entire pipelines—to achieve an unprecedented level of computational reproducibility. We also provide a practical implementation and five recommendations to help set a typical researcher on the path to performing data analyses reproducibly.}},
+ author = {Grüning, Björn and Chilton, John and Köster, Johannes and Dale, Ryan and Soranzo, Nicola and van den Beek, Marius and Goecks, Jeremy and Backofen, Rolf and Nekrutenko, Anton and Taylor, James},
+ doi = {10.1016/j.cels.2018.03.014},
+ issn = {2405-4712},
+ journal = {Cell Systems},
+ keywords = {},
+ number = {6},
+ pages = {631--635},
+ pmid = {29953862},
+ title = {{Practical Computational Reproducibility in the Life Sciences}},
+ volume = {6},
+ year = {2018}
+}
+
+@article{haghverdi2018,
+ abstract = {{Differences in gene expression between individual cells of the same type are measured across batches and used to correct technical artifacts in single-cell RNA-sequencing data. Large-scale single-cell RNA sequencing (scRNA-seq) data sets that are produced in different laboratories and at different times contain batch effects that may compromise the integration and interpretation of the data. Existing scRNA-seq analysis methods incorrectly assume that the composition of cell populations is either known or identical across batches. We present a strategy for batch correction based on the detection of mutual nearest neighbors (MNNs) in the high-dimensional expression space. Our approach does not rely on predefined or equal population compositions across batches; instead, it requires only that a subset of the population be shared between batches. We demonstrate the superiority of our approach compared with existing methods by using both simulated and real scRNA-seq data sets. Using multiple droplet-based scRNA-seq data sets, we demonstrate that our MNN batch-effect-correction method can be scaled to large numbers of cells.}},
+ author = {Haghverdi, Laleh and Lun, Aaron T L and Morgan, Michael D and Marioni, John C},
+ doi = {10.1038/nbt.4091},
+ issn = {1087-0156},
+ journal = {Nature Biotechnology},
+ keywords = {},
+ number = {5},
+ pages = {421--427},
+ pmid = {29608177},
+ title = {{Batch effects in single-cell RNA-sequencing data are corrected by matching mutual nearest neighbors}},
+ volume = {36},
+ year = {2018}
+}
+
+@article{halchenko2018,
+ author = {Halchenko, Yaroslav and Goncalves, Mathias and Visconti di Oleggio Castello, Matteo and Ghosh, Satrajit and Hanke, Michael and Brett, Matthew and Salo, Taylor and Gorgolewski, Krzysztof J. and Stadler, Joerg and lee, john and pvelasco and Lurie, Daniel and Pellman, John and Poldrack, Benjamin and Schiffler, Björn and Szczepanik, Michał and Carlin, Johan},
+ doi = {10.5281/zenodo.1306159},
+ keywords = {},
+ title = {{nipy/heudiconv: Heudiconv v0.5.1}},
+ url = {https://doi.org/10.5281/zenodo.1306159},
+ year = {2018}
+}
+
+@article{hallquist2013,
+ abstract = {{ Recent resting-state functional connectivity fMRI (RS-fcMRI) research has demonstrated that head motion during fMRI acquisition systematically influences connectivity estimates despite bandpass filtering and nuisance regression, which are intended to reduce such nuisance variability. We provide evidence that the effects of head motion and other nuisance signals are poorly controlled when the fMRI time series are bandpass-filtered but the regressors are unfiltered, resulting in the inadvertent reintroduction of nuisance-related variation into frequencies previously suppressed by the bandpass filter, as well as suboptimal correction for noise signals in the frequencies of interest. This is important because many RS-fcMRI studies, including some focusing on motion-related artifacts, have applied this approach. In two cohorts of individuals (n =117 and 22) who completed resting-state fMRI scans, we found that the bandpass–regress approach consistently overestimated functional connectivity across the brain, typically on the order of r =.10–.35, relative to a simultaneous bandpass filtering and nuisance regression approach. Inflated correlations under the bandpass–regress approach were associated with head motion and cardiac artifacts. Furthermore, distance-related differences in the association of head motion and connectivity estimates were much weaker for the simultaneous filtering approach. We recommend that future RS-fcMRI studies ensure that the frequencies of nuisance regressors and fMRI data match prior to nuisance regression, and we advocate a simultaneous bandpass filtering and nuisance regression strategy that better controls nuisance-related variability.}},
+ author = {Hallquist, Michael N. and Hwang, Kai and Luna, Beatriz},
+ doi = {10.1016/j.neuroimage.2013.05.116},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ pages = {208--225},
+ pmcid = {PMC3759585},
+ pmid = {23747457},
+ title = {{The nuisance of nuisance regression: Spectral misspecification in a common approach to resting-state fMRI preprocessing reintroduces noise and obscures functional connectivity}},
+ volume = {82},
+ year = {2013}
+}
+
+@article{harris2020,
+ abstract = {{Array programming provides a powerful, compact and expressive syntax for accessing, manipulating and operating on data in vectors, matrices and higher-dimensional arrays. NumPy is the primary array programming library for the Python language. It has an essential role in research analysis pipelines in fields as diverse as physics, chemistry, astronomy, geoscience, biology, psychology, materials science, engineering, finance and economics. For example, in astronomy, NumPy was an important part of the software stack used in the discovery of gravitational waves1 and in the first imaging of a black hole2. Here we review how a few fundamental array concepts lead to a simple and powerful programming paradigm for organizing, exploring and analysing scientific data. NumPy is the foundation upon which the scientific Python ecosystem is constructed. It is so pervasive that several projects, targeting audiences with specialized needs, have developed their own NumPy-like interfaces and array objects. Owing to its central position in the ecosystem, NumPy increasingly acts as an interoperability layer between such array computation libraries and, together with its application programming interface (API), provides a flexible framework to support the next decade of scientific and industrial analysis. NumPy is the primary array programming library for Python; here its fundamental concepts are reviewed and its evolution into a flexible interoperability layer between increasingly specialized computational libraries is discussed.}},
+ author = {Harris, Charles R. and Millman, K. Jarrod and van der Walt, Stéfan J. and Gommers, Ralf and Virtanen, Pauli and Cournapeau, David and Wieser, Eric and Taylor, Julian and Berg, Sebastian and Smith, Nathaniel J. and Kern, Robert and Picus, Matti and Hoyer, Stephan and van Kerkwijk, Marten H. and Brett, Matthew and Haldane, Allan and del Río, Jaime Fernández and Wiebe, Mark and Peterson, Pearu and Gérard-Marchant, Pierre and Sheppard, Kevin and Reddy, Tyler and Weckesser, Warren and Abbasi, Hameer and Gohlke, Christoph and Oliphant, Travis E.},
+ doi = {10.1038/s41586-020-2649-2},
+ eprint = {2006.10256},
+ issn = {0028-0836},
+ journal = {Nature},
+ keywords = {},
+ number = {7825},
+ pages = {357--362},
+ pmid = {32939066},
+ title = {{Array programming with NumPy}},
+ volume = {585},
+ year = {2020}
+}
+
+@article{hoogman2020,
+ abstract = {{Neuroimaging has been extensively used to study brain structure and function in individuals with attention deficit/hyperactivity disorder (ADHD) and autism spectrum disorder (ASD) over the past decades. Two of the main shortcomings of the neuroimaging literature of these disorders are the small sample sizes employed and the heterogeneity of methods used. In 2013 and 2014, the ENIGMA-ADHD and ENIGMA-ASD working groups were respectively, founded with a common goal to address these limitations. Here, we provide a narrative review of the thus far completed and still ongoing projects of these working groups. Due to an implicitly hierarchical psychiatric diagnostic classification system, the fields of ADHD and ASD have developed largely in isolation, despite the considerable overlap in the occurrence of the disorders. The collaboration between the ENIGMA-ADHD and -ASD working groups seeks to bring the neuroimaging efforts of the two disorders closer together. The outcomes of case–control studies of subcortical and cortical structures showed that subcortical volumes are similarly affected in ASD and ADHD, albeit with small effect sizes. Cortical analyses identified unique differences in each disorder, but also considerable overlap between the two, specifically in cortical thickness. Ongoing work is examining alternative research questions, such as brain laterality, prediction of case–control status, and anatomical heterogeneity. In brief, great strides have been made toward fulfilling the aims of the ENIGMA collaborations, while new ideas and follow-up analyses continue that include more imaging modalities (diffusion MRI and resting-state functional MRI), collaborations with other large databases, and samples with dual diagnoses.}},
+ author = {Hoogman, Martine and Rooij, Daan and Klein, Marieke and Boedhoe, Premika and Ilioska, Iva and Li, Ting and Patel, Yash and Postema, Merel C. and Zhang-James, Yanli and Anagnostou, Evdokia and Arango, Celso and Auzias, Guillaume and Banaschewski, Tobias and Bau, Claiton H. D. and Behrmann, Marlene and Bellgrove, Mark A. and Brandeis, Daniel and Brem, Silvia and Busatto, Geraldo F. and Calderoni, Sara and Calvo, Rosa and Castellanos, Francisco X. and Coghill, David and Conzelmann, Annette and Daly, Eileen and Deruelle, Christine and Dinstein, Ilan and Durston, Sarah and Ecker, Christine and Ehrlich, Stefan and Epstein, Jeffery N. and Fair, Damien A. and Fitzgerald, Jacqueline and Freitag, Christine M. and Frodl, Thomas and Gallagher, Louise and Grevet, Eugenio H. and Haavik, Jan and Hoekstra, Pieter J. and Janssen, Joost and Karkashadze, Georgii and King, Joseph A. and Konrad, Kerstin and Kuntsi, Jonna and Lazaro, Luisa and Lerch, Jason P. and Lesch, Klaus-Peter and Louza, Mario R. and Luna, Beatriz and Mattos, Paulo and McGrath, Jane and Muratori, Filippo and Murphy, Clodagh and Nigg, Joel T. and Oberwelland-Weiss, Eileen and Tuura, Ruth L. O'Gorman and O'Hearn, Kirsten and Oosterlaan, Jaap and Parellada, Mara and Pauli, Paul and Plessen, Kerstin J. and Ramos-Quiroga, J. Antoni and Reif, Andreas and Reneman, Liesbeth and Retico, Alessandra and Rosa, Pedro G. P. and Rubia, Katya and Shaw, Philip and Silk, Tim J. and Tamm, Leanne and Vilarroya, Oscar and Walitza, Susanne and Jahanshad, Neda and Faraone, Stephen V. and Francks, Clyde and Heuvel, Odile A. and Paus, Tomas and Thompson, Paul M. and Buitelaar, Jan K. and Franke, Barbara},
+ doi = {10.1002/hbm.25029},
+ issn = {1065-9471},
+ journal = {Human Brain Mapping},
+ keywords = {},
+ pmid = {32420680},
+ title = {{Consortium neuroscience of attention deficit/hyperactivity disorder and autism spectrum disorder: The ENIGMA adventure}},
+ year = {2020}
+}
+
+@online{horn2016a,
+ author = {Horn, Andreas},
+ date = {2016-07-28},
+ file = {MNI T1 6thGen NLIN to MNI 2009b NLIN ANTs transform:C\:\\Users\\Lea\\Zotero\\storage\\D8YU5UNC\\2.html:text/html},
+ title = {{MNI} T1 6thGen {NLIN} to {MNI} 2009b {NLIN} {ANTs} transform},
+ url = {https://doi.org/10.6084/m9.figshare.3502238.v2},
+ urldate = {2021-03-23}
+}
+
+@online{horn2016b,
+ author = {Horn, Andreas},
+ date = {2016-07-27},
+ file = {Snapshot:C\:\\Users\\Lea\\Zotero\\storage\\66VGMLIL\\about-the-mni-spaces.html:text/html},
+ langid = {american},
+ title = {About the {MNI} space(s)},
+ titleaddon = {Lead-{DBS}},
+ url = {https://www.lead-dbs.org/about-the-mni-spaces/},
+ urldate = {2021-03-23}
+}
+
+@misc{horn2016c,
+ author = {Horn, Andreas},
+ keywords = {},
+ title = {{MNI T1 6thGen NLIN to MNI 2009b NLIN ANTs transform}},
+ url = {https://doi.org/10.6084/m9.figshare.3502238.v2},
+ year = {2016}
+}
+
+@misc{horn2016d,
+ author = {Horn, Andreas},
+ file = {Snapshot:/work/.zotero/storage/66VGMLIL/about-the-mni-spaces.html:text/html},
+ journal = {Lead-DBS},
+ language = {en-US},
+ month = {7},
+ title = {About the {MNI} space(s)},
+ url = {https://www.lead-dbs.org/about-the-mni-spaces/},
+ urldate = {2021-03-23},
+ year = {2016}
+}
+
+@inproceedings{jarecka2020,
+ author = {Jarecka, Dorota and Goncalves, Mathias and Markiewicz, Christopher J. and Esteban, Oscar and Lo, Nicole and Kaczmarzyk, Jakub and Ghosh, Satrajit},
+ booktitle = {Proceedings of the 19th Python in Science Conference },
+ doi = {10.25080/majora-342d178e-012},
+ keywords = {},
+ pages = {132 -- 139 },
+ title = {{Pydra - a flexible and lightweight dataflow engine for scientific analyses }},
+ year = {2020}
+}
+
+@article{jenkinson2012,
+ abstract = {{FSL (the FMRIB Software Library) is a comprehensive library of analysis tools for functional, structural and diffusion MRI brain imaging data, written mainly by members of the Analysis Group, FMRIB, Oxford. For this NeuroImage special issue on “20 years of fMRI” we have been asked to write about the history, developments and current status of FSL. We also include some descriptions of parts of FSL that are not well covered in the existing literature. We hope that some of this content might be of interest to users of FSL, and also maybe to new research groups considering creating, releasing and supporting new software packages for brain image analysis.}},
+ author = {Jenkinson, Mark and Beckmann, Christian F. and Behrens, Timothy E.J. and Woolrich, Mark W. and Smith, Stephen M.},
+ doi = {10.1016/j.neuroimage.2011.09.015},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ number = {2},
+ pages = {782--790},
+ pmid = {21979382},
+ title = {{FSL}},
+ volume = {62},
+ year = {2012}
+}
+
+@article{jo2013,
+ abstract = {{Artifactual sources of resting-state (RS) FMRI can originate from head motion, physiology, and hardware. Of these sources, motion has received considerable attention and was found to induce corrupting effects by differentially biasing correlations between regions depending on their distance. Numerous corrective approaches have relied on the identification and censoring of high-motion time points and the use of the brain-wide average time series as a nuisance regressor to which the data are orthogonalized (Global Signal Regression, GSReg). We replicate the previously reported head-motion bias on correlation coefficients and then show that while motion can be the source of artifact in correlations, the distance-dependent bias is exacerbated by GSReg. Put differently, correlation estimates obtained after GSReg are more susceptible to the presence of motion and by extension to the levels of censoring. More generally, the effect of motion on correlation estimates depends on the preprocessing steps leading to the correlation estimate, with certain approaches performing markedly worse than others. For this purpose, we consider various models for RS FMRI preprocessing and show that the local white matter regressor (WMeLOCAL), a subset of ANATICOR, results in minimal sensitivity to motion and reduces by extension the dependence of correlation results on censoring.}},
+ author = {Jo, Hang Joon and Gotts, Stephen J. and Reynolds, Richard C. and Bandettini, Peter A. and Martin, Alex and Cox, Robert W. and Saad, Ziad S.},
+ doi = {10.1155/2013/935154},
+ issn = {1110-757X},
+ journal = {Journal of Applied Mathematics},
+ keywords = {},
+ pages = {1--9},
+ pmid = {24415902},
+ title = {{Effective Preprocessing Procedures Virtually Eliminate Distance-Dependent Motion Artifacts in Resting State FMRI}},
+ volume = {2013},
+ year = {2013}
+}
+
+@article{johnson2007,
+ abstract = {{Non-biological experimental variation or “batch effects" are commonly observed across multiple batches of microarray experiments, often rendering the task of combining data from these batches difficult. The ability to combine microarray data sets is advantageous to researchers to increase statistical power to detect biological phenomena from studies where logistical considerations restrict sample size or in studies that require the sequential hybridization of arrays. In general, it is inappropriate to combine data sets without adjusting for batch effects. Methods have been proposed to filter batch effects from data, but these are often complicated and require large batch sizes (>25) to implement. Because the majority of microarray studies are conducted using much smaller sample sizes, existing methods are not sufficient. We propose parametric and non-parametric empirical Bayes frameworks for adjusting data for batch effects that is robust to outliers in small sample sizes and performs comparable to existing methods for large samples. We illustrate our methods using two example data sets and show that our methods are justifiable, easy to apply, and useful in practice. Software for our method is freely available at: http://biosun1.harvard.edu/complab/batch/.}},
+ author = {Johnson, W. Evan and Li, Cheng and Rabinovic, Ariel},
+ doi = {10.1093/biostatistics/kxj037},
+ issn = {1465-4644},
+ journal = {Biostatistics},
+ keywords = {},
+ number = {1},
+ pages = {118--127},
+ pmid = {16632515},
+ title = {{Adjusting batch effects in microarray expression data using empirical Bayes methods}},
+ volume = {8},
+ year = {2007}
+}
+
+@article{kerestes2017,
+ abstract = {The amygdala is one of the most extensively studied human brain regions and undisputedly plays a central role in many psychiatric disorders. However, an outstanding question is whether connectivity of amygdala subregions, specifically the centromedial ({CM}), laterobasal ({LB}) and superficial ({SF}) nuclei, are modulated by brain state (i.e., task vs. rest). Here, using a multimodal approach, we directly compared meta-analytic connectivity modeling ({MACM}) and specific co-activation likelihood estimation ({SCALE})-derived estimates of {CM}, {LB} and {SF} task-based co-activation to the functional connectivity of these nuclei as assessed by resting state fmri (rs-fmri). Finally, using a preexisting resting state functional connectivity-derived cortical parcellation, we examined both {MACM} and rs-fmri amygdala subregion connectivity with 17 large-scale networks, to explicitly address how the amygdala interacts with other large-scale neural networks. Analyses revealed strong differentiation of {CM}, {LB} and {SF} connectivity patterns with other brain regions, both in task-dependent and task-independent contexts. All three regions, however, showed convergent connectivity with the right ventrolateral prefrontal cortex ({VLPFC}) that was not driven by high base rate levels of activation. Similar patterns of connectivity across rs-fmri and {MACM} were observed for each subregion, suggesting a similar network architecture of amygdala connectivity with the rest of the brain across tasks and resting state for each subregion, that may be modified in the context of specific task demands. These findings support animal models that posit a parallel model of amygdala functioning, but importantly, also modify this position to suggest integrative processing in the amygdala.},
+ author = {Kerestes, Rebecca and Chase, Henry W. and Phillips, Mary L. and Ladouceur, Cecile D. and Eickhoff, Simon B.},
+ date = {2017-03-01},
+ doi = {10.1016/j.neuroimage.2016.12.023},
+ file = {Accepted Version:C\:\\Users\\Lea\\Zotero\\storage\\HYNMTYHN\\Kerestes et al. - 2017 - Multimodal evaluation of the amygdala's functional.pdf:application/pdf;ScienceDirect Snapshot:C\:\\Users\\Lea\\Zotero\\storage\\252XHKVC\\S1053811916307455.html:text/html},
+ issn = {1053-8119},
+ journaltitle = {{NeuroImage}},
+ keywords = {Resting state, Amygdala, Meta-analytic connectivity modeling ({MACM}), Specific co-activation likelihood estimation ({SCALE}), Ventrolateral prefrontal cortex ({VLPFC})},
+ langid = {english},
+ pages = {219--229},
+ shortjournal = {{NeuroImage}},
+ title = {Multimodal evaluation of the amygdala's functional connectivity},
+ url = {https://www.sciencedirect.com/science/article/pii/S1053811916307455},
+ urldate = {2021-10-12},
+ volume = {148}
+}
+
+@article{kurtzer2017,
+ abstract = {{Here we present Singularity, software developed to bring containers and reproducibility to scientific computing. Using Singularity containers, developers can work in reproducible environments of their choosing and design, and these complete environments can easily be copied and executed on other platforms. Singularity is an open source initiative that harnesses the expertise of system and software engineers and researchers alike, and integrates seamlessly into common workflows for both of these groups. As its primary use case, Singularity brings mobility of computing to both users and HPC centers, providing a secure means to capture and distribute software and compute environments. This ability to create and deploy reproducible environments across these centers, a previously unmet need, makes Singularity a game changing development for computational science.}},
+ author = {Kurtzer, Gregory M. and Sochat, Vanessa and Bauer, Michael W.},
+ doi = {10.1371/journal.pone.0177459},
+ journal = {PLOS ONE},
+ keywords = {},
+ number = {5},
+ pages = {e0177459},
+ pmid = {28494014},
+ title = {{Singularity: Scientific containers for mobility of compute}},
+ volume = {12},
+ year = {2017}
+}
+
+@article{lenth2016,
+ abstract = {{Least-squares means are predictions from a linear model, or averages thereof. They are useful in the analysis of experimental data for summarizing the effects of factors, and for testing linear contrasts among predictions. The lsmeans package (Lenth 2016) provides a simple way of obtaining least-squares means and contrasts thereof. It supports many models fitted by R (R Core Team 2015) core packages (as well as a few key contributed ones) that fit linear or mixed models, and provides a simple way of extending it to cover more model classes.}},
+ author = {Lenth, Russell V.},
+ doi = {10.18637/jss.v069.i01},
+ issn = {1548-7660},
+ journal = {Journal of Statistical Software, Articles},
+ keywords = {least-squares means; linear models; experimental design},
+ number = {1},
+ pages = {1---33},
+ title = {{Least-Squares Means: The R Package lsmeans}},
+ url = {https://www.jstatsoft.org/v069/i01},
+ volume = {69},
+ year = {2016}
+}
+
+@article{li2016,
+ abstract = {{BackgroundClinical imaging data are typically stored and transferred in the DICOM format, whereas the NIfTI format has been widely adopted by scientists in the neuroimaging community. Therefore, a vital initial step in processing the data is to convert images from the complicated DICOM format to the much simpler NIfTI format. While there are a number of tools that usually handle DICOM to NIfTI conversion seamlessly, some variations can disrupt this process.New methodWe provide some insight into the challenges faced with image conversion. First, different manufacturers implement the DICOM format differently which complicates the conversion. Second, different modalities and sub-modalities may need special treatment during conversion. Lastly, the image transferring and archiving can also impact the DICOM conversion.ResultsWe present results in several error-prone domains, including the slice order for functional imaging, phase encoding direction for distortion correction, effect of diffusion gradient direction, and effect of gantry correction for some imaging modality.Comparison with existing methodsConversion tools are often designed for a specific manufacturer or modality. The tools and insight we present here are aimed at different manufacturers or modalities.ConclusionsThe imaging conversion is complicated by the variation of images. An understanding of the conversion basics can be helpful for identifying the source of the error. Here we provide users with simple methods for detecting and correcting problems. This also serves as an overview for developers who wish to either develop their own tools or adapt the open source tools created by the authors.}},
+ author = {Li, Xiangrui and Morgan, Paul S. and Ashburner, John and Smith, Jolinda and Rorden, Christopher},
+ doi = {10.1016/j.jneumeth.2016.03.001},
+ issn = {0165-0270},
+ journal = {Journal of Neuroscience Methods},
+ keywords = {},
+ pages = {47--56},
+ pmid = {26945974},
+ title = {{The first step for neuroimaging data analysis: DICOM to NIfTI conversion}},
+ volume = {264},
+ year = {2016}
+}
+
+@article{lindquist2019,
+ abstract = {{The preprocessing pipelines typically used in both task and resting-state functional magnetic resonance imaging (rs-fMRI) analysis are modular in nature: They are composed of a number of separate filtering/regression steps, including removal of head motion covariates and band-pass filtering, performed sequentially and in a flexible order. In this article, we illustrate the shortcomings of this approach, as we show how later preprocessing steps can reintroduce artifacts previously removed from the data in prior preprocessing steps. We show that each regression step is a geometric projection of data onto a subspace, and that performing a sequence of projections can move the data into subspaces no longer orthogonal to those previously removed, reintroducing signal related to nuisance covariates. Thus, linear filtering operations are not commutative, and the order in which the preprocessing steps are performed is critical. These issues can arise in practice when any combination of standard preprocessing steps including motion regression, scrubbing, component-based correction, physiological correction, global signal regression, and temporal filtering are performed sequentially. In this work, we focus primarily on rs-fMRI. We illustrate the problem both theoretically and empirically through application to a test–retest rs-fMRI data set, and suggest remedies. These include (a) combining all steps into a single linear filter, or (b) sequential orthogonalization of covariates/linear filters performed in series.}},
+ author = {Lindquist, Martin A. and Geuter, Stephan and Wager, Tor D. and Caffo, Brian S.},
+ doi = {10.1002/hbm.24528},
+ issn = {1065-9471},
+ journal = {Human Brain Mapping},
+ keywords = {},
+ number = {8},
+ pages = {2358--2376},
+ pmid = {30666750},
+ title = {{Modular preprocessing pipelines can reintroduce artifacts into fMRI data}},
+ volume = {40},
+ year = {2019}
+}
+
+@article{marchini2000,
+ abstract = {{There are many ways to detect activation patterns in a time series of observations at a single voxel in a functional magnetic resonance imaging study. The critical problem is to estimate the statistical significance, which depends on the estimation of both the magnitude of the response to the stimulus and the serial dependence of the time series and especially on the assumptions made in that estimation. We show that for experimental designs with periodic stimuli, only a few aspects of the serial dependence are important and these can be estimated reliably via nonparametric estimation of the spectral density of the time series, whereas existing techniques are biased by their assumptions. The linear model with (stationary) serially dependent errors can be analyzed entirely in frequency domain, and doing so provides many insights. In particular, we introduce a technique to detect periodic activations and show that it has a distribution theory that enables us to assign significance levels down to 1 in 100,000, levels which are needed when a whole brain image is under consideration. Nonparametric spectral density estimation is shown to be self-calibrating and accurate when compared to several other time-domain approaches. The technique is especially resistant to high frequency artefacts that we have found in some datasets and we demonstrate that time-domain approaches may be sufficiently susceptible to these effects to give misleading results. The method is easily generalized to handle event-related designs. We found it necessary to consider the trends in the time series carefully and use nonlinear filters to remove the trends and robust techniques to remove “spikes.” Using this in connection with our techniques allows us to detect activations in clumps of a few (even one) voxel in periodic designs, yet produce essentially no false positive detections at any voxels in null datasets.}},
+ author = {Marchini, Jonathan L. and Ripley, Brian D.},
+ doi = {10.1006/nimg.2000.0628},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ number = {4},
+ pages = {366--380},
+ pmid = {10988031},
+ title = {{A New Statistical Approach to Detecting Significant Activation in Functional MRI}},
+ volume = {12},
+ year = {2000}
+}
+
+@software{markiewicz2021,
+ abstract = {Release Notes Minor bugfix release in the 0.9.x series. {CHANGES} {FIX}: Exclude res from report entities (\#301) @adelavega {MNT}: Update to versioneer 0.20 (\#300) @effigies {MNT}: codespell run + ignore (\#289) @yarikoptic},
+ author = {Markiewicz, Christopher J. and De La Vega, Alejandro and Wagner, Adina and Halchenko, Yaroslav O. and Finc, Karolina and Ciric, Rastko and Goncalves, Mathias and Nielson, Dylan M. and Kent, James D. and Lee, John A. and Poldrack, Russell A. and Gorgolewski, Krzysztof J.},
+ date = {2021-07-21},
+ doi = {10.5281/zenodo.5120201},
+ file = {Zenodo Snapshot:C\:\\Users\\Lea\\Zotero\\storage\\8E2WLDBH\\5120201.html:text/html},
+ keywords = {pipeline, workflow, {BIDS}, neuroimaging, {fMRI}, statistics},
+ publisher = {Zenodo},
+ shorttitle = {poldracklab/fitlins},
+ title = {poldracklab/fitlins: v0.9.2},
+ url = {https://zenodo.org/record/5120201},
+ urldate = {2021-11-09}
+}
+
+@inproceedings{mckinney2010,
+ author = {McKinney, Wes},
+ booktitle = {Proceedings of the 9th Python in Science Conference },
+ doi = {10.25080/majora-92bf1922-00a},
+ keywords = {},
+ pages = {56 -- 61 },
+ title = {{Data Structures for Statistical Computing in Python }},
+ year = {2010}
+}
+
+@book{mouat2015,
+ abstract = {Docker containers offer simpler, faster, and more robust methods for developing, distributing, and running software than previously available. With this hands-on guide, you’ll learn why containers are so important, what you’ll gain by adopting Docker, and how to make it part of your development process.},
+ author = {Mouat, Adrian},
+ date = {2015},
+ edition = {1},
+ isbn = {978-1-4919-1576-9},
+ keywords = {Operations ; Operating Systems \& Server Administration ; Information Technology/Operations ; Application software, {VMware} ; Math \& Science ; Information Technology},
+ publisher = {O'Reilly},
+ title = {Using Docker}
+}
+
+@article{murphy2013,
+ abstract = {{The goal of resting-state functional magnetic resonance imaging (fMRI) is to investigate the brain's functional connections by using the temporal similarity between blood oxygenation level dependent (BOLD) signals in different regions of the brain “at rest” as an indicator of synchronous neural activity. Since this measure relies on the temporal correlation of fMRI signal changes between different parts of the brain, any non-neural activity-related process that affects the signals will influence the measure of functional connectivity, yielding spurious results. To understand the sources of these resting-state fMRI confounds, this article describes the origins of the BOLD signal in terms of MR physics and cerebral physiology. Potential confounds arising from motion, cardiac and respiratory cycles, arterial CO2 concentration, blood pressure/cerebral autoregulation, and vasomotion are discussed. Two classes of techniques to remove confounds from resting-state BOLD time series are reviewed: 1) those utilising external recordings of physiology and 2) data-based cleanup methods that only use the resting-state fMRI data itself. Further methods that remove noise from functional connectivity measures at a group level are also discussed. For successful interpretation of resting-state fMRI comparisons and results, noise cleanup is an often over-looked but essential step in the analysis pipeline.}},
+ author = {Murphy, Kevin and Birn, Rasmus M. and Bandettini, Peter A.},
+ doi = {10.1016/j.neuroimage.2013.04.001},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ pages = {349--359},
+ pmcid = {PMC3720818},
+ pmid = {23571418},
+ title = {{Resting-state fMRI confounds and cleanup}},
+ volume = {80},
+ year = {2013}
+}
+
+@book{pezoulas2020a,
+ author = {Pezoulas, Vasileios C. and Exarchos, Themis P. and Fotiadis, Dimitrios I.},
+ date = {2020},
+ doi = {10.1016/C2018-0-00523-X},
+ isbn = {978-0-12-816507-2},
+ langid = {english},
+ publisher = {Elsevier},
+ title = {Medical Data Sharing, Harmonization and Analytics},
+ url = {https://linkinghub.elsevier.com/retrieve/pii/C2018000523X},
+ urldate = {2021-03-23}
+}
+
+@book{pezoulas2020b,
+ author = {Pezoulas, V. and Exarchos, T. and Fotiadis, D.I.},
+ isbn = {9780128165591},
+ keywords = {},
+ publisher = {Academic Press},
+ title = {{Medical Data Sharing, Harmonization and Analytics}},
+ url = {https://doi.org/10.1016/C2018-0-00523-X},
+ year = {2020}
+}
+
+@article{plis2016,
+ abstract = {The field of neuroimaging has embraced the need for sharing and collaboration. Data sharing mandates from public funding agencies and major journal publishers have spurred the development of data repositories and neuroinformatics consortia. However, efficient and effective data sharing still faces several hurdles. For example, open data sharing is on the rise but is not suitable for sensitive data that are not easily shared, such as genetics. Current approaches can be cumbersome (such as negotiating multiple data sharing agreements). There are also significant data transfer, organization and computational challenges. Centralized repositories only partially address the issues. We propose a dynamic, decentralized platform for large scale analyses called the Collaborative Informatics and Neuroimaging Suite Toolkit for Anonymous Computation (COINSTAC). The COINSTAC solution can include data missing from central repositories, allows pooling of both open and ``closed'' repositories by developing privacy-preserving versions of widely-used algorithms, and incorporates the tools within an easy-to-use platform enabling distributed computation. We present an initial prototype system which we demonstrate on two multi-site data sets, without aggregating the data. In addition, by iterating across sites, the COINSTAC model enables meta-analytic solutions to converge to ``pooled-data'' solutions (i.e. as if the entire data were in hand). More advanced approaches such as feature generation, matrix factorization models, and preprocessing can be incorporated into such a model. In sum, COINSTAC enables access to the many currently unavailable data sets, a user friendly privacy enabled interface for decentralized analysis, and a powerful solution that complements existing data sharing solutions.},
+ author = {Plis, Sergey M. and Sarwate, Anand D. and Wood, Dylan and Dieringer, Christopher and Landis, Drew and Reed, Cory and Panta, Sandeep R. and Turner, Jessica A. and Shoemaker, Jody M. and Carter, Kim W. and Thompson, Paul and Hutchison, Kent and Calhoun, Vince D.},
+ doi = {10.3389/fnins.2016.00365},
+ file = {Full Text PDF:/work/.zotero/storage/HSLUZRG7/Plis et al. - 2016 - COINSTAC A Privacy Enabled Model and Prototype fo.pdf:application/pdf},
+ issn = {1662-453X},
+ journal = {Frontiers in Neuroscience},
+ keywords = {data sharing, brain imaging, Decentralized algorithms, decentralized processing, Privacy},
+ language = {English},
+ shorttitle = {{COINSTAC}},
+ title = {{COINSTAC}: {A} {Privacy} {Enabled} {Model} and {Prototype} for {Leveraging} and {Processing} {Decentralized} {Brain} {Imaging} {Data}},
+ url = {https://www.frontiersin.org/articles/10.3389/fnins.2016.00365/full},
+ urldate = {2021-04-21},
+ volume = {10},
+ year = {2016}
+}
+
+@article{poldrack2015,
+ abstract = {The amount of shared data available for re-analysis has greatly increased in the last few years. Here we discuss some of the challenges raised by the analysis of these shared datasets and propose some strategies to address these issues.},
+ author = {Poldrack, Russell A. and Poline, Jean-Baptiste},
+ date = {2015-02-01},
+ doi = {10.1016/j.tics.2014.11.008},
+ file = {ScienceDirect Full Text PDF:C\:\\Users\\Lea\\Zotero\\storage\\47Q296C4\\Poldrack and Poline - 2015 - The publication and reproducibility challenges of .pdf:application/pdf;ScienceDirect Snapshot:C\:\\Users\\Lea\\Zotero\\storage\\YAW4EGTB\\S1364661314002526.html:text/html},
+ issn = {1364-6613},
+ journaltitle = {Trends in Cognitive Sciences},
+ keywords = {{fMRI}, cognitive neuroscience, data sharing, meta-analysis, publication},
+ langid = {english},
+ number = {2},
+ pages = {59--61},
+ shortjournal = {Trends in Cognitive Sciences},
+ title = {The publication and reproducibility challenges of shared data},
+ url = {https://www.sciencedirect.com/science/article/pii/S1364661314002526},
+ urldate = {2021-03-23},
+ volume = {19}
+}
+
+@article{poldrack2017,
+ abstract = {{There is growing concern about the reproducibility of scientific research, and neuroimaging research suffers from many features that are thought to lead to high levels of false results.Statistical power of neuroimaging studies has increased over time but remains relatively low, especially for group comparison studies. An analysis of effect sizes in the Human Connectome Project demonstrates that most functional MRI studies are not sufficiently powered to find reasonable effect sizes.Neuroimaging analysis has a high degree of flexibility in analysis methods, which can lead to inflated false-positive rates unless controlled for. Pre-registration of analysis plans and clear delineation of hypothesis-driven and exploratory research are potential solutions to this problem.The use of appropriate corrections for multiple tests has increased, but some common methods can have highly inflated false-positive rates. The use of non-parametric methods is encouraged to provide accurate correction for multiple tests.Software errors have the potential to lead to incorrect or irreproducible results. The adoption of improved software engineering methods and software testing strategies can help to reduce such problems.Reproducibility will be improved through greater transparency in methods reporting and through increased sharing of data and code. There is growing concern about the reproducibility of scientific research, and neuroimaging research suffers from many features that are thought to lead to high levels of false results. Statistical power of neuroimaging studies has increased over time but remains relatively low, especially for group comparison studies. An analysis of effect sizes in the Human Connectome Project demonstrates that most functional MRI studies are not sufficiently powered to find reasonable effect sizes. Neuroimaging analysis has a high degree of flexibility in analysis methods, which can lead to inflated false-positive rates unless controlled for. Pre-registration of analysis plans and clear delineation of hypothesis-driven and exploratory research are potential solutions to this problem. The use of appropriate corrections for multiple tests has increased, but some common methods can have highly inflated false-positive rates. The use of non-parametric methods is encouraged to provide accurate correction for multiple tests. Software errors have the potential to lead to incorrect or irreproducible results. The adoption of improved software engineering methods and software testing strategies can help to reduce such problems. Reproducibility will be improved through greater transparency in methods reporting and through increased sharing of data and code. Neuroimaging techniques are increasingly applied by the wider neuroscience community. However, problems such as low statistical power, flexibility in data analysis and software issues pose challenges to interpreting neuroimaging data in a meaningful and reliable way. Here, Poldracket al. discuss these and other problems, and suggest solutions. Functional neuroimaging techniques have transformed our ability to probe the neurobiological basis of behaviour and are increasingly being applied by the wider neuroscience community. However, concerns have recently been raised that the conclusions that are drawn from some human neuroimaging studies are either spurious or not generalizable. Problems such as low statistical power, flexibility in data analysis, software errors and a lack of direct replication apply to many fields, but perhaps particularly to functional MRI. Here, we discuss these problems, outline current and suggested best practices, and describe how we think the field should evolve to produce the most meaningful and reliable answers to neuroscientific questions.}},
+ author = {Poldrack, Russell A. and Baker, Chris I. and Durnez, Joke and Gorgolewski, Krzysztof J. and Matthews, Paul M. and Munafò, Marcus R. and Nichols, Thomas E. and Poline, Jean-Baptiste and Vul, Edward and Yarkoni, Tal},
+ doi = {10.1038/nrn.2016.167},
+ issn = {1471-003X},
+ journal = {Nature Reviews Neuroscience},
+ keywords = {},
+ number = {2},
+ pages = {115--126},
+ pmid = {28053326},
+ title = {{Scanning the horizon: towards transparent and reproducible neuroimaging research}},
+ volume = {18},
+ year = {2017}
+}
+
+@article{poldrack2019,
+ abstract = {{The reproducibility of scientific research has become a point of critical concern. We argue that openness and transparency are critical for reproducibility, and we outline an ecosystem for open and transparent science that has emerged within the human neuroimaging community. We discuss the range of open data-sharing resources that have been developed for neuroimaging data, as well as the role of data standards (particularly the brain imaging data structure) in enabling the automated sharing, processing, and reuse of large neuroimaging data sets. We outline how the open source Python language has provided the basis for a data science platform that enables reproducible data analysis and visualization. We also discuss how new advances in software engineering, such as containerization, provide the basis for greater reproducibility in data analysis. The emergence of this new ecosystem provides an example for many areas of science that are currently struggling with reproducibility. Expected final online publication date for the Annual Review of Biomedical Data Science Volume 2 is July 22, 2019. Please see http://www.annualreviews.org/page/journal/pubdates for revised estimates.}},
+ author = {Poldrack, Russell A. and Gorgolewski, Krzysztof J. and Varoquaux, Gaël},
+ doi = {10.1146/annurev-biodatasci-072018-021237},
+ issn = {2574-3414},
+ journal = {Annual Review of Biomedical Data Science},
+ keywords = {},
+ number = {1},
+ pages = {1--20},
+ title = {{Computational and Informatic Advances for Reproducible Data Analysis in Neuroimaging}},
+ volume = {2},
+ year = {2019}
+}
+
+@article{pontikos2017,
+ abstract = {{Phenopolis is an open-source web server providing an intuitive interface to genetic and phenotypic databases. It integrates analysis tools such as variant filtering and gene prioritisation based on phenotype. The Phenopolis platform will accelerate clinical diagnosis, gene discovery and encourage wider adoption of the Human Phenotype Ontology in the study of rare genetic diseases.}},
+ author = {Pontikos, Nikolas and Yu, Jing and Moghul, Ismail and Withington, Lucy and Blanco-Kelly, Fiona and Vulliamy, Tom and Wong, Tsz Lun Ernest and Murphy, Cian and Cipriani, Valentina and Fiorentino, Alessia and Arno, Gavin and Greene, Daniel and Jacobsen, Julius OB and Clark, Tristan and Gregory, David S and Nemeth, Andrea M and Halford, Stephanie and Inglehearn, Chris F and Downes, Susan and Black, Graeme C and Webster, Andrew R and Hardcastle, Alison J and UKIRDC and Plagnol, Vincent},
+ doi = {10.1093/bioinformatics/btx147},
+ issn = {1367-4803},
+ journal = {Bioinformatics},
+ keywords = {},
+ number = {15},
+ pages = {2421--2423},
+ pmid = {28334266},
+ title = {{Phenopolis: an open platform for harmonization and analysis of genetic and phenotypic data}},
+ volume = {33},
+ year = {2017}
+}
+
+@article{power2012,
+ abstract = {{ Here, we demonstrate that subject motion produces substantial changes in the timecourses of resting state functional connectivity MRI (rs-fcMRI) data despite compensatory spatial registration and regression of motion estimates from the data. These changes cause systematic but spurious correlation structures throughout the brain. Specifically, many long-distance correlations are decreased by subject motion, whereas many short-distance correlations are increased. These changes in rs-fcMRI correlations do not arise from, nor are they adequately countered by, some common functional connectivity processing steps. Two indices of data quality are proposed, and a simple method to reduce motion-related effects in rs-fcMRI analyses is demonstrated that should be flexibly implementable across a variety of software platforms. We demonstrate how application of this technique impacts our own data, modifying previous conclusions about brain development. These results suggest the need for greater care in dealing with subject motion, and the need to critically revisit previous rs-fcMRI work that may not have adequately controlled for effects of transient subject movements.}},
+ author = {Power, Jonathan D. and Barnes, Kelly A. and Snyder, Abraham Z. and Schlaggar, Bradley L. and Petersen, Steven E.},
+ doi = {10.1016/j.neuroimage.2011.10.018},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ number = {3},
+ pages = {2142--2154},
+ pmcid = {PMC3254728},
+ pmid = {22019881},
+ title = {{Spurious but systematic correlations in functional connectivity MRI networks arise from subject motion}},
+ volume = {59},
+ year = {2012}
+}
+
+@article{power2014,
+ abstract = {{ Head motion systematically alters correlations in resting state functional connectivity fMRI (RSFC). In this report we examine impact of motion on signal intensity and RSFC correlations. We find that motion-induced signal changes (1) are often complex and variable waveforms, (2) are often shared across nearly all brain voxels, and (3) often persist more than 10s after motion ceases. These signal changes, both during and after motion, increase observed RSFC correlations in a distance-dependent manner. Motion-related signal changes are not removed by a variety of motion-based regressors, but are effectively reduced by global signal regression. We link several measures of data quality to motion, changes in signal intensity, and changes in RSFC correlations. We demonstrate that improvements in data quality measures during processing may represent cosmetic improvements rather than true correction of the data. We demonstrate a within-subject, censoring-based artifact removal strategy based on volume censoring that reduces group differences due to motion to chance levels. We note conditions under which group-level regressions do and do not correct motion-related effects.}},
+ author = {Power, Jonathan D. and Mitra, Anish and Laumann, Timothy O. and Snyder, Abraham Z. and Schlaggar, Bradley L. and Petersen, Steven E.},
+ doi = {10.1016/j.neuroimage.2013.08.048},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ pages = {320--341},
+ pmcid = {PMC3849338},
+ pmid = {23994314},
+ title = {{Methods to detect, characterize, and remove motion artifact in resting state fMRI}},
+ volume = {84},
+ year = {2014}
+}
+
+@article{power2017,
+ abstract = {{ This short “how to” article describes a plot I find useful for assessing fMRI data quality. I discuss the reasoning behind the plot and how it is constructed. I create the plot in scans from several publicly available datasets to illustrate different kinds of fMRI signal variance, ranging from thermal noise to motion artifacts to respiratory-related signals. I also show how the plot can be used to understand the variance removed during denoising. Code to make the plot is provided with the article, and supplemental movies show plots for hundreds of additional subjects.}},
+ author = {Power, Jonathan D.},
+ doi = {10.1016/j.neuroimage.2016.08.009},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ pages = {150--158},
+ pmid = {27510328},
+ title = {{A simple but useful way to assess fMRI scan qualities}},
+ volume = {154},
+ year = {2017}
+}
+
+@article{pruim2015,
+ abstract = {{ Head motion during functional MRI (fMRI) scanning can induce spurious findings and/or harm detection of true effects. Solutions have been proposed, including deleting (‘scrubbing’) or regressing out (‘spike regression’) motion volumes from fMRI time-series. These strategies remove motion-induced signal variations at the cost of destroying the autocorrelation structure of the fMRI time-series and reducing temporal degrees of freedom. ICA-based fMRI denoising strategies overcome these drawbacks but typically require re-training of a classifier, needing manual labeling of derived components (e.g. ICA-FIX; Salimi-Khorshidi et al. (2014)). Here, we propose an ICA-based strategy for Automatic Removal of Motion Artifacts (ICA-AROMA) that uses a small (n=4), but robust set of theoretically motivated temporal and spatial features. Our strategy does not require classifier re-training, retains the data's autocorrelation structure and largely preserves temporal degrees of freedom. We describe ICA-AROMA, its implementation, and initial validation. ICA-AROMA identified motion components with high accuracy and robustness as illustrated by leave-N-out cross-validation. We additionally validated ICA-AROMA in resting-state (100 participants) and task-based fMRI data (118 participants). Our approach removed (motion-related) spurious noise from both rfMRI and task-based fMRI data to larger extent than regression using 24 motion parameters or spike regression. Furthermore, ICA-AROMA increased sensitivity to group-level activation. Our results show that ICA-AROMA effectively reduces motion-induced signal variations in fMRI data, is applicable across datasets without requiring classifier re-training, and preserves the temporal characteristics of the fMRI data.}},
+ author = {Pruim, Raimon H.R. and Mennes, Maarten and van Rooij, Daan and Llera, Alberto and Buitelaar, Jan K. and Beckmann, Christian F.},
+ doi = {10.1016/j.neuroimage.2015.02.064},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ pages = {267-277},
+ pmid = {25770991},
+ title = {{ICA-AROMA: A robust ICA-based strategy for removing motion artifacts from fMRI data}},
+ volume = {112},
+ year = {2015}
+}
+
+@software{reback2021,
+ abstract = {This is a patch release in the 1.2.x series and includes some regression fixes. We recommend that all users upgrade to this version. See the full whatsnew for a list of all the changes. The release will be available on the defaults and conda-forge channels: conda install pandas Or via {PyPI}: python3 -m pip install --upgrade pandas Please report any issues with the release on the pandas issue tracker.},
+ author = {Reback, Jeff and {McKinney}, Wes and jbrockmendel and Van den Bossche and Tom Augspurger and Phillip Cloud and gfyoung and Simon Hawkins and Sinhrks and Matthew Roeschke and Adam Klein and Terji Petersen and Jeff Tratner and Chang She and William Ayd and Shahar Naveh and Marc Garcia and patrick and Jeremy Schendel and Andy Hayden and Daniel Saxton and Vytautas Jancauskas and Richard Shadrach and Marco Gorelli and Ali {McMaster} and Pietro Battiston and Skipper Seabold and Kaiqi Dong and chris-b1 and h-vetinari},
+ date = {2021-03-02},
+ doi = {10.5281/zenodo.4572994},
+ file = {Zenodo Snapshot:C\:\\Users\\Lea\\Zotero\\storage\\SU8RT6D3\\4572994.html:text/html},
+ publisher = {Zenodo},
+ shorttitle = {pandas-dev/pandas},
+ title = {pandas-dev/pandas: Pandas 1.2.3},
+ url = {https://zenodo.org/record/4572994},
+ urldate = {2021-03-23}
+}
+
+@article{savio2017,
+ author = {Savio, Alexandre M. and Schutte, Michael and Graña, Manuel and Yakushev, Igor},
+ doi = {10.3389/fninf.2017.00025},
+ journal = {Frontiers in Neuroinformatics},
+ keywords = {},
+ pages = {25},
+ pmid = {28443013},
+ title = {{Pypes: Workflows for Processing Multimodal Neuroimaging Data}},
+ volume = {11},
+ year = {2017}
+}
+
+@article{schirner2018,
+ abstract = {The neurophysiological processes underlying non-invasive brain activity measurements are incompletely understood. Here, we developed a connectome-based brain network model that integrates individual structural and functional data with neural population dynamics to support multi-scale neurophysiological inference. Simulated populations were linked by structural connectivity and, as a novelty, driven by electroencephalography ({EEG}) source activity. Simulations not only predicted subjects' individual resting-state functional magnetic resonance imaging ({fMRI}) time series and spatial network topologies over 20 minutes of activity, but more importantly, they also revealed precise neurophysiological mechanisms that underlie and link six empirical observations from different scales and modalities: (1) resting-state {fMRI} oscillations, (2) functional connectivity networks, (3) excitation-inhibition balance, (4, 5) inverse relationships between α-rhythms, spike-firing and {fMRI} on short and long time scales, and (6) {fMRI} power-law scaling. These findings underscore the potential of this new modelling framework for general inference and integration of neurophysiological knowledge to complement empirical studies.},
+ author = {Schirner, Michael and {McIntosh}, Anthony Randal and Jirsa, Viktor and Deco, Gustavo and Ritter, Petra},
+ date = {2018-01-08},
+ doi = {10.7554/eLife.28927},
+ editor = {Schroeder, Charles E},
+ file = {Full Text PDF:C\:\\Users\\Lea\\Zotero\\storage\\8UA47YJW\\Schirner et al. - 2018 - Inferring multi-scale neural mechanisms with brain.pdf:application/pdf},
+ issn = {2050-084X},
+ journaltitle = {{eLife}},
+ keywords = {{fMRI}, connectomics, alpha rhythm, Brain modeling, {EEG}, resting-state networks},
+ note = {Publisher: {eLife} Sciences Publications, Ltd},
+ pages = {e28927},
+ title = {Inferring multi-scale neural mechanisms with brain network modelling},
+ url = {https://doi.org/10.7554/eLife.28927},
+ urldate = {2021-04-22},
+ volume = {7}
+}
+
+@article{schmaal2020,
+ abstract = {{A key objective in the field of translational psychiatry over the past few decades has been to identify the brain correlates of major depressive disorder (MDD). Identifying measurable indicators of brain processes associated with MDD could facilitate the detection of individuals at risk, and the development of novel treatments, the monitoring of treatment effects, and predicting who might benefit most from treatments that target specific brain mechanisms. However, despite intensive neuroimaging research towards this effort, underpowered studies and a lack of reproducible findings have hindered progress. Here, we discuss the work of the ENIGMA Major Depressive Disorder (MDD) Consortium, which was established to address issues of poor replication, unreliable results, and overestimation of effect sizes in previous studies. The ENIGMA MDD Consortium currently includes data from 45 MDD study cohorts from 14 countries across six continents. The primary aim of ENIGMA MDD is to identify structural and functional brain alterations associated with MDD that can be reliably detected and replicated across cohorts worldwide. A secondary goal is to investigate how demographic, genetic, clinical, psychological, and environmental factors affect these associations. In this review, we summarize findings of the ENIGMA MDD disease working group to date and discuss future directions. We also highlight the challenges and benefits of large-scale data sharing for mental health research.}},
+ author = {Schmaal, Lianne and Pozzi, Elena and Ho, Tiffany C. and van Velzen, Laura S. and Veer, Ilya M. and Opel, Nils and Van Someren, Eus J. W. and Han, Laura K. M. and Aftanas, Lybomir and Aleman, André and Baune, Bernhard T. and Berger, Klaus and Blanken, Tessa F. and Capitão, Liliana and Couvy-Duchesne, Baptiste and Cullen, Kathryn R. and Dannlowski, Udo and Davey, Christopher and Erwin-Grabner, Tracy and Evans, Jennifer and Frodl, Thomas and Fu, Cynthia H. Y. and Godlewska, Beata and Gotlib, Ian H. and Goya-Maldonado, Roberto and Grabe, Hans J. and Groenewold, Nynke A. and Grotegerd, Dominik and Gruber, Oliver and Gutman, Boris A. and Hall, Geoffrey B. and Harrison, Ben J. and Hatton, Sean N. and Hermesdorf, Marco and Hickie, Ian B. and Hilland, Eva and Irungu, Benson and Jonassen, Rune and Kelly, Sinead and Kircher, Tilo and Klimes-Dougan, Bonnie and Krug, Axel and Landrø, Nils Inge and Lagopoulos, Jim and Leerssen, Jeanne and Li, Meng and Linden, David E. J. and MacMaster, Frank P. and McIntosh, Andrew M. and Mehler, David M. A. and Nenadić, Igor and Penninx, Brenda W. J. H. and Portella, Maria J. and Reneman, Liesbeth and Rentería, Miguel E. and Sacchet, Matthew D. and Sämann, Philipp G. and Schrantee, Anouk and Sim, Kang and Soares, Jair C. and Stein, Dan J. and Tozzi, Leonardo and van der Wee, Nic J. A. and van Tol, Marie-José and Vermeiren, Robert and Vives-Gilabert, Yolanda and Walter, Henrik and Walter, Martin and Whalley, Heather C. and Wittfeld, Katharina and Whittle, Sarah and Wright, Margaret J. and Yang, Tony T. and Zarate, Carlos and Thomopoulos, Sophia I. and Jahanshad, Neda and Thompson, Paul M. and Veltman, Dick J.},
+ doi = {10.1038/s41398-020-0842-6},
+ journal = {Translational Psychiatry},
+ keywords = {},
+ number = {1},
+ pages = {172},
+ pmid = {32472038},
+ title = {{ENIGMA MDD: seven years of global neuroimaging studies of major depression through worldwide data sharing}},
+ volume = {10},
+ year = {2020}
+}
+
+@article{smith2004,
+ abstract = {The techniques available for the interrogation and analysis of neuroimaging data have a large influence in determining the flexibility, sensitivity, and scope of neuroimaging experiments. The development of such methodologies has allowed investigators to address scientific questions that could not previously be answered and, as such, has become an important research area in its own right. In this paper, we present a review of the research carried out by the Analysis Group at the Oxford Centre for Functional {MRI} of the Brain ({FMRIB}). This research has focussed on the development of new methodologies for the analysis of both structural and functional magnetic resonance imaging data. The majority of the research laid out in this paper has been implemented as freely available software tools within {FMRIB}'s Software Library ({FSL}).},
+ author = {Smith, Stephen M. and Jenkinson, Mark and Woolrich, Mark W. and Beckmann, Christian F. and Behrens, Timothy E. J. and Johansen-Berg, Heidi and Bannister, Peter R. and De Luca, Marilena and Drobnjak, Ivana and Flitney, David E. and Niazy, Rami K. and Saunders, James and Vickers, John and Zhang, Yongyue and De Stefano, Nicola and Brady, J. Michael and Matthews, Paul M.},
+ date = {2004-01-01},
+ doi = {10.1016/j.neuroimage.2004.07.051},
+ file = {ScienceDirect Snapshot:C\:\\Users\\Lea\\Zotero\\storage\\4TT7YKZ2\\S1053811904003933.html:text/html;Submitted Version:C\:\\Users\\Lea\\Zotero\\storage\\LPECZI83\\Smith et al. - 2004 - Advances in functional and structural MR image ana.pdf:application/pdf},
+ issn = {1053-8119},
+ journaltitle = {{NeuroImage}},
+ keywords = {{FSL}, {FMRI}, Structural {MR} image analysis},
+ langid = {english},
+ pages = {S208--S219},
+ series = {Mathematics in Brain Imaging},
+ shortjournal = {{NeuroImage}},
+ title = {Advances in functional and structural {MR} image analysis and implementation as {FSL}},
+ url = {https://www.sciencedirect.com/science/article/pii/S1053811904003933},
+ urldate = {2021-03-23},
+ volume = {23}
+}
+
+@article{smith2018,
+ author = {Smith, Nathaniel J. and Hudon, Christian and broessli and Seabold, Skipper and Quackenbush, Peter and Hudson-Doyle, Michael and Humber, Max and Leinweber, Katrin and Kibirige, Hassan and Davidson-Pilon, Cameron and Portnoy, Andrey},
+ doi = {10.5281/zenodo.1472929},
+ keywords = {},
+ title = {{pydata/patsy: v0.5.1}},
+ url = {https://doi.org/10.5281/zenodo.1472929},
+ year = {2018}
+}
+
+@article{steegen2016,
+ abstract = {{Empirical research inevitably includes constructing a data set by processing raw data into a form ready for statistical analysis. Data processing often involves choices among several reasonable options for excluding, transforming, and coding data. We suggest that instead of performing only one analysis, researchers could perform a multiverse analysis, which involves performing all analyses across the whole set of alternatively processed data sets corresponding to a large set of reasonable scenarios. Using an example focusing on the effect of fertility on religiosity and political attitudes, we show that analyzing a single data set can be misleading and propose a multiverse analysis as an alternative practice. A multiverse analysis offers an idea of how much the conclusions change because of arbitrary choices in data construction and gives pointers as to which choices are most consequential in the fragility of the result.}},
+ author = {Steegen, Sara and Tuerlinckx, Francis and Gelman, Andrew and Vanpaemel, Wolf},
+ doi = {10.1177/1745691616658637},
+ issn = {1745-6916},
+ journal = {Perspectives on Psychological Science},
+ keywords = {},
+ number = {5},
+ pages = {702--712},
+ pmid = {27694465},
+ title = {{Increasing Transparency Through a Multiverse Analysis}},
+ volume = {11},
+ year = {2016}
+}
+
+@article{szucs2020,
+ abstract = {We evaluated 1038 of the most cited structural and functional ({fMRI}) magnetic resonance brain imaging papers (1161 studies) published during 1990–2012 and 270 papers (300 studies) published in top neuroimaging journals in 2017 and 2018. 96\% of highly cited experimental {fMRI} studies had a single group of participants and these studies had median sample size of 12, highly cited clinical {fMRI} studies (with patient participants) had median sample size of 14.5, and clinical structural {MRI} studies had median sample size of 50. The sample size of highly cited experimental {fMRI} studies increased at a rate of 0.74 participant/year and this rate of increase was commensurate with the median sample sizes of neuroimaging studies published in top neuroimaging journals in 2017 (23 participants) and 2018 (24 participants). Only 4 of 131 papers in 2017 and 5 of 142 papers in 2018 had pre-study power calculations, most for single t-tests and correlations. Only 14\% of highly cited papers reported the number of excluded participants whereas 49\% of papers with their own data in 2017 and 2018 reported excluded participants. Publishers and funders should require pre-study power calculations necessitating the specification of effect sizes. The field should agree on universally required reporting standards. Reporting formats should be standardized so that crucial study parameters could be identified unequivocally.},
+ author = {Szucs, Denes and Ioannidis, John {PA}.},
+ date = {2020-11-01},
+ doi = {10.1016/j.neuroimage.2020.117164},
+ file = {ScienceDirect Full Text PDF:C\:\\Users\\Lea\\Zotero\\storage\\MCKK4DMW\\Szucs and Ioannidis - 2020 - Sample size evolution in neuroimaging research An.pdf:application/pdf;ScienceDirect Snapshot:C\:\\Users\\Lea\\Zotero\\storage\\TX8H8JII\\S1053811920306509.html:text/html},
+ issn = {1053-8119},
+ journaltitle = {{NeuroImage}},
+ langid = {english},
+ pages = {117164},
+ shortjournal = {{NeuroImage}},
+ shorttitle = {Sample size evolution in neuroimaging research},
+ title = {Sample size evolution in neuroimaging research: An evaluation of highly-cited studies (1990–2012) and of latest practices (2017–2018) in high-impact journals},
+ url = {https://www.sciencedirect.com/science/article/pii/S1053811920306509},
+ urldate = {2021-03-23},
+ volume = {221}
+}
+
+@article{taylor2013,
+ abstract = {{We present a suite of software tools for facilitating the combination of functional magnetic resonance imaging (FMRI) and diffusion-based tractography from a network-focused point of view. The programs have been designed for investigating functionally derived gray matter networks and related structural white matter networks. The software comprises the Functional and Tractographic Connectivity Analysis Toolbox (FATCAT), now freely distributed with AFNI. This toolbox supports common file formats and has been designed to integrate as easily as possible with existing standard FMRI pipelines and diffusion software, such as AFNI, FSL, and TrackVis. The programs are efficient, run by commandline for facilitating group processing, and produce several visualizable outputs. Here, we present the programs and their underlying methods, and we also provide a test example of resting-state FMRI analysis combined with tractography. Tractography results are compared with existing methods, showing significantly reduced runtime and generally similar connectivity, but with important differences such as more circumscribed tract regions and more physiologically identifiable paths produced between several region-of-interest pairs. Currently, FATCAT uses only diffusion tensor-based tractography (one direction per voxel), but higher-order models will soon be included.}},
+ author = {Taylor, Paul A. and Saad, Ziad S.},
+ doi = {10.1089/brain.2013.0154},
+ issn = {2158-0014},
+ journal = {Brain Connectivity},
+ keywords = {},
+ number = {5},
+ pages = {523--535},
+ pmcid = {PMC3796333},
+ pmid = {23980912},
+ title = {{FATCAT: (An Efficient) Functional And Tractographic Connectivity Analysis Toolbox}},
+ volume = {3},
+ year = {2013}
+}
+
+@article{thompson2020a,
+ abstract = {This review summarizes the last decade of work by the ENIGMA (Enhancing NeuroImaging Genetics through Meta Analysis) Consortium, a global alliance of over 1400 scientists across 43 countries, studying the human brain in health and disease. Building on large-scale genetic studies that discovered the first robustly replicated genetic loci associated with brain metrics, ENIGMA has diversified into over 50 working groups (WGs), pooling worldwide data and expertise to answer fundamental questions in neuroscience, psychiatry, neurology, and genetics. Most ENIGMA WGs focus on specific psychiatric and neurological conditions, other WGs study normal variation due to sex and gender differences, or development and aging; still other WGs develop methodological pipelines and tools to facilitate harmonized analyses of “big data” (i.e., genetic and epigenetic data, multimodal MRI, and electroencephalography data). These international efforts have yielded the largest neuroimaging studies to date in schizophrenia, bipolar disorder, major depressive disorder, post-traumatic stress disorder, substance use disorders, obsessive-compulsive disorder, attention-deficit/hyperactivity disorder, autism spectrum disorders, epilepsy, and 22q11.2 deletion syndrome. More recent ENIGMA WGs have formed to study anxiety disorders, suicidal thoughts and behavior, sleep and insomnia, eating disorders, irritability, brain injury, antisocial personality and conduct disorder, and dissociative identity disorder. Here, we summarize the first decade of ENIGMA’s activities and ongoing projects, and describe the successes and challenges encountered along the way. We highlight the advantages of collaborative large-scale coordinated data analyses for testing reproducibility and robustness of findings, offering the opportunity to identify brain systems involved in clinical syndromes across diverse samples and associated genetic, environmental, demographic, cognitive, and psychosocial factors.},
+ author = {Thompson, Paul M. and Jahanshad, Neda and Ching, Christopher R. K. and Salminen, Lauren E. and Thomopoulos, Sophia I. and Bright, Joanna and Baune, Bernhard T. and Bertolín, Sara and Bralten, Janita and Bruin, Willem B. and Bülow, Robin and Chen, Jian and Chye, Yann and Dannlowski, Udo and de Kovel, Carolien G. F. and Donohoe, Gary and Eyler, Lisa T. and Faraone, Stephen V. and Favre, Pauline and Filippi, Courtney A. and Frodl, Thomas and Garijo, Daniel and Gil, Yolanda and Grabe, Hans J. and Grasby, Katrina L. and Hajek, Tomas and Han, Laura K. M. and Hatton, Sean N. and Hilbert, Kevin and Ho, Tiffany C. and Holleran, Laurena and Homuth, Georg and Hosten, Norbert and Houenou, Josselin and Ivanov, Iliyan and Jia, Tianye and Kelly, Sinead and Klein, Marieke and Kwon, Jun Soo and Laansma, Max A. and Leerssen, Jeanne and Lueken, Ulrike and Nunes, Abraham and Neill, Joseph O’ and Opel, Nils and Piras, Fabrizio and Piras, Federica and Postema, Merel C. and Pozzi, Elena and Shatokhina, Natalia and Soriano-Mas, Carles and Spalletta, Gianfranco and Sun, Daqiang and Teumer, Alexander and Tilot, Amanda K. and Tozzi, Leonardo and van der Merwe, Celia and Van Someren, Eus J. W. and van Wingen, Guido A. and Völzke, Henry and Walton, Esther and Wang, Lei and Winkler, Anderson M. and Wittfeld, Katharina and Wright, Margaret J. and Yun, Je-Yeon and Zhang, Guohao and Zhang-James, Yanli and Adhikari, Bhim M. and Agartz, Ingrid and Aghajani, Moji and Aleman, André and Althoff, Robert R. and Altmann, Andre and Andreassen, Ole A. and Baron, David A. and Bartnik-Olson, Brenda L. and Marie Bas-Hoogendam, Janna and Baskin-Sommers, Arielle R. and Bearden, Carrie E. and Berner, Laura A. and Boedhoe, Premika S. W. and Brouwer, Rachel M. and Buitelaar, Jan K. and Caeyenberghs, Karen and Cecil, Charlotte A. M. and Cohen, Ronald A. and Cole, James H. and Conrod, Patricia J. and De Brito, Stephane A. and de Zwarte, Sonja M. C. and Dennis, Emily L. and Desrivieres, Sylvane and Dima, Danai and Ehrlich, Stefan and Esopenko, Carrie and Fairchild, Graeme and Fisher, Simon E. and Fouche, Jean-Paul and Francks, Clyde and Frangou, Sophia and Franke, Barbara and Garavan, Hugh P. and Glahn, David C. and Groenewold, Nynke A. and Gurholt, Tiril P. and Gutman, Boris A. and Hahn, Tim and Harding, Ian H. and Hernaus, Dennis and Hibar, Derrek P. and Hillary, Frank G. and Hoogman, Martine and Hulshoff Pol, Hilleke E. and Jalbrzikowski, Maria and Karkashadze, George A. and Klapwijk, Eduard T. and Knickmeyer, Rebecca C. and Kochunov, Peter and Koerte, Inga K. and Kong, Xiang-Zhen and Liew, Sook-Lei and Lin, Alexander P. and Logue, Mark W. and Luders, Eileen and Macciardi, Fabio and Mackey, Scott and Mayer, Andrew R. and McDonald, Carrie R. and McMahon, Agnes B. and Medland, Sarah E. and Modinos, Gemma and Morey, Rajendra A. and Mueller, Sven C. and Mukherjee, Pratik and Namazova-Baranova, Leyla and Nir, Talia M. and Olsen, Alexander and Paschou, Peristera and Pine, Daniel S. and Pizzagalli, Fabrizio and Rentería, Miguel E. and Rohrer, Jonathan D. and Sämann, Philipp G. and Schmaal, Lianne and Schumann, Gunter and Shiroishi, Mark S. and Sisodiya, Sanjay M. and Smit, Dirk J. A. and Sønderby, Ida E. and Stein, Dan J. and Stein, Jason L. and Tahmasian, Masoud and Tate, David F. and Turner, Jessica A. and van den Heuvel, Odile A. and van der Wee, Nic J. A. and van der Werf, Ysbrand D. and van Erp, Theo G. M. and van Haren, Neeltje E. M. and van Rooij, Daan and van Velzen, Laura S. and Veer, Ilya M. and Veltman, Dick J. and Villalon-Reina, Julio E. and Walter, Henrik and Whelan, Christopher D. and Wilde, Elisabeth A. and Zarei, Mojtaba and Zelman, Vladimir},
+ copyright = {2020 The Author(s)},
+ doi = {10.1038/s41398-020-0705-1},
+ file = {Full Text PDF:/work/.zotero/storage/KAS7C86M/Thompson et al. - 2020 - ENIGMA and global neuroscience A decade of large-.pdf:application/pdf;Snapshot:/work/.zotero/storage/L7MJLN4Z/s41398-020-0705-1.html:text/html},
+ issn = {2158-3188},
+ journal = {Translational Psychiatry},
+ language = {en},
+ month = {3},
+ number = {1},
+ pages = {1--28},
+ shorttitle = {{ENIGMA} and global neuroscience},
+ title = {{ENIGMA} and global neuroscience: {A} decade of large-scale studies of the brain in health and disease across more than 40 countries},
+ url = {https://www.nature.com/articles/s41398-020-0705-1},
+ urldate = {2021-03-23},
+ volume = {10},
+ year = {2020}
+}
+
+@incollection{thompson2020b,
+ abstract = {Big data and large-scale biobanks offer the potential to answer new types of questions as well as address older questions with greater confidence and rigor in order to overcome the ‘crisis of reproducibility’ in the neurosciences, in which findings from small datasets were often not replicated in independent samples. A recent paradigm shift has led to the formation of large-scale consortia that pool resources from around the world and significantly improve the power to establish the effects of genetics, and a large range of psychiatric disorders, on the brain in populations worldwide. The individual studies with diverse datasets from people with different ethnic and cultural backgrounds can now be pooled to combine evidence across collaborative studies to determine the robust brain signatures of psychiatric disorders, as well as factors that modulate them. In this chapter, we describe some of the efforts underway internationally to analyze mental health data in a coordinated way, as well as some of the challenges in comparing data from different studies. We discuss “Big Data” as international neuroimaging and genetic data, the need for large scale efforts in brain imaging and genetics, and the activities and findings from the psychiatry focused groups of the ENIGMA consortium, efforts developed to bring together researchers and resources to improve our understanding of how psychiatric disorders affect brain structure and function.},
+ address = {Cham},
+ author = {Thompson, Paul M. and Ching, Christopher R. K. and Dennis, Emily L. and Salminen, Lauren E. and Turner, Jessica A. and van Erp, Theo G. M. and Jahanshad, Neda},
+ booktitle = {Neuroimaging in {Schizophrenia}},
+ doi = {10.1007/978-3-030-35206-6_21},
+ editor = {Kubicki, Marek and Shenton, Martha E.},
+ file = {Springer Full Text PDF:/work/.zotero/storage/9CXDQZN6/Thompson et al. - 2020 - Big Data Initiatives in Psychiatry Global Neuroim.pdf:application/pdf},
+ isbn = {978-3-030-35206-6},
+ keywords = {Neuroimaging, Imaging genetics, International consortia, Reproducibility, Team science},
+ language = {en},
+ pages = {411--426},
+ publisher = {Springer International Publishing},
+ shorttitle = {Big {Data} {Initiatives} in {Psychiatry}},
+ title = {Big {Data} {Initiatives} in {Psychiatry}: {Global} {Neuroimaging} {Studies}},
+ url = {https://doi.org/10.1007/978-3-030-35206-6_21},
+ urldate = {2021-03-23},
+ year = {2020}
+}
+
+@article{turner2018,
+ abstract = {Despite a growing body of research suggesting that task-based functional magnetic resonance imaging ({fMRI}) studies often suffer from a lack of statistical power due to too-small samples, the proliferation of such underpowered studies continues unabated. Using large independent samples across eleven tasks, we demonstrate the impact of sample size on replicability, assessed at different levels of analysis relevant to {fMRI} researchers. We find that the degree of replicability for typical sample sizes is modest and that sample sizes much larger than typical (e.g., N = 100) produce results that fall well short of perfectly replicable. Thus, our results join the existing line of work advocating for larger sample sizes. Moreover, because we test sample sizes over a fairly large range and use intuitive metrics of replicability, our hope is that our results are more understandable and convincing to researchers who may have found previous results advocating for larger samples inaccessible.},
+ author = {Turner, Benjamin O. and Paul, Erick J. and Miller, Michael B. and Barbey, Aron K.},
+ date = {2018-06-07},
+ doi = {10.1038/s42003-018-0073-z},
+ file = {Full Text PDF:C\:\\Users\\Lea\\Zotero\\storage\\ZEMXI8P3\\Turner et al. - 2018 - Small sample sizes reduce the replicability of tas.pdf:application/pdf},
+ issn = {2399-3642},
+ journaltitle = {Communications Biology},
+ langid = {english},
+ note = {Number: 1
+Publisher: Nature Publishing Group},
+ number = {1},
+ pages = {1--10},
+ rights = {2018 The Author(s)},
+ title = {Small sample sizes reduce the replicability of task-based {fMRI} studies},
+ url = {https://www.nature.com/articles/s42003-018-0073-z},
+ urldate = {2021-03-23},
+ volume = {1}
+}
+
+@article{vandenheuvel2020,
+ abstract = {Neuroimaging has played an important part in advancing our understanding of the neurobiology of obsessive–compulsive disorder (OCD). At the same time, neuroimaging studies of OCD have had notable limitations, including reliance on relatively small samples. International collaborative efforts to increase statistical power by combining samples from across sites have been bolstered by the ENIGMA consortium; this provides specific technical expertise for conducting multi-site analyses, as well as access to a collaborative community of neuroimaging scientists. In this article, we outline the background to, development of, and initial findings from ENIGMA's OCD working group, which currently consists of 47 samples from 34 institutes in 15 countries on 5 continents, with a total sample of 2,323 OCD patients and 2,325 healthy controls. Initial work has focused on studies of cortical thickness and subcortical volumes, structural connectivity, and brain lateralization in children, adolescents and adults with OCD, also including the study on the commonalities and distinctions across different neurodevelopment disorders. Additional work is ongoing, employing machine learning techniques. Findings to date have contributed to the development of neurobiological models of OCD, have provided an important model of global scientific collaboration, and have had a number of clinical implications. Importantly, our work has shed new light on questions about whether structural and functional alterations found in OCD reflect neurodevelopmental changes, effects of the disease process, or medication impacts. We conclude with a summary of ongoing work by ENIGMA-OCD, and a consideration of future directions for neuroimaging research on OCD within and beyond ENIGMA.},
+ author = {van den Heuvel, Odile A. and Boedhoe, Premika S. W. and Bertolin, Sara and Bruin, Willem B. and Francks, Clyde and Ivanov, Iliyan and Jahanshad, Neda and Kong, Xiang-Zhen and Kwon, Jun Soo and O'Neill, Joseph and Paus, Tomas and Patel, Yash and Piras, Fabrizio and Schmaal, Lianne and Soriano-Mas, Carles and Spalletta, Gianfranco and van Wingen, Guido A. and Yun, Je-Yeon and Vriend, Chris and Simpson, H. Blair and van Rooij, Daan and Hoexter, Marcelo Q. and Hoogman, Martine and
+Buitelaar, Jan K. and Arnold, Paul and Beucke, Jan C. and Benedetti, Francesco and Bollettini, Irene and Bose, Anushree and Brennan, Brian P. and De Nadai, Alessandro S. and Fitzgerald, Kate and Gruner, Patricia and Grünblatt, Edna and Hirano, Yoshiyuki and Huyser, Chaim and James, Anthony and Koch, Kathrin and Kvale, Gerd and Lazaro, Luisa and Lochner, Christine and Marsh, Rachel and Mataix-Cols, David and Morgado, Pedro and Nakamae, Takashi and Nakao, Tomohiro and Narayanaswamy, Janardhanan C. and Nurmi, Erika and Pittenger, Christopher and Reddy, Y. C. Janardhan and Sato, João R. and Soreni, Noam and Stewart, S. Evelyn and Taylor, Stephan F. and Tolin, David and Thomopoulos, Sophia I. and Veltman, Dick J. and Venkatasubramanian, Ganesan and Walitza, Susanne and Wang, Zhen and Thompson, Paul M. and Stein, Dan J.},
+ copyright = {© 2020 The Authors. Human Brain Mapping published by Wiley Periodicals, Inc.},
+ doi = {https://doi.org/10.1002/hbm.24972},
+ file = {Full Text PDF:/work/.zotero/storage/XI55AQL9/Heuvel et al. - An overview of the first 5 years of the ENIGMA obs.pdf:application/pdf;Snapshot:/work/.zotero/storage/MA28FT9U/hbm.html:text/html},
+ issn = {1097-0193},
+ journal = {Human Brain Mapping},
+ keywords = {MRI, meta-analysis, ENIGMA, cortical thickness, mega-analysis, obsessive–compulsive disorder, surface area, volume},
+ language = {en},
+ number = {n/a},
+ shorttitle = {An overview of the first 5 years of the {ENIGMA} obsessive–compulsive disorder working group},
+ title = {An overview of the first 5 years of the {ENIGMA} obsessive–compulsive disorder working group: {The} power of worldwide collaboration},
+ url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/hbm.24972},
+ urldate = {2021-04-02},
+ volume = {n/a},
+ year = {2020}
+}
+
+@inproceedings{veer2019a,
+ author = {Veer, Ilya M. and Waller, Lea and Lett, Tristram and Erk, Susanne and Walter, Henrik},
+ booktitle = {25th Organization of Human Brain Mapping Annual Meeting},
+ date = {2019},
+ pages = {9--13},
+ shorttitle = {{ENIGMA} task-based {fMRI}},
+ title = {{ENIGMA} task-based {fMRI}: A workgroup studying the genetic basis of task-evoked brain activity}
+}
+
+@article{veer2019b,
+ author = {Veer, Ilya M. and Waller, Lea and Lett, Tristram A.P. and Erk, Susanne and Walter, Henrik},
+ journal = {25th Organization of Human Brain Mapping Annual Meeting},
+ keywords = {},
+ title = {{ENIGMA task-based fMRI: A workgroup studying the genetic basis of task-evoked brain activity}},
+ url = {https://archive.aievolution.com/2019/hbm1901/index.cfm?do=doc.viewDocument&documentID=2746},
+ year = {2019}
+}
+
+@article{wachinger2021,
+ abstract = {{The desire to train complex machine learning algorithms and to increase the statistical power in association studies drives neuroimaging research to use ever-larger datasets. The most obvious way to increase sample size is by pooling scans from independent studies. However, simple pooling is often ill-advised as selection, measurement, and confounding biases may creep in and yield spurious correlations. In this work, we combine 35,320 magnetic resonance images of the brain from 17 studies to examine bias in neuroimaging. In the first experiment, Name That Dataset, we provide empirical evidence for the presence of bias by showing that scans can be correctly assigned to their respective dataset with 71.5\% accuracy. Given such evidence, we take a closer look at confounding bias, which is often viewed as the main shortcoming in observational studies. In practice, we neither know all potential confounders nor do we have data on them. Hence, we model confounders as unknown, latent variables. Kolmogorov complexity is then used to decide whether the confounded or the causal model provides the simplest factorization of the graphical model. Finally, we present methods for dataset harmonization and study their ability to remove bias in imaging features. In particular, we propose an extension of the recently introduced ComBat algorithm to control for global variation across image features, inspired by adjusting for unknown population stratification in genetics. Our results demonstrate that harmonization can reduce dataset-specific information in image features. Further, confounding bias can be reduced and even turned into a causal relationship. However, harmonization also requires caution as it can easily remove relevant subject-specific information. Code is available at https://github.com/ai-med/Dataset-Bias.}},
+ author = {Wachinger, Christian and Rieckmann, Anna and Pölsterl, Sebastian and {ageing, for the Alzheimer’s Disease Neuroimaging Initiative and the Australian Imaging Biomarkers and Lifestyle flagship study of}},
+ doi = {10.1016/j.media.2020.101879},
+ eprint = {2002.05049},
+ issn = {1361-8415},
+ journal = {Medical Image Analysis},
+ keywords = {},
+ pages = {101879},
+ pmid = {33152602},
+ title = {{Detect and correct bias in multi-site neuroimaging datasets}},
+ volume = {67},
+ year = {2021}
+}
+
+@article{wager2008,
+ abstract = {{Although prefrontal cortex has been implicated in the cognitive regulation of emotion, the cortical-subcortical interactions that mediate this ability remain poorly understood. To address this issue, we identified a right ventrolateral prefrontal region (vlPFC) whose activity correlated with reduced negative emotional experience during cognitive reappraisal of aversive images. We then applied a pathway-mapping analysis on subcortical regions to locate mediators of the association between vlPFC activity and reappraisal success (i.e., reductions in reported emotion). Results identified two separable pathways that together explained ∼50\% of the reported variance in self-reported emotion: (1) a path through nucleus accumbens that predicted greater reappraisal success, and (2) a path through ventral amygdala that predicted reduced reappraisal success (i.e., more negative emotion). These results provide direct evidence that vlPFC is involved in both the generation and regulation of emotion through different subcortical pathways, suggesting a general role for this region in appraisal processes.}},
+ author = {Wager, Tor D. and Davidson, Matthew L. and Hughes, Brent L. and Lindquist, Martin A. and Ochsner, Kevin N.},
+ doi = {10.1016/j.neuron.2008.09.006},
+ issn = {0896-6273},
+ journal = {Neuron},
+ keywords = {},
+ number = {6},
+ pages = {1037--1050},
+ pmcid = {PMC2742320},
+ pmid = {18817740},
+ title = {{Prefrontal-Subcortical Pathways Mediating Successful Emotion Regulation}},
+ volume = {59},
+ year = {2008}
+}
+
+@article{weis2020a,
+ author = {Weis, Carissa},
+ date = {2020-12-01},
+ file = {"Data-Driven Approach to Dynamic Resting State Functional Connectivity " by Carissa Weis:C\:\\Users\\Lea\\Zotero\\storage\\XREWSEG2\\2623.html:text/html},
+ journaltitle = {Theses and Dissertations},
+ title = {Data-Driven Approach to Dynamic Resting State Functional Connectivity in Post-Traumatic Stress Disorder},
+ url = {https://dc.uwm.edu/etd/2623}
+}
+
+@article{weis2020b,
+ author = {Weis, Carissa},
+ journal = {PhD dissertation, The University of Wisconsin Milwaukee},
+ keywords = {},
+ title = {{Data-driven approach to dynamic resting state functional connectivity in post-traumatic stress disorder}},
+ url = {https://dc.uwm.edu/etd/2623},
+ year = {2020}
+}
+
+@article{whitfieldgabrieli2012,
+ abstract = {Resting state functional connectivity reveals intrinsic, spontaneous networks that elucidate the functional architecture of the human brain. However, valid statistical analysis used to identify such networks must address sources of noise in order to avoid possible confounds such as spurious correlations based on non-neuronal sources. We have developed a functional connectivity toolbox Conn (www.nitrc.org/projects/conn) that implements the component-based noise correction method ({CompCor}) strategy for physiological and other noise source reduction, additional removal of movement, and temporal covariates, temporal filtering and windowing of the residual blood oxygen level-dependent ({BOLD}) contrast signal, first-level estimation of multiple standard functional connectivity magnetic resonance imaging ({fcMRI}) measures, and second-level random-effect analysis for resting state as well as task-related data. Compared to methods that rely on global signal regression, the {CompCor} noise reduction method allows for interpretation of anticorrelations as there is no regression of the global signal. The toolbox implements {fcMRI} measures, such as estimation of seed-to-voxel and region of interest ({ROI})-to-{ROI} functional correlations, as well as semipartial correlation and bivariate/multivariate regression analysis for multiple {ROI} sources, graph theoretical analysis, and novel voxel-to-voxel analysis of functional connectivity. We describe the methods implemented in the Conn toolbox for the analysis of {fcMRI} data, together with examples of use and interscan reliability estimates of all the implemented {fcMRI} measures. The results indicate that the {CompCor} method increases the sensitivity and selectivity of {fcMRI} analysis, and show a high degree of interscan reliability for many {fcMRI} measures.},
+ author = {Whitfield-Gabrieli, Susan and Nieto-Castanon, Alfonso},
+ date = {2012-06-01},
+ doi = {10.1089/brain.2012.0073},
+ file = {Full Text PDF:C\:\\Users\\Lea\\Zotero\\storage\\LJWGXACX\\Whitfield-Gabrieli and Nieto-Castanon - 2012 - Conn A Functional Connectivity Toolbox for Correl.pdf:application/pdf},
+ issn = {2158-0014},
+ journaltitle = {Brain Connectivity},
+ keywords = {brain connectivity, {CompCor} functional connectivity, intrinsic connectivity, noise, resting state},
+ note = {Publisher: Mary Ann Liebert, Inc., publishers},
+ number = {3},
+ pages = {125--141},
+ shorttitle = {Conn},
+ title = {Conn: A Functional Connectivity Toolbox for Correlated and Anticorrelated Brain Networks},
+ url = {https://www.liebertpub.com/doi/full/10.1089/brain.2012.0073},
+ urldate = {2021-11-09},
+ volume = {2}
+}
+
+@article{woolrich2001,
+ abstract = {In functional magnetic resonance imaging statistical analysis there are problems with accounting for temporal autocorrelations when assessing change within voxels. Techniques to date have utilized temporal filtering strategies to either shape these autocorrelations or remove them. Shaping, or “coloring,” attempts to negate the effects of not accurately knowing the intrinsic autocorrelations by imposing known autocorrelation via temporal filtering. Removing the autocorrelation, or “prewhitening,” gives the best linear unbiased estimator, assuming that the autocorrelation is accurately known. For single-event designs, the efficiency of the estimator is considerably higher for prewhitening compared with coloring. However, it has been suggested that sufficiently accurate estimates of the autocorrelation are currently not available to give prewhitening acceptable bias. To overcome this, we consider different ways to estimate the autocorrelation for use in prewhitening. After high-pass filtering is performed, a Tukey taper (set to smooth the spectral density more than would normally be used in spectral density estimation) performs best. Importantly, estimation is further improved by using nonlinear spatial filtering to smooth the estimated autocorrelation, but only within tissue type. Using this approach when prewhitening reduced bias to close to zero at probability levels as low as 1 × 10−5.},
+ author = {Woolrich, Mark W. and Ripley, Brian D. and Brady, Michael and Smith, Stephen M.},
+ doi = {10.1006/nimg.2001.0931},
+ file = {ScienceDirect Snapshot:/work/.zotero/storage/WBLPKMPP/S1053811901909310.html:text/html},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {autoregressive model, FMRI analysis, GLM, multitapering, single-event, spatial filtering, spectral density estimation, temporal autocorrelation, temporal filtering},
+ language = {en},
+ month = {12},
+ number = {6},
+ pages = {1370--1386},
+ title = {Temporal {Autocorrelation} in {Univariate} {Linear} {Modeling} of {FMRI} {Data}},
+ url = {https://www.sciencedirect.com/science/article/pii/S1053811901909310},
+ urldate = {2021-04-22},
+ volume = {14},
+ year = {2001}
+}
+
+@article{woolrich2004,
+ abstract = {{Functional magnetic resonance imaging studies often involve the acquisition of data from multiple sessions and/or multiple subjects. A hierarchical approach can be taken to modelling such data with a general linear model (GLM) at each level of the hierarchy introducing different random effects variance components. Inferring on these models is nontrivial with frequentist solutions being unavailable. A solution is to use a Bayesian framework. One important ingredient in this is the choice of prior on the variance components and top-level regression parameters. Due to the typically small numbers of sessions or subjects in neuroimaging, the choice of prior is critical. To alleviate this problem, we introduce to neuroimage modelling the approach of reference priors, which drives the choice of prior such that it is noninformative in an information-theoretic sense. We propose two inference techniques at the top level for multilevel hierarchies (a fast approach and a slower more accurate approach). We also demonstrate that we can infer on the top level of multilevel hierarchies by inferring on the levels of the hierarchy separately and passing summary statistics of a noncentral multivariate t distribution between them.}},
+ author = {Woolrich, Mark W. and Behrens, Timothy E.J. and Beckmann, Christian F. and Jenkinson, Mark and Smith, Stephen M.},
+ doi = {10.1016/j.neuroimage.2003.12.023},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ number = {4},
+ pages = {1732--1747},
+ pmid = {15050594},
+ title = {{Multilevel linear modelling for FMRI group analysis using Bayesian inference}},
+ volume = {21},
+ year = {2004}
+}
+
+@article{yan2016,
+ abstract = {Brain imaging efforts are being increasingly devoted to decode the functioning of the human brain. Among neuroimaging techniques, resting-state {fMRI} (R-{fMRI}) is currently expanding exponentially. Beyond the general neuroimaging analysis packages (e.g., {SPM}, {AFNI} and {FSL}), {REST} and {DPARSF} were developed to meet the increasing need of user-friendly toolboxes for R-{fMRI} data processing. To address recently identified methodological challenges of R-{fMRI}, we introduce the newly developed toolbox, {DPABI}, which was evolved from {REST} and {DPARSF}. {DPABI} incorporates recent research advances on head motion control and measurement standardization, thus allowing users to evaluate results using stringent control strategies. {DPABI} also emphasizes test-retest reliability and quality control of data processing. Furthermore, {DPABI} provides a user-friendly pipeline analysis toolkit for rat/monkey R-{fMRI} data analysis to reflect the rapid advances in animal imaging. In addition, {DPABI} includes preprocessing modules for task-based {fMRI}, voxel-based morphometry analysis, statistical analysis and results viewing. {DPABI} is designed to make data analysis require fewer manual operations, be less time-consuming, have a lower skill requirement, a smaller risk of inadvertent mistakes, and be more comparable across studies. We anticipate this open-source toolbox will assist novices and expert users alike and continue to support advancing R-{fMRI} methodology and its application to clinical translational studies.},
+ author = {Yan, Chao-Gan and Wang, Xin-Di and Zuo, Xi-Nian and Zang, Yu-Feng},
+ date = {2016-07-01},
+ doi = {10.1007/s12021-016-9299-4},
+ file = {Springer Full Text PDF:C\:\\Users\\Lea\\Zotero\\storage\\I2JJVXTK\\Yan et al. - 2016 - DPABI Data Processing & Analysis for (Resting-Sta.pdf:application/pdf},
+ issn = {1559-0089},
+ journaltitle = {Neuroinformatics},
+ langid = {english},
+ number = {3},
+ pages = {339--351},
+ shortjournal = {Neuroinform},
+ shorttitle = {{DPABI}},
+ title = {{DPABI}: Data Processing \& Analysis for (Resting-State) Brain Imaging},
+ url = {https://doi.org/10.1007/s12021-016-9299-4},
+ urldate = {2021-11-09},
+ volume = {14}
+}
+
+@article{zang2004,
+ abstract = {{Kendall's coefficient concordance (KCC) can measure the similarity of a number of time series. It has been used for purifying a given cluster in functional MRI (fMRI). In the present study, a new method was developed based on the regional homogeneity (ReHo), in which KCC was used to measure the similarity of the time series of a given voxel to those of its nearest neighbors in a voxel-wise way. Six healthy subjects performed left and right finger movement tasks in event-related design; five of them were additionally scanned in a rest condition. KCC was compared among the three conditions (left finger movement, right finger movement, and the rest). Results show that bilateral primary motor cortex (M1) had higher KCC in either left or right finger movement condition than in rest condition. Contrary to prediction and to activation pattern, KCC of ipsilateral M1 is significantly higher than contralateral M1 in unilateral finger movement conditions. These results support the previous electrophysiologic findings of increasing ipsilateral M1 excitation during unilateral movement. ReHo can consider as a complementary method to model-driven method, and it could help reveal the complexity of the human brain function. More work is needed to understand the neural mechanism underlying ReHo.}},
+ author = {Zang, Yufeng and Jiang, Tianzi and Lu, Yingli and He, Yong and Tian, Lixia},
+ doi = {10.1016/j.neuroimage.2003.12.030},
+ issn = {1053-8119},
+ journal = {NeuroImage},
+ keywords = {},
+ number = {1},
+ pages = {394--400},
+ pmid = {15110032},
+ title = {{Regional homogeneity approach to fMRI data analysis}},
+ volume = {22},
+ year = {2004}
+}
+
+@article{zou2008,
+ abstract = {{Most of the resting-state functional magnetic resonance imaging (fMRI) studies demonstrated the correlations between spatially distinct brain areas from the perspective of functional connectivity or functional integration. The functional connectivity approaches do not directly provide information of the amplitude of brain activity of each brain region within a network. Alternatively, an index named amplitude of low-frequency fluctuation (ALFF) of the resting-state fMRI signal has been suggested to reflect the intensity of regional spontaneous brain activity. However, it has been indicated that the ALFF is also sensitive to the physiological noise. The current study proposed a fractional ALFF (fALFF) approach, i.e., the ratio of power spectrum of low-frequency (0.01–0.08Hz) to that of the entire frequency range and this approach was tested in two groups of resting-state fMRI data. The results showed that the brain areas within the default mode network including posterior cingulate cortex, precuneus, medial prefrontal cortex and bilateral inferior parietal lobule had significantly higher fALFF than the other brain areas. This pattern was consistent with previous neuroimaging results. The non-specific signal components in the cistern areas in resting-state fMRI were significantly suppressed, indicating that the fALFF approach improved the sensitivity and specificity in detecting spontaneous brain activities. Its mechanism and sensitivity to abnormal brain activity should be evaluated in the future studies.}},
+ author = {Zou, Qi-Hong and Zhu, Chao-Zhe and Yang, Yihong and Zuo, Xi-Nian and Long, Xiang-Yu and Cao, Qing-Jiu and Wang, Yu-Feng and Zang, Yu-Feng},
+ doi = {10.1016/j.jneumeth.2008.04.012},
+ issn = {0165-0270},
+ journal = {Journal of Neuroscience Methods},
+ keywords = {},
+ number = {1},
+ pages = {137--141},
+ pmcid = {PMC3902859},
+ pmid = {18501969},
+ title = {{An improved approach to detection of amplitude of low-frequency fluctuation (ALFF) for resting-state fMRI: Fractional ALFF}},
+ volume = {172},
+ year = {2008}
+}
