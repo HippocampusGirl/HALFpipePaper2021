@@ -73,7 +73,7 @@
 ]
 
 \setmathfont{XITSMath-Regular}[
-  Extension = .otf, 
+  Extension = .otf,
   BoldFont = XITSMath-Bold
 ]
 
@@ -127,7 +127,7 @@
 
 \reversemarginpar
 \RequirePackage[
-  left=1.5cm,  
+  left=1.5cm,
   right=1.3cm,
   top=2.5cm,
   bottom=2.5cm,
@@ -149,8 +149,24 @@
   singlelinecheck=false,
   tableposition=top
 ]{caption}
-                
+
 % \captionsetup*[table]{skip=\medskipamount}
+
+%%
+%% No indent after environments
+%%
+
+% https://tex.stackexchange.com/questions/112404/reliable-code-for-automatic-noindent-after-specific-environments
+
+\makeatletter
+\def\@doendpe{%
+  \@endpetrue
+  \everypar{%
+    {\setbox\z@\lastbox}%
+    \everypar{}%
+    \@endpefalse
+  }%
+}
 
 %%
 %% Bibliography
@@ -174,7 +190,7 @@
 \pagestyle{fancy}          % Enables the custom headers/footers
 
 \addtolength{\headwidth}{\marginparsep}
-\addtolength{\headwidth}{\marginparwidth} 
+\addtolength{\headwidth}{\marginparwidth}
 % \addtolength{\headwidth}{1cm}
 
 % \rfoot{\small\color{eLifeMediumGrey}\thepage\space of\space\pageref{LastPage}}%
@@ -184,7 +200,6 @@
 
 \renewcommand{\footrulewidth}{0.2pt}
 \xpretocmd\footrule{\color{leaPurple}}{}{\PatchFailed}
-
 
 %%
 %% Section/subsection/paragraph set-up
@@ -201,17 +216,17 @@
 \titleformat{\subsection}
   {\color{eLifeMediumGrey}\large\fontseries{mb}\sffamily}
   {\thesubsection}{}{#1}[]
- 
+
 \titleformat{\paragraph}[runin]
   {\vspace{1mm}\color{eLifeMediumGrey}\fontseries{mb}\sffamily}
-  {\theparagraph}{0em}{#1} 
+  {\theparagraph}{0em}{#1}
 
 \titlespacing*{\section}{0pc}{3ex \@plus4pt \@minus3pt}{0pt}
 \titlespacing*{\subsection}{0pc}{2.5ex \@plus3pt \@minus2pt}{0pt}
 \titlespacing*{\subsubsection}{0pc}{2ex \@plus2.5pt \@minus1.5pt}{0pt}
 %\titlespacing*{\paragraph}{0pc}{3ex \@plus4pt \@minus3pt}{0pt}
 \titlespacing{\paragraph}{0pc}{1mm}{0.5em}
-  
+
 \RequirePackage{enumitem}
 \setlist{noitemsep}
 
@@ -233,9 +248,8 @@
   \fnsymbolmult{\numexpr\value{authorfn}+#1}%
 }
 
-
 %%
-%% Custom title page 
+%% Custom title page
 %%
 
 \RequirePackage[many]{tcolorbox}
@@ -274,7 +288,7 @@
 \patchcmd{\@author}{%
   \AB@authlist\\[\affilsep]\AB@affillist
 }{%
-  \AB@authlist\\[\affilsep] 
+  \AB@authlist\\[\affilsep]
 }{}{}
 
 \newmdenv[
@@ -307,8 +321,8 @@
    \phantomsection
    \addcontentsline{toc}{section}{Abstract}%
    {\color{leaDarkGrey}\sffamily\fontseries{mb}\large\selectfont\abstractname\space}
-   \fontseries{mb}\selectfont   
-}{%   
+   \fontseries{mb}\selectfont
+}{%
   \vskip4pt
 }
 
