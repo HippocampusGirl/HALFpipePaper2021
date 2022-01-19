@@ -58,66 +58,25 @@
 
 \begin{abstract}
 
-The reproducibility crisis in neuroimaging has led to an increased
-demand for standardized data processing workflows. Within the ENIGMA
-consortium, we developed \soft{HALFpipe} (\myuline{H}armonized 
-\myuline{A}na\myuline{L}\contour{white}{ysis} of \myuline{F}unctional MRI 
-\myuline{pipe}line), an open-source, containerized, user-friendly tool that
-facilitates reproducible analysis of task-based and resting-state fMRI
-data through uniform application of preprocessing, quality assessment,
-single-subject feature extraction, and group-level statistics. It
-provides state-of-the-art preprocessing using \soft{fMRIPrep} without the
-requirement for input data in Brain Imaging Data Structure (BIDS)
-format. \soft{HALFpipe} extends the functionality of \soft{fMRIPrep} with 
-additional preprocessing steps, which include spatial smoothing, grand 
-mean scaling, temporal filtering, and confound regression. \soft{HALFpipe}
-generates an interactive quality assessment (QA) webpage to assess the quality
-of key preprocessing outputs and raw data in general. \soft{HALFpipe} features
-myriad post-processing functions at the individual subject level,
-including calculation of task-based activation, seed-based connectivity,
-network-template (or dual) regression, atlas-based functional
-connectivity matrices, regional homogeneity (ReHo), and fractional
-amplitude of low frequency fluctuations (fALFF), offering support to
-evaluate a combinatorial number of features or preprocessing settings in
-one run. Finally, flexible factorial models can be defined for
-mixed-effects regression analysis at the group level, including multiple
-comparison correction. Here, we introduce the theoretical framework in
-which \soft{HALFpipe} was developed, and present an overview of the main
-functions of the pipeline. \soft{HALFpipe} offers the scientific community a
-major advance toward addressing the reproducibility crisis in
-neuroimaging, providing a workflow that encompasses preprocessing,
-post-processing, and QA of fMRI data, while broadening core principles
-of data analysis for producing reproducible results. Instructions and 
-code can be found at \url{https://github.com/HALFpipe/HALFpipe}.
+The reproducibility crisis in neuroimaging has led to an increased demand for standardized data processing workflows. Within the ENIGMA consortium, we developed \soft{HALFpipe} (\myuline{H}armonized \myuline{A}na\myuline{L}\contour{white}{ysis} of \myuline{F}unctional MRI \myuline{pipe}line), an open-source, containerized, user-friendly tool that facilitates reproducible analysis of task-based and resting-state fMRI data through uniform application of preprocessing, quality assessment, single-subject feature extraction, and group-level statistics. It provides state-of-the-art preprocessing using \soft{fMRIPrep} without the requirement for input data in Brain Imaging Data Structure (BIDS) format. \soft{HALFpipe} extends the functionality of \soft{fMRIPrep} with additional preprocessing steps, which include spatial smoothing, grand mean scaling, temporal filtering, and confound regression. \soft{HALFpipe} generates an interactive quality assessment (QA) webpage to rate the quality of key preprocessing outputs and raw data in general. \soft{HALFpipe} features myriad post-processing functions at the individual subject level, including calculation of task-based activation, seed-based connectivity, network-template (or dual) regression, atlas-based functional connectivity matrices, regional homogeneity (ReHo), and fractional amplitude of low frequency fluctuations (fALFF), offering support to evaluate a combinatorial number of features or preprocessing settings in one run. Finally, flexible factorial models can be defined for mixed-effects regression analysis at the group level, including multiple comparison correction. Here, we introduce the theoretical framework in which \soft{HALFpipe} was developed, and present an overview of the main functions of the pipeline. \soft{HALFpipe} offers the scientific community a major advance toward addressing the reproducibility crisis in neuroimaging, providing a workflow that encompasses preprocessing, post-processing, and QA of fMRI data, while broadening core principles of data analysis for producing reproducible results. Instructions and code can be found at \url{https://github.com/HALFpipe/HALFpipe}.
 
 \end{abstract}
 
-\input{./tex/introduction.tex}
+\input{./tex/introduction/introduction.tex}
 
-\input{./tex/methods.tex}
+\input{./tex/methods/methods.tex}
 
-\input{./tex/procedure.tex}
+\input{./tex/procedure/procedure.tex}
 
-\input{./tex/discussion.tex}
+\input{./tex/discussion/discussion.tex}
 
 \section{Data availability}
 
-This technical report does not rely on any data. Code and documentation are
-available at \url{https://github.com/HALFpipe/HALFpipe}.
+This technical report does not rely on any data. Code and documentation are available at \url{https://github.com/HALFpipe/HALFpipe}.
 
 \section{Acknowledgements}
 
-This work has been supported by a Grant from the German Research
-Foundation to S.E. and H.W. (DFG ER 724/4--1, WA 1539/11--1).
-P.M.T. received research grant funding from Biogen, Inc., for research
-unrelated to this manuscript.
-L.S. received funding from the National Institutes of Health (NIH R01
-MH117601 and NHMRC Career Development Fellowship 1140764).
-R.A.M received funding from National Institutes of Health (NIH R01
-MH111671).
-I.M.V. and H.W. received funding from the European Union's Horizon 2020
-research and innovation programme under under Grant Agreement number
-777084 (DynaMORE project).
+This work has been supported by a Grant from the German Research Foundation to S.E. and H.W. (DFG ER 724/4--1, WA 1539/11--1). P.M.T. received research grant funding from Biogen, Inc., for research unrelated to this manuscript. L.S. received funding from the National Institutes of Health (NIH R01 MH117601 and NHMRC Career Development Fellowship 1140764). R.A.M received funding from National Institutes of Health (NIH R01 MH111671). I.M.V. and H.W. received funding from the European Union's Horizon 2020 research and innovation programme under under Grant Agreement number 777084 (DynaMORE project).
 
 \printbibliography
 
