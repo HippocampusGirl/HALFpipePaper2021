@@ -10,8 +10,11 @@ MAKEFLAGS += --no-builtin-variables
 %-crop.pdf: %.pdf
 	pdfcrop --verbose --luatex $< $@
 
-all: $(CROP)
+pdf: $(CROP)
 	latexmk -bibtex -pdflatex="lualatex --interaction=nonstopmode" -pdf -halt-on-error
 
-clean: 
+annotated: $(CROP) pdf
+	git latexdiff submission --preamble preamble.latexdiff --append-safecmd="item" --main document.tex --biber --lualatex --no-view --ln-untracked --output annotated.pdf --cleanup none --verbose
+
+clean:
 	latexmk -c
