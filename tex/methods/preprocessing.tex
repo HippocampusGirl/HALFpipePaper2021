@@ -1,4 +1,4 @@
-\subsection{Pre-processing}\label{sec:pre_processing}
+\subsection{Preprocessing}\label{sec:preprocessing}
 
 Main preprocessing is done in \soft{HALFpipe} with \soft{fMRIPrep}, which performs a consensus of preprocessing steps required for any fMRI study \parencite{esteban2019a}. Consensus steps for structural images include skull stripping, tissue segmentation, and spatial normalization. Consensus steps for functional images include motion correction, slice time correction, susceptibility distortion correction, coregistration, and spatial normalization (Figure 1).
 
@@ -35,3 +35,11 @@ Temporal filtering can be selected to remove low-frequency drift via a high-pass
 \end{enumerate}
 
 Importantly, \soft{HALFpipe} runs \soft{fMRIPrep} with small modifications. For instance, we disabled \soft{fMRIPrep}’s experimental susceptibility distortion correction in the absence of field maps, because it is not yet validated. Further, \soft{HALFpipe} suggests default settings for each preprocessing step, which are outlined in Table~\ref{table:settings}. Note that some are selected based on best-practices in the field (i.e., band-pass temporal filter for ALFF and ReHo), whereas most default settings can be adjusted by the user. Last, \soft{HALFpipe} does not output preprocessed and normalized functional images by default, because they use a lot of disk space. However, in the user interface users can manually choose to output a preprocessed functional image with their choice of preprocessing settings.
+
+\begin{figure}[!tb]
+    \begin{adjustwidth}{-2.4cm}{}
+        \hsize=\linewidth%
+        \includegraphics[width=\linewidth]{fig/workflow/workflow-crop}
+        \caption{\textbf{\soft{HALFpipe} workflow.} \soft{HALFpipe} is configured in a user interface where the user is asked a series of questions about their data and the processing steps to perform. Data is then converted to BIDS format \parencite{gorgolewski2016b} to allow standardized processing (white). After minimal preprocessing of the structural (blue) and functional (green and orange) data with \soft{fMRIPrep} \parencite{esteban2019a}, additional preprocessing steps can be selected (purple). Using the preprocessed data, statistical maps can be calculated during feature extraction (turquoise). Finally, group statistics can be performed (yellow). Note that not all preprocessing steps are available for each feature, as is outlined in Table~\ref{table:settings}. The diagram omits this information to increase visual clarity.}\label{fig:workflow}
+  \end{adjustwidth}
+\end{figure}

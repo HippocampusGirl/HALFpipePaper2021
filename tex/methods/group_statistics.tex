@@ -1,33 +1,7 @@
-\subsection{Statistics}\label{sec:statistics}
+\subsection{Group statistics}\label{sec:statistics}
 
-\soft{HALFpipe} uses \soft{FSL} FMRIB Local Analysis of Mixed Effects
-(FLAME) \parencite{woolrich2004} for group statistics,
-because it considers the within-subject variance of lower level estimates
-in its mixed effects models. In addition, its estimates are conservative,
-which means they offer robust control of the false positive rate
-\parencite{eklund2016}.
+\soft{HALFpipe} uses \soft{FSL} FMRIB Local Analysis of Mixed Effects (FLAME) \parencite{woolrich2004} for group statistics, because FLAME considers the within-subject variance of lower level estimates in its mixed effects models. In addition, its estimates are conservative, which means they offer robust control of the false positive rate \parencite{eklund2016}.
 
-A common issue in fMRI studies is that the spatial extent of brain coverage
-may differ between subjects. A common choice is to restrict higher-level
-statistics to only those voxels that were acquired in every subject.
-However, with a large variation in brain coverage, which is to be expected
-when pooling multi-cohort data, sizable portions of the brain may
-ultimately be excluded from analysis. To circumvent this issue,
-\soft{HALFpipe} uses a re-implementation of \soft{FSL}'s \soft{flameo} in
-\soft{Numpy} \parencite{harris2020}. In this implementation, a
-unique design matrix is re-generated for every voxel so that only subjects
-who have a measurable value for a given voxel are included. Then the model
-is estimated using the FLAME algorithm. This list-wise deletion approach
-depends on the assumption that voxels are missing completely at random
-(MCAR), meaning that the regressors (and thus statistical values) are
-independent of scanner coverage.
+A common issue in fMRI studies is that the spatial extent of brain coverage may differ between subjects. A common choice is to restrict higher-level statistics to only those voxels that were acquired in every subject. However, with a large variation in brain coverage, which is to be expected when pooling multi-cohort data, sizable portions of the brain may ultimately be excluded from analysis. To circumvent this issue, \soft{HALFpipe} uses a re-implementation of \soft{FSL}'s \soft{flameo} in \soft{Numpy} \parencite{harris2020}. In this implementation, a unique design matrix is generated for every voxel so that only subjects who have a measurable value for a given voxel are included. Then the model is estimated using the FLAME algorithm. This list-wise deletion approach depends on the assumption that voxels are missing completely at random (MCAR), meaning that the regressors (and thus statistical values) are independent of scanner coverage.
 
-For group models, users can specify flexible factorial models that include
-covariates and group comparisons. By default, missing values for these
-variables are handled by list-wise deletion as well, but the user may
-alternatively choose to replace missing values by zero in the demeaned
-design matrix. The latter approach is equivalent to imputation by the
-sample mean. Design matrices for the flexible factorial models are
-generated using the Python module \soft{Patsy}
-\parencite{smith2018}. Contrasts between groups are
-specified using the \soft{lsmeans} procedure \parencite{lenth2016}.
+For group models, users can specify flexible factorial models that include covariates and group comparisons. By default, missing values for these variables are handled by list-wise deletion as well, but the user may alternatively choose to replace missing values by zero in the demeaned design matrix. The latter approach is equivalent to imputation by the sample mean. Design matrices for the flexible factorial models are generated using the Python module \soft{Patsy} \parencite{smith2018}. Contrasts between groups are specified using the \soft{lsmeans} procedure \parencite{lenth2016}.
