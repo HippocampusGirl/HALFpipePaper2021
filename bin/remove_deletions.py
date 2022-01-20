@@ -12,7 +12,7 @@ with open(file_path) as file_handle:
 data = ""
 
 i = 0
-for m in re.finditer(r"\\DIFdelbegin.*?\\DIFdelend", file_data, flags=re.DOTALL):
+for m in re.finditer(r"\\DIFdelbegin(FL)?.*?\\DIFdelend(FL)?\s*", file_data, flags=re.DOTALL):
     start, end = m.span()
 
     before_match = file_data[i:start]
