@@ -446,10 +446,10 @@
 \RequirePackage{soul}
 
 \newcommand{\soft}[1]{%
-\smash{\ttfamily\texttransparent{0.15}{%
+\smash{\ttfamily%
 \begingroup\fboxsep=1pt%
-\colorbox{leaGrey}{\texttransparent{1}{#1}}%
-\endgroup}}}
+\colorbox{leaLightGrey}{#1}%
+\endgroup}}
 
 \newcommand{\filename}[1]{%
 \smash{\ttfamily\texttransparent{0.70}{%
