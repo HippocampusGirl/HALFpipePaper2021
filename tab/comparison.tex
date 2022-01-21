@@ -1,13 +1,16 @@
 \begin{tablebox}[label={table:comparison}]{Comparison to other neuroimaging pipelines}
 
+\soft{HALFpipe} supports a number of different features that are also available in other pipelines, such as the Configurable Pipeline for the Analysis of Connectomes \soft{C-PAC} \parencite{craddock2013}, the Conn toolbox \parencite{whitfieldgabrieli2012}, the eXtensible Connectivity Pipeline \soft{XCP} \parencite{ciric2018} and the Data Processing and Analysis of Brain Images toolbox \soft{DPABI} \parencite{yan2016}. \soft{fMRIPrep} \parencite{esteban2019a} in combination with \soft{MRIQC} \parencite{esteban2017} and FitLins \parencite{markiewicz2021} allows users to construct an analysis pipeline fully within the \soft{Nipype} ecosystem \parencite{esteban2020c}.
+\\
+
 \begingroup%
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}%
 \newcolumntype{C}{>{\centering\arraybackslash}X}%
 \newcolumntype{K}[1]{>{\raggedright\arraybackslash}m{#1}}%
 \renewcommand\tabularxcolumn[1]{m{#1}}%
 \renewcommand{\arraystretch}{1.35}%
-  \begin{tabularx}{\textwidth}{@{} | K{1.5cm} | K{2cm} | 
-C | C | C | C | C | C | @{}} 
+  \begin{tabularx}{\textwidth}{@{} | K{1.5cm} | K{2cm} |
+C | C | C | C | C | C | @{}}
 \hhline{~|~|-|-|-|-|-|-|}
 \multicolumn{2}{c|}{} &%
 \textbf{HALFpipe} &%
@@ -19,10 +22,10 @@ C | C | C | C | C | C | @{}}
 \hhline{-|-|-|-|-|-|-|-|}
 \multirow{2}{*}[-0.7em]{\parbox[c][][c]{2cm}{\raggedright{Quality assessment}}} &%
 Quality metrics &%
-\cellcolor{leaLightGreen}Yes &% 
-\cellcolor{leaLightGreen}Yes &% 
-\cellcolor{leaLightGreen}Yes &% 
-\cellcolor{leaLightGreen}Yes &% 
+\cellcolor{leaLightGreen}Yes &%
+\cellcolor{leaLightGreen}Yes &%
+\cellcolor{leaLightGreen}Yes &%
+\cellcolor{leaLightGreen}Yes &%
 \cellcolor{leaLightGreen}Yes &%
 \cellcolor{leaLightGreen}Yes \\
 \hhline{~|-|-|-|-|-|-|-|}
@@ -35,7 +38,7 @@ Visual quality assessment &%
 \cellcolor{leaLightGreen}Yes &%
 \cellcolor{leaLightGreen}Yes \\
 \hhline{-|-|-|-|-|-|-|-|}
-\multirow{7}{*}[-2.2em]{Features} &% 
+\multirow{7}{*}[-2.2em]{Features} &%
 Task-based activation &%
 \cellcolor{leaLightGreen}Yes &%
 \cellcolor{leaLightYellow}No &%
