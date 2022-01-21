@@ -26,6 +26,8 @@
 
 \RequirePackage{xstring}
 
+\RequirePackage{clipboard}
+
 %%
 %% Fonts
 %%
