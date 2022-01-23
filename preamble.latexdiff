@@ -1,0 +1,18 @@
+%DIF BOLD PREAMBLE
+\providecommand{\DIFadd}[1]{#1}
+\providecommand{\DIFdel}[1]{}
+%DIF END BOLD PREAMBLE
+
+%DIF SAFE PREAMBLE
+\providecommand{\DIFaddbegin}{\begingroup\protect\color{BlueViolet}\fontseries{mb}\selectfont}
+\providecommand{\DIFaddend}{\endgroup}
+\providecommand{\DIFmodbegin}{}
+\providecommand{\DIFmodend}{}
+%DIF END SAFE PREAMBLE
+
+%DIF IDENTICAL PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}}
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}}
+\providecommand{\DIFaddbeginFL}{\DIFaddbegin}
+\providecommand{\DIFaddendFL}{\DIFaddend}
+%DIF END IDENTICAL PREAMBLE

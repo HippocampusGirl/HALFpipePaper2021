@@ -32,6 +32,7 @@ annotated: $(CROP) pdf
 		--lualatex \
 		--no-view \
 		--output annotated.pdf \
+		--cleanup none \
 		--verbose
 
 clean:
