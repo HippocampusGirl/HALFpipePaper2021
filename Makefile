@@ -31,9 +31,7 @@ annotated: $(CROP) pdf
 		--biber \
 		--lualatex \
 		--no-view \
-		--ln-untracked \
 		--output annotated.pdf \
-		--cleanup none \
 		--verbose
 
 clean:

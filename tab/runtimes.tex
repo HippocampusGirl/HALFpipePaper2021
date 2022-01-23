@@ -1,0 +1,29 @@
+\begin{tablebox}[label={table:runtimes}]{Efficient pipeline construction speeds up multiverse analyses}
+
+A core feature of \soft{HALFpipe} is the ability to explore the impact of different preprocessing strategies on results. For a face matching task data set \parencite{wakeman2015}, participant \emph{01} was entered into \soft{HALFpipe} and task contrasts were calculated with three pipelines.
+
+First we used the recommended settings from Table~\ref{table:settings}. For the second and third pipelines we used the same settings but disabled \soft{ICA-AROMA}. For the second pipeline we additionally added the motion parameters to the task model as nuisance regressors. The third pipeline did not include any denoising or confound time series removal.
+
+The naive approach is to run \soft{HALFpipe} three times, once for each pipeline. This approach is sub-optimal, as many duplicate computations are performed. By default, \soft{HALFpipe} combines all three pipelines and executes them so that no duplicate computations are performed, making processing much faster. Processing was done on an \emph{AMD Ryzen Threadripper 2950X} 16-core processor, and each run of \soft{HALFpipe} was configured to use all cores. The table shows the processing time (\emph{wall clock time}) spent on each pipeline. For the naive approach, we also show the total time.
+\\
+
+\begingroup%
+\fboxsep=1pt%
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{K}[1]{>{\raggedright\arraybackslash}m{#1}}%
+\renewcommand{\arraystretch}{1.35}%
+\begin{tabularx}{\textwidth}{@{} | K{2cm} |
+L | L | @{}}
+\hhline{~|-|-|}
+\multicolumn{1}{c|}{} &
+\textbf{Naive approach} &
+\textbf{Combined approach (via hashing algorithm)} \\
+\hhline{-|-|-|}
+Processing time (hh:mm) &%
+01:39 + 01:36 + 01:33 = \textbf{04:49} &%
+\textbf{01:43} \\
+\hhline{-|-|-|}
+\end{tabularx}\par
+\endgroup
+
+\end{tablebox}
