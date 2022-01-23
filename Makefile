@@ -19,14 +19,14 @@ pdf: $(CROP)
 		-bibtex \
 		-pdflatex="lualatex --interaction=nonstopmode" \
 		-pdf \
-		-halt-on-error
+		-halt-on-error \
+		document.tex
 
 annotated: $(CROP) pdf
 	git latexdiff \
 		submission \
 		--preamble preamble.latexdiff \
 		--filter "./bin/remove_deletions.py document.tex"\
-		--append-safecmd="item" \
 		--main document.tex \
 		--biber \
 		--lualatex \

@@ -1,5 +1,5 @@
 %DIF BOLD PREAMBLE
-\providecommand{\DIFadd}[1]{#1}
+\providecommand{\DIFadd}[1]{{\protect\color{BlueViolet}\fontseries{mb}\selectfont #1}}
 \providecommand{\DIFdel}[1]{}
 %DIF END BOLD PREAMBLE
 
