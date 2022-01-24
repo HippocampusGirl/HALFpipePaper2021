@@ -4,7 +4,7 @@ A core feature of \soft{HALFpipe} is the ability to explore the impact of differ
 
 First we used the recommended settings from Table~\ref{table:settings}. For the second and third pipelines we used the same settings but disabled \soft{ICA-AROMA}. For the second pipeline we additionally added the motion parameters to the task model as confound time series. The third pipeline did not include any denoising or confound time series removal.
 
-The naive approach is to run \soft{HALFpipe} three times, once for each pipeline. This approach is sub-optimal, as many duplicate computations are performed. By default, \soft{HALFpipe} combines all three pipelines and executes them so that no duplicate computations are performed, making processing much faster. Processing was done on an \emph{AMD Ryzen Threadripper 2950X} 16-core processor, and each run of \soft{HALFpipe} was configured to use all cores. The table shows the processing time (\emph{wall clock time}) spent on each pipeline. For the naive approach, we also show the total time.
+The naive approach is to run \soft{HALFpipe} three times, once for each pipeline. This approach is sub-optimal, as many duplicate computations are performed. By default, \soft{HALFpipe} combines all three pipelines and executes them so that no duplicate computations are performed, making processing much faster. Processing was done on an \emph{AMD Ryzen Threadripper 2950X} 16-core processor, and each run of \soft{HALFpipe} was configured to use all cores. Table~\ref{table:runtimes} shows the processing time (\emph{wall clock time}) spent on each pipeline. For the naive approach, we also show the total time.
 \\
 
 \begingroup%
