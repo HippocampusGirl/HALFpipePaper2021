@@ -1,4 +1,4 @@
-\begin{tablebox}[label={table:settings}]{Default values for preprocessing settings per feature}
+\begin{tablebox}[label={table:settings},enlarge left by=-3.7cm,width=\linewidth+3.7cm]{Default values for preprocessing settings per feature}
 
 \begingroup%
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}%
@@ -7,10 +7,12 @@
 \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}%
 \renewcommand\tabularxcolumn[1]{m{#1}}%
 \renewcommand{\arraystretch}{1.35}%
-\begin{tabularx}{\textwidth}{@{} | K{2cm} |
-M{1.9cm} | C | C | M{1.4cm} | C | c | c | @{}}
-\hhline{~|-|-|-|-|-|-|-|}
-\multicolumn{1}{c|}{} &
+\begin{tabularx}{\textwidth}{@{} | K{1.8cm} | K{2cm} | M{1.9cm} | C | C | M{1.4cm} | C | c | c | @{}}
+\hhline{~|~|-|-|-|-|-|-|-|}
+\multicolumn{2}{c|}{} &
+\multicolumn{7}{c|}{\textbf{Feature}} \\
+\hhline{~|~|-|-|-|-|-|-|-|}
+\multicolumn{2}{c|}{} &
 \textbf{Preprocessed image} &
 \textbf{Task-based activation} &
 \textbf{Seed-based connectivity} &
@@ -18,37 +20,43 @@ M{1.9cm} | C | C | M{1.4cm} | C | c | c | @{}}
 \textbf{Atlas-based connectivity matrix} &
 \textbf{ReHo} &
 \textbf{fALFF} \\
-\hhline{-|-|-|-|-|-|-|-|}
+\hhline{-|-|-|-|-|-|-|-|-|}
+\multirow{6}{*}[-3em]{\parbox[c][][c]{1.8cm}{\raggedright{Preprocessing step}}} &%
 Spatial smoothing &%
 \multicolumn{4}{c|}{\cellcolor{leaLightGreen}6 mm} &%
 \cellcolor{leaGrey} &%
 \multicolumn{2}{c|}{\cellcolor{leaLightGreen}6 mm*} \\
-\hhline{-|-|-|-|-|-|-|-|}
+\hhline{~|-|-|-|-|-|-|-|-|}
+&%
 Grand mean scaling &%
 \multicolumn{7}{c|}{\cellcolor{leaLightGreen}10,000} \\
-\hhline{-|-|-|-|-|-|-|-|}
+\hhline{~|-|-|-|-|-|-|-|-|}
+&%
 ICA-AROMA &%
 \multicolumn{7}{c|}{\cellcolor{leaLightGreen}Yes} \\ [2ex]
-\hhline{-|-|-|-|-|-|-|-|}
+\hhline{~|-|-|-|-|-|-|-|-|}
+&%
 Temporal filter &%
 \multicolumn{4}{c|}{\cellcolor{leaLightGreen}Gaussian (125 s FWHM)} &%
-  \multicolumn{3}{c|}{\cellcolor{leaLightGreen}Frequency-based (0.01--0.1 Hz)} \\ [2ex]
-\hhline{-|-|-|-|-|-|-|-|}
+\multicolumn{3}{c|}{\cellcolor{leaLightGreen}Frequency-based (0.01--0.1 Hz)} \\ [2ex]
+\hhline{~|-|-|-|-|-|-|-|-|}
+&%
 Confound removal &%
 \cellcolor{leaLightGreen}None &%
 \multicolumn{3}{c|}{\cellcolor{leaGrey}} &%
 \multicolumn{3}{c|}{\cellcolor{leaLightGreen}None} \\
-\hhline{-|-|-|-|-|-|-|-|}
+\hhline{~|-|-|-|-|-|-|-|-|}
+&%
 Add confounds to model &%
 \cellcolor{leaGrey}&%
 \multicolumn{3}{c|}{\cellcolor{leaLightGreen}None} &%
 \multicolumn{3}{c|}{\cellcolor{leaGrey}} \\
-\hhline{-|-|-|-|-|-|-|-|}
+\hhline{-|-|-|-|-|-|-|-|-|}
 \end{tabularx}\par
 \vspace*{2mm}
-Note: Cells filled in gray indicate that this option cannot be selected in
-the user interface, all other settings can be adjusted by the user; * Done
-on the statistical maps after feature extraction.
+Note: Cells filled in gray indicate that this option cannot be selected in the user interface, all other settings can be adjusted by the user
+
+* Done on the statistical maps after feature extraction.
 \endgroup
 
 \end{tablebox}

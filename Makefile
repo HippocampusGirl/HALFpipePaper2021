@@ -27,11 +27,13 @@ annotated: $(CROP) pdf
 		submission \
 		--preamble preamble.latexdiff \
 		--filter "./bin/remove_deletions.py document.tex"\
+		--append-safecmd="soft" --append-safecmd="filename" \
 		--main document.tex \
 		--biber \
 		--lualatex \
 		--no-view \
 		--output annotated.pdf \
+		--tmpdirprefix . \
 		--cleanup none \
 		--verbose
 
