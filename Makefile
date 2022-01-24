@@ -26,7 +26,7 @@ annotated: $(CROP) pdf
 	git latexdiff \
 		submission \
 		--preamble preamble.latexdiff \
-		--filter "./bin/remove_deletions.py document.tex"\
+		--filter "./bin/remove_deletions.py document.tex && ./bin/patch_latexdiff.py document.tex" \
 		--append-safecmd="soft" --append-safecmd="filename" \
 		--main document.tex \
 		--biber \
