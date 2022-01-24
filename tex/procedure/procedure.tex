@@ -76,6 +76,12 @@ Group-level statistics on individual features can be performed with \soft{FSL}'s
 
 For group-level statistics, users can choose to calculate the intercept only (i.e., mean across all subjects) or run flexible factorial models. For the latter, \soft{HALFpipe} prompts the user to specify the path to a covariates file (multiple file formats are supported) containing subject IDs, group membership, and other variables, and to specify whether these are continuous or categorical. Missing values in the covariates file can be handled with either listwise deletion or mean substitution. The user can specify main effects and interactions between variables, while within-group regressions against a continuous variable (e.g., symptom severity) is also possible.
 
+\subsection{Outputs}
+
+After computation finishes, all outputs are accessible in the working directory. The outputs of \soft{fMRIPrep} are stored in \filename{derivatives/fmriprep} folders, similar to when \soft{fMRIPrep} had been run outside of \soft{HALFpipe}. The \filename{derivatives} folder also contains the folder \filename{halfpipe} which contains any preprocessed images and features that were generated. Just like the \filename{fmriprep} folder, the \filename{halfpipe} folder conforms to the BIDS standard for derived datasets \parencite{bidscontributors2021}. This means that all file names contain structured information such as subject ID \filename{sub-01} or the name given to the feature \filename{feature-seedConn} in a standardized way that may be different from the original file naming. Underscores, dashes, and other non-alphanumeric characters are removed from the subject ID, session IDs, etc. for compliance with BIDS. \soft{HALFpipe}'s standardized output file naming means that additional analysis steps can be automated easily.
+
+The outputs from group statistics are placed in a similar folder structure that make it easy to share summary statistics for collaborative meta-analysis projects.
+
 \begin{featurebox}[label={box:features}]{Overview of HALFpipe features}
 
 \paragraph{Task-based activations}
