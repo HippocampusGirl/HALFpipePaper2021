@@ -39,7 +39,7 @@ for block in blocks:
     if lines[0].lower() == args.section.lower():
         break
 
-    import pdb; pdb.set_trace()
+    # import pdb; pdb.set_trace()
 
     if 169 < x0 < 190:
         line_number += len(lines)
