@@ -4,17 +4,20 @@ CROP := $(join $(PDF), $(addprefix /,$(addsuffix -crop.pdf, $(notdir $(PDF)))))
 MAKEFLAGS += --no-builtin-rules
 MAKEFLAGS += --no-builtin-variables
 
-%.pdf: %.emf
+fig/%.pdf: %.emf
 	inkscape $< \
 		--export-margin=10 \
 		--export-filename=$@
 
-%-crop.pdf: %.pdf
+fig/%-crop.pdf: %.pdf
 	pdfcrop \
 		--verbose \
 		--luatex $< $@
 
-pdf: $(CROP)
+expand.tex: document.tex
+	latexpand document.tex > expand.tex
+
+document.pdf: document.tex $(CROP)
 	latexmk \
 		-bibtex \
 		-pdflatex="lualatex --interaction=nonstopmode" \
@@ -22,7 +25,7 @@ pdf: $(CROP)
 		-halt-on-error \
 		document.tex
 
-annotated: $(CROP) pdf
+annotated.pdf: document.tex $(CROP)
 	git latexdiff \
 		submission \
 		--preamble preamble.latexdiff \
@@ -36,6 +39,16 @@ annotated: $(CROP) pdf
 		--tmpdirprefix . \
 		--cleanup none \
 		--verbose
+
+response_to_reviewers.pdf: response_to_reviewers.tex $(CROP)
+	latexmk \
+		-bibtex \
+		-pdflatex="lualatex --interaction=nonstopmode --shell-escape" \
+		-pdf \
+		-halt-on-error \
+		response_to_reviewers.tex
+
+all: document.pdf annotated.pdf response_to_reviewers.pdf
 
 clean:
 	latexmk -c
